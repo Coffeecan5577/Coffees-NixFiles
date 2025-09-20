@@ -34,6 +34,7 @@
     keepassxc
     librewolf
     obsidian
+    virt-manager
     vscodium
 
   # Window Manager stuff

@@ -14,6 +14,7 @@
     ./services.nix
     ./timezone.nix
     ./user.nix
+    ./virt-manager.nix
     ./virtualization.nix
     ./vpn.nix
   ];
