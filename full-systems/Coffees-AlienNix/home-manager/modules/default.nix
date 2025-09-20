@@ -2,6 +2,7 @@
   imports = [
     ./bat.nix
     ./cartridges.nix
+    ./cursor.nix
     ./eza.nix
     ./fish.nix
     ./fonts.nix

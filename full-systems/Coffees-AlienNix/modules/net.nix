@@ -1,3 +1,24 @@
+{ pkgs, ... }:
+
 {
-  networking.networkmanager.enable = true;
+  # Enable networking
+  networking.wireless.iwd = {
+    enable = true;
+    settings = {
+      General = {
+        EnableNetworkConfiguration = true;
+      };
+      Network = {
+        EnableIPv6 = true;
+      };
+      Scan = {
+        DisablePeriodicScan = true;
+      };
+    };
+  };
+
+  environment.systemPackages = with pkgs; [
+    iwgtk
+    impala
+  ];
 }

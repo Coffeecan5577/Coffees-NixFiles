@@ -18,6 +18,8 @@
     hyprpicker
     lshw
     ranger
+    showmethekey
+    silicon
     udisks
     unzip
     waybar
@@ -39,6 +41,9 @@
     libnotify
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+
+  # Other utilities
+    nix-prefetch-scripts
 
   ];
 }
