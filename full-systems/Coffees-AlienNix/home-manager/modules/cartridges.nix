@@ -1,0 +1,6 @@
+{
+  # programs.cartridges = {
+    # enable = true;
+  # };
+}
+

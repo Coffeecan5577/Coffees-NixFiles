@@ -19,6 +19,8 @@
       "$fileManager" = "$terminal -e sh -c 'ranger'";
       "$browser" = "librewolf";
       "$menu" = "wofi";
+      # "$notes" = "obsidian";
+      # "$editor" = "codium";
 
       exec-once = [
         "waybar"
@@ -95,12 +97,15 @@
         "move 990 60,size 900 170,pin,noinitialfocus,class:(showmethekey-gtk)"
         "noborder,nofocus,class:(showmethekey-gtk)"
 
-        "workspace 3,class:(obsidian)"
-        "workspace 3,class:(zathura)"
-        "workspace 4,class:(com.obsproject.Studio)"
-        "workspace 5,class:(telegram)"
-        "workspace 5,class:(vesktop)"
-        "workspace 6,class:(teams-for-linux)"
+        "workspace 1,class:(librewolf)"
+        "workspace 2,class:(ranger)"
+        "workspace 3,class:(ghostty)"
+        "workspace 4,class:(obsidian)"
+        "workspace 5,class:(monitor)"
+        "workspace 6,class:(cartridges)"
+        "workspace 7,class:(codium)"
+        "workspace 8,class:(keepassxc)"
+        "workspace 9,class:(gitkraken)"
 
         "suppressevent maximize, class:.*"
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"

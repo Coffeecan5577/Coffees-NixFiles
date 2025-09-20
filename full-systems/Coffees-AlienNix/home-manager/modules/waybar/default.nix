@@ -21,9 +21,9 @@
             "2" = "󰪶";
             "3" = "";
             "4" = "󰎞";
-            "5" = "";
-            "6" = "";
-            "7" = "󰖺";
+            "5" = "";
+            "6" = "󰖺";
+            "7" = "";
             "8" = "󰟵";
             "9" = "";
             "magic" = "";
@@ -67,7 +67,7 @@
 
         "custom/weather" = {
           format = " {} ";
-          exec = "curl -s 'wttr.in/Hansford+County?format=%c%t'";
+          exec = "curl -s 'wttr.in/Gruver?format=%c%t'";
           interval = 300;
           class = "weather";
         };

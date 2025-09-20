@@ -11,21 +11,28 @@
     btop
     cbonsai
     cliphist
-    emacs
     fastfetch
     ghostty
     git
     hyprpaper
-    librewolf
+    hyprpicker
     lshw
-    microfetch
     ranger
-    parted
+    udisks
     unzip
     waybar
     wget
     wl-clipboard
     wofi
+
+  # Desktop Applications
+    cartridges
+    emacs
+    gitkraken
+    keepassxc
+    librewolf
+    obsidian
+    vscodium
 
   # Window Manager stuff
     libsForQt5.xwaylandvideobridge
