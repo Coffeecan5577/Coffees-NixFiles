@@ -5,7 +5,7 @@
     ./clamav-scanner.nix
     ./display-manager.nix
     ./env.nix
-    ./file-systems.nix
+    # ./file-systems.nix
     ./hardware.nix
     ./home-manager.nix
     ./hyprland.nix
