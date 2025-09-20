@@ -31,6 +31,7 @@
     cartridges
     emacs
     gitkraken
+    gparted
     keepassxc
     librewolf
     obsidian
