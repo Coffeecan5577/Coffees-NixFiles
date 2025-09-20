@@ -24,6 +24,11 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
+  fileSystems."/media/Nix-Storage" = 
+    { device = "/dev/disk/by-uuid/d3b591de-15f1-4b9b-ba8c-6cb3387c1dfe";
+      fsType = "btrfs";
+    };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/d0ee95ac-fa4d-4b96-a584-0dc2fbb5a689"; }
     ];
