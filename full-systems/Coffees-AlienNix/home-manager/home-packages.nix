@@ -36,6 +36,7 @@
     keepassxc
     librewolf
     obsidian
+    pika-backup
     virt-manager
     vscodium
 
@@ -47,6 +48,5 @@
 
   # Other utilities
     nix-prefetch-scripts
-
   ];
 }

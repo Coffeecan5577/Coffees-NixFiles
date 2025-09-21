@@ -5,14 +5,16 @@
     ./clamav-scanner.nix
     ./display-manager.nix
     ./env.nix
-    # ./file-systems.nix
+    ./firewall.nix
     ./hardware.nix
     ./home-manager.nix
     ./hyprland.nix
+    ./llm.nix
     ./net.nix
     ./nh.nix
     ./nix.nix
     ./services.nix
+    ./syncthing.nix
     ./timezone.nix
     ./user.nix
     ./virt-manager.nix
