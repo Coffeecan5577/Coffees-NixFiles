@@ -2,7 +2,7 @@
   services.ollama = {
     enable = true;
     loadModels = [ "deepseek-r1:8b"  "nomic-embed-text" ];
-    # acceleration = "rocm";
+    acceleration = "rocm";
   };
 
   services.n8n = {
