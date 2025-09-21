@@ -21,6 +21,7 @@
     ranger
     showmethekey
     silicon
+    tealdeer
     udisks
     unzip
     waybar
