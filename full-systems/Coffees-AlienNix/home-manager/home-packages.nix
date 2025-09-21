@@ -23,6 +23,7 @@
     silicon
     tealdeer
     udisks
+    ueberzugpp
     unzip
     waybar
     wget
@@ -34,6 +35,7 @@
     dolphin-emu
     duckstation
     emacs
+    flameshot
     gitkraken
     gparted
     keepassxc
@@ -52,6 +54,7 @@
     libnotify
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+    grim
 
   # Other utilities
     nix-prefetch-scripts

@@ -17,7 +17,8 @@
       "$mainMod,       L, exec, loginctl lock-session"
       "$mainMod,       P, exec, hyprpicker -an"
       "$mainMod,       N, exec, swaync-client -t"
-      ", Print, exec, grimblast --notify --freeze copysave area"
+      # ", Print, exec, grimblast --notify --freeze copysave area"
+      "$mainMod SHIFT, Print, exec, flameshot screen --path ~/Pictures/Screenshots" 
 
       # Moving focus
       "$mainMod, left, movefocus, l"

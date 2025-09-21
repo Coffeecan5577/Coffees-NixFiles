@@ -1,7 +1,6 @@
 {
   imports = [
     ./bat.nix
-    ./cartridges.nix
     ./cursor.nix
     ./dconf.nix
     ./eza.nix
