@@ -9,6 +9,7 @@
     ./hardware.nix
     ./home-manager.nix
     ./hyprland.nix
+    ./kernel.nix
     ./llm.nix
     ./net.nix
     ./nh.nix
