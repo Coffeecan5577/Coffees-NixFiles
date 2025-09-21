@@ -18,7 +18,7 @@
         };
     in
       getFrom 
-        "https://github.com/rhizoome/dmz-cursors/releases/download/v1.0/dmz-black.tar.xz"
-        "sha256-mf60uHFEjWGTk1QZ4AA54g3yJUGipF2ZLNQK7oUGQ4I="
-        "DMZ-Black";
+        "https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.7/Bibata-Modern-Ice.tar.xz"
+        "sha256-SG/NQd3K9DHNr9o4m49LJH+UC/a1eROUjrAQDSn3TAU="
+        "Bibata-Modern-Ice";
 }
