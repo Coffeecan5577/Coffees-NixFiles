@@ -1,7 +1,7 @@
 * {
   border: none;
   border-radius: 0px;
-  font-family: "JetBrains Mono";
+  font-family: "JetBrains Mono Nerd Font";
   font-weight: bold;
   font-size: 16px;
   min-height: 0;
@@ -24,7 +24,7 @@ window#waybar {
   background: #d65d0e;
 }
 
-#clock, #battery, #pulseaudio, #tray, #network, #weather {
+#clock, #battery, #pulseaudio, #diskfree, #network, #weather {
   padding: 0 10px;
   margin: 0 10px;
 }
@@ -61,12 +61,12 @@ window#waybar {
 
 #clock {
   margin: 0;
-  color: #b16286;
-  border-bottom: 5px solid #b16286;
+  color: #cc241d;
+  border-bottom: 5px solid #cc241d;
 }
 
-#tray {
+#custom-diskfree {
   margin: 0;
-  color: #d65d0e;
-  border-bottom: 5px solid #d65d0e;
+  color: #b16286;
+  border-bottom: 5px solid #b16286;
 }

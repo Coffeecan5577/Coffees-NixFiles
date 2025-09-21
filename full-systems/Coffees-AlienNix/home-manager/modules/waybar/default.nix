@@ -9,7 +9,7 @@
         height = 30;
         modules-left = ["hyprland/workspaces"];
         modules-center = ["hyprland/window"];
-        modules-right = ["network" "custom/weather" "pulseaudio" "battery" "clock" "tray"];
+        modules-right = ["network" "custom/weather" "pulseaudio" "battery" "custom/diskfree" "clock"];
         "hyprland/workspaces" = {
           disable-scroll = true;
           show-special = true;
@@ -104,9 +104,11 @@
           format-alt = "{:%A, %B %d at %R}";
         };
 
-        "tray" = {
-          icon-size = 14;
-          spacing = 1;
+        "custom/diskfree" = {
+          format = "󱁋 Disk: {} used";
+          interval = 300;
+          max_length = 20;
+          exec = "df --total -hl | grep 'nvme0n1' | awk '{print $5}'";
         };
       };
     };
