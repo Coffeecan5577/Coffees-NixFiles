@@ -11,6 +11,7 @@
     btop
     cbonsai
     cliphist
+    erdtree
     fastfetch
     ghostty
     git
