@@ -31,13 +31,19 @@
 
   # Desktop Applications
     cartridges
+    dolphin-emu
+    duckstation
     emacs
     gitkraken
     gparted
     keepassxc
     librewolf
+    melonDS
+    mgba
+    nestopia-ue
     obsidian
     pika-backup
+    snes9x-gtk
     virt-manager
     vscodium
 
