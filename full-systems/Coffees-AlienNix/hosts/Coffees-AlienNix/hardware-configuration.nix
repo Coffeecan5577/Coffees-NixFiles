@@ -27,11 +27,17 @@
   fileSystems."/media/Nix-Storage" = 
     { device = "/dev/disk/by-uuid/d3b591de-15f1-4b9b-ba8c-6cb3387c1dfe";
       fsType = "btrfs";
+  
+      # Define which users can do what with the mounted drive:
+      options = [ "users" "nofail" "rw" ];
     };
 
   fileSystems."/media/External-Drive" = 
     { device = "/dev/disk/by-uuid/0ddfc82d-e2c8-4b98-b907-fa09bceedfd7";
-      fsType = "btrfs"; 
+      fsType = "btrfs";
+
+      # Define which users can do what with the mounted drive:
+      options = [ "users" "nofail" "rw" ]; 
     };
 
   swapDevices =
