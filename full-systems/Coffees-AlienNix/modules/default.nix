@@ -6,6 +6,7 @@
     ./display-manager.nix
     ./env.nix
     ./firewall.nix
+    ./gamemode.nix
     ./hardware.nix
     ./home-manager.nix
     ./hyprland.nix
