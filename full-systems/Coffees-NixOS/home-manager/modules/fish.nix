@@ -5,11 +5,11 @@ programs.fish = {
     shellAliases = {
     
       # Nix-specific aliases
-      rebuild-Nix = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles/full-systems/Coffees-NixOS#Coffees-NixOS";
-      rebuild-Nix-Home = "home-manager switch --file ~/nixos-dotfiles/full-systems/Coffees-NixOS/home-manager/home.nix";
+      rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/Coffees-NixOS#Coffees-NixOS";
+      rebuild-Nix-Home = "home-manager switch --file ~/Coffees-NixFiles/full-systems/Coffees-NixOS/home-manager/home.nix";
       update-Nix-Flake = "sudo nix flake update";
-      config-Nix-Home = "sudo nano ~/nixos-dotfiles/full-systems/Coffees-NixOS/home-manager/home.nix";
-      config-Nix-Flake = "sudo nano ~/nixos-dotfiles/full-systems/Coffees-NixOS/flake.nix";
+      config-Nix-Home = "sudo nano ~/Coffees-NixFiles/full-systems/Coffees-NixOS/home-manager/home.nix";
+      config-Nix-Flake = "sudo nano ~/Coffees-NixFiles/full-systems/Coffees-NixOS/flake.nix";
       cleanup-Nix = "sudo nix-collect-garbage -d";
       rebuild-Nix-Boot = "sudo nixos-rebuild boot";
   

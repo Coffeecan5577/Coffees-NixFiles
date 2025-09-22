@@ -1,4 +1,8 @@
-{
+{ pkgs, ... }:
+
+{  
+  nixpkgs.config.allowUnfree = true;
+
   services.ollama = {
     enable = true;
     loadModels = [ "deepseek-r1:8b"  "nomic-embed-text" ];

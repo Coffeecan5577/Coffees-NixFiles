@@ -13,7 +13,7 @@
         "XDG_SCREENSHOTS_DIR,$HOME/Pictures/Screenshots"
       ];
 
-      monitor = ",1920x1080@60,auto,1";
+      monitor = "e-DP1,1920x1200@120,auto,1";
       "$mainMod" = "SUPER";
       "$terminal" = "ghostty";
       "$fileManager" = "$terminal -e sh -c 'ranger'";

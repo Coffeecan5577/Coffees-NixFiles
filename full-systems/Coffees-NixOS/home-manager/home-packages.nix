@@ -8,6 +8,7 @@
   # Packages in each category are sorted alphabetically
   
   # CLI utilities
+    brightnessctl
     btop
     cbonsai
     cliphist
