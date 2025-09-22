@@ -45,6 +45,7 @@
     mgba
     nestopia-ue
     obsidian
+    onlyoffice-desktopeditors
     pika-backup
     snes9x-gtk
     virt-manager
