@@ -41,6 +41,7 @@
     gparted
     keepassxc
     librewolf
+    mangohud
     melonDS
     mgba
     nestopia-ue

@@ -31,7 +31,7 @@
       fsType = "btrfs";
 
       # Define which users can do what with the mounted drive:
-      options = [ "users" "nofail" "rw" ]; 
+      options = [ "nofail" ]; 
     };
 
     fileSystems."/media/External-Drive" = 
