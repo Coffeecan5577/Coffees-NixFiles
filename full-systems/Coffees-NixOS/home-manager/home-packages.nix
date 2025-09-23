@@ -8,8 +8,9 @@
   # Packages in each category are sorted alphabetically
   
   # CLI utilities
+    atuin
     brightnessctl
-    btop
+    btop-rocm
     cbonsai
     cliphist
     erdtree
