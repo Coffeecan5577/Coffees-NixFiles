@@ -34,6 +34,7 @@
 
   # Desktop Applications
     cartridges
+    deluge
     dolphin-emu
     duckstation
     emacs
