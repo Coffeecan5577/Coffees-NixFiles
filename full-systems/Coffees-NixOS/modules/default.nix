@@ -17,6 +17,7 @@
     ./nix.nix
     ./services.nix
     ./steam.nix
+    # ./store-management.nix
     ./syncthing.nix
     ./timezone.nix
     ./user.nix
