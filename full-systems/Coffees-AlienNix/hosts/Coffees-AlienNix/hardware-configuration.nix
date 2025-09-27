@@ -32,6 +32,13 @@
       options = [ "users" "nofail" "rw" ];
     };
 
+  fileSystems."/media/Raspberry-Pi-Imager" =
+    { device = "/dev/disk/by-uuid/ff832aae-623d-4e59-8be4-d7d5e1be3234";
+      fsType = "ext4";
+
+      options = [ "users" "nofail" "rw" ];
+    };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/d0ee95ac-fa4d-4b96-a584-0dc2fbb5a689"; }
     ];
