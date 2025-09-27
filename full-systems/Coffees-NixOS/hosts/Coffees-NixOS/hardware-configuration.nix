@@ -47,7 +47,7 @@
     { device = "dev/disk/by-uuid/ff832aae-623d-4e59-8be4-d7d5e1be3234";
       fsType = "ext4";
 
-      options = [ "users" "nofail" ];
+      options = [ "nofail" "rw" ];
     };
 
   swapDevices =
