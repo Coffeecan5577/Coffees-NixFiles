@@ -42,6 +42,12 @@
       options = [ "users" "nofail" "rw" ];
     };
 
+    fileSystems."/media/Second-External-Drive" = 
+    { device = "dev/disk/by-uuid/13f05027-a1ef-4a20-ba01-6c6791cea1fb";
+      fsType = "btrfs";
+
+      options = [ "users" "nofail" "rw" ];
+
     #Raspberry Pi SD Card slot for imaging the Pis
     fileSystems."/media/Raspberry-Pi-Imager" = 
     { device = "dev/disk/by-uuid/ff832aae-623d-4e59-8be4-d7d5e1be3234";
