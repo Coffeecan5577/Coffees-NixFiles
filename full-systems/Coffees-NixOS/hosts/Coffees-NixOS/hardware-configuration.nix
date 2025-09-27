@@ -51,7 +51,7 @@
 
     #Raspberry Pi SD Card slot for imaging the Pis
     fileSystems."/media/Raspberry-Pi-Imager" = 
-    { device = "dev/disk/by-uuid/ff832aae-623d-4e59-8be4-d7d5e1be3234";
+    { device = "dev/disk/by-uuid/1a00f54f-1cd3-4830-8bc5-1cbdd8ab70c6";
       fsType = "ext4";
 
       options = [ "nofail" "rw" ];

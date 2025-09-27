@@ -11,6 +11,7 @@
     atuin
     brightnessctl
     btop-rocm
+    caligula
     cbonsai
     cliphist
     erdtree
@@ -50,7 +51,6 @@
     obsidian
     onlyoffice-desktopeditors
     pika-backup
-    rpi-imager
     snes9x-gtk
     virt-manager
     vscodium
