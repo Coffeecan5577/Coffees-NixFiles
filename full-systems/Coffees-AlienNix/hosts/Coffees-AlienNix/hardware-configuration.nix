@@ -32,14 +32,6 @@
       options = [ "users" "nofail" "rw" ];
     };
 
-  fileSystems."/media/External-Drive" = 
-    { device = "/dev/disk/by-uuid/0ddfc82d-e2c8-4b98-b907-fa09bceedfd7";
-      fsType = "btrfs";
-
-      # Define which users can do what with the mounted drive:
-      options = [ "users" "nofail" "rw" ]; 
-    };
-
   swapDevices =
     [ { device = "/dev/disk/by-uuid/d0ee95ac-fa4d-4b96-a584-0dc2fbb5a689"; }
     ];
