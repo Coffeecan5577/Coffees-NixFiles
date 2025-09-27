@@ -50,6 +50,7 @@
     obsidian
     onlyoffice-desktopeditors
     pika-backup
+    rpi-imager
     snes9x-gtk
     virt-manager
     vscodium
