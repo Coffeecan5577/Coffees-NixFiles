@@ -47,6 +47,7 @@
       fsType = "btrfs";
 
       options = [ "users" "nofail" "rw" ];
+    };
 
     #Raspberry Pi SD Card slot for imaging the Pis
     fileSystems."/media/Raspberry-Pi-Imager" = 
