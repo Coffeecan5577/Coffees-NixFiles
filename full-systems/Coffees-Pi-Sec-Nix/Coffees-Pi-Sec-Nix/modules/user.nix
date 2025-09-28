@@ -5,7 +5,7 @@
     defaultUserShell = pkgs.fish;
     users.${user} = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" "libvirtd" ];
+      extraGroups = [ "wheel" "networkmanager" ];
       };
     };
 }

@@ -1,5 +1,5 @@
 {
-  description = "Coffees NixOS System Configuration";
+  description = "Coffees Pi-Sec-Nix System Configuration";
 
   inputs = {
     
@@ -25,7 +25,7 @@
     homeStateVersion = "25.05";
     user = "coffeecan";
     hosts = [
-      { hostname = "Coffees-NixOS"; stateVersion = "25.05"; }
+      { hostname = "Coffees-Pi-Sec-Nix"; stateVersion = "25.05"; }
     ];
 
     makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
