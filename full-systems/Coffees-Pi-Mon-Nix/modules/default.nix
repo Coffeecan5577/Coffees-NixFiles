@@ -4,7 +4,6 @@
     ./display-manager.nix
     ./env.nix
     ./firewall.nix
-    ./hardware.nix
     ./home-manager.nix
     ./kernel.nix
     ./net.nix
