@@ -5,11 +5,11 @@ programs.fish = {
     shellAliases = {
     
       # Nix-specific aliases
-      rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/Coffees-Pi-Mon-Nix#Coffees-Pi-Mon-Nix";
-      rebuild-Nix-Home = "home-manager switch --file ~/Coffees-NixFiles/full-systems/Coffees-Pi-Mon-Nix/home-manager/home.nix";
+      rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/Coffees-Pi-Sec-Nix#Coffees-Pi-Mon-Nix";
+      rebuild-Nix-Home = "home-manager switch --file ~/Coffees-NixFiles/full-systems/Coffees-Pi-Sec-Nix/home-manager/home.nix";
       update-Nix-Flake = "sudo nix flake update";
-      config-Nix-Home = "sudo nano ~/Coffees-NixFiles/full-systems/Coffees-Pi-Mon-Nix/home-manager/home.nix";
-      config-Nix-Flake = "sudo nano ~/Coffees-NixFiles/full-systems/Coffees-Pi-Mon-Nix/flake.nix";
+      config-Nix-Home = "sudo nano ~/Coffees-NixFiles/full-systems/Coffees-Pi-Sec-Nix/home-manager/home.nix";
+      config-Nix-Flake = "sudo nano ~/Coffees-NixFiles/full-systems/Coffees-Pi-Sec-Nix/flake.nix";
       cleanup-Nix = "sudo nix-collect-garbage -d";
       rebuild-Nix-Boot = "sudo nixos-rebuild boot";
   
@@ -52,7 +52,7 @@ programs.fish = {
     };
    interactiveShellInit = ''
    # Enable custom shell for oh-my-posh (hopefully)
-   ~/Downloads/Custom_Shells/oh-my-posh/oh-my-posh init fish --config $HOME/.cache/oh-my-posh/themes/atomic.omp.json | source
+   ~/Downloads/Custom_Shells/oh-my-posh/oh-my-posh init fish --config $HOME/.cache/oh-my-posh/themes/blueish.omp.json | source
      '';
   };
 }
