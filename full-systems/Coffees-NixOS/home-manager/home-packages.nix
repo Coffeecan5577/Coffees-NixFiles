@@ -21,6 +21,7 @@
     hyprpaper
     hyprpicker
     lshw
+    nmap
     ranger
     showmethekey
     silicon
