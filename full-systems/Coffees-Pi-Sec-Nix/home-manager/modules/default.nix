@@ -4,7 +4,7 @@
     ./eza.nix
     ./fish.nix
     ./git.nix
-    ./ranger.nix
+    # ./ranger.nix
     ./tmux.nix
   ];
 }
