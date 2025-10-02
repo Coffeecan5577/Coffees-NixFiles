@@ -20,9 +20,9 @@
   # Adding mounted external drive on Pi-Mon-Nix
    fileSystems = {
     "~/media/Homelab-Drive" = {
-       device = "dev/disk/by-label/06a86980-4c92-4be1-bcb8-8cdc63809d33";
-       fsType = "ext4";
-       options = [ "nofail" ];
+       device = "dev/disk/by-label/574f4de0-0a87-4a5a-af2c-130680ed95b6";
+       fsType = "btrfs";
+       options = [ "users" "nofail" "rw" ];
      };
    };
 
