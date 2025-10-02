@@ -52,7 +52,7 @@ programs.fish = {
     };
    interactiveShellInit = ''
    # Enable custom shell for oh-my-posh (hopefully)
-   ~/Downloads/Custom_Shells/oh-my-posh/oh-my-posh init fish --config $HOME/.cache/oh-my-posh/themes/atomic.omp.json | source
+   ~/Downloads/Custom_Shells/oh-my-posh/oh-my-posh init fish --config $HOME/.cache/oh-my-posh/themes/tokyo.omp.json | source
      '';
   };
 }
