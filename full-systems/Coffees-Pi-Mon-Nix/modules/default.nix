@@ -7,6 +7,7 @@
     ./hardware.nix
     ./home-manager.nix
     ./net.nix
+    ./nfs.nix
     ./nh.nix
     ./nix.nix
     ./services.nix
