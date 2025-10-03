@@ -18,7 +18,7 @@
   };
 
    # NFS filesystem mount for homelab
-   fileSystems."~/media/Homelab-Drive/Coffees-Homelab" = {
+   fileSystems."/media/Homelab-Drive/Coffees-Homelab" = {
      device = "10.10.1.124:/Coffees-Homelab";
      fsType = "nfs";
    };
