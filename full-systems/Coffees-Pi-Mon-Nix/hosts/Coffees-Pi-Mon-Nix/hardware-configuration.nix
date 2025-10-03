@@ -27,8 +27,8 @@
    };
 
    # Adding NFS directory to prepare for export
-   fileSystems."/media/Homelab-Drive/Coffees-Homelab" = {
-    device = "/media/Homelab-Drive";
+   fileSystems."/srv/nfs" = {
+    device = "/srv/nfs/Coffees-Homelab";
     options = [ "bind" ];
   };
 
