@@ -3,10 +3,14 @@
   services.openssh = {
     enable = true;
     settings = {
-      PasswordAuthentication = true;
+      PasswordAuthentication = false;
       KbdInteractiveAuthentication = false;
       PermitRootLogin = "no";
       AllowUsers = [ "coffeecan" ];
      };
   };
+  
+  # Start the ssh-agent program
+  programs.ssh.startAgent = true;
+  
 }
