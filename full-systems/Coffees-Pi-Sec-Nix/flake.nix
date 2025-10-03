@@ -5,22 +5,17 @@
     
     # Nix Packages URL
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
- 
-    # Custom Japanese Font import URL
-    nixos-fonts.url = "github:Takamatsu-Naoki/nixos-fonts";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+  
+    vscode-server.url = "github:nix-community/nixos-vscode-server";
 
-    stylix = {
-      url = "github:nix-community/stylix/release-25.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };   
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, vscode-server, ... }@inputs: let
     system = "aarch64-linux";
     homeStateVersion = "25.05";
     user = "coffeecan";
@@ -36,6 +31,7 @@
 
       modules = [
         ./hosts/${hostname}/configuration.nix
+        vscode-server.nixosModules.default
       ];
     };
 
