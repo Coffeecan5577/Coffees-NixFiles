@@ -3,8 +3,8 @@
   services.openssh = {
     enable = true;
     settings = {
-      PasswordAuthentication = true;
-      KbdInteractiveAuthentication = false;
+      PasswordAuthentication = false;
+      KbdInteractiveAuthentication = true;
       PermitRootLogin = "no";
       AllowUsers = [ "coffeecan" ];
      };
