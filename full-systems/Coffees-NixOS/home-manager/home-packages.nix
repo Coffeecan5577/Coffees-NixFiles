@@ -54,7 +54,6 @@
     pika-backup
     snes9x-gtk
     virt-manager
-    vscodium
     zed-editor
 
   # Window Manager stuff
