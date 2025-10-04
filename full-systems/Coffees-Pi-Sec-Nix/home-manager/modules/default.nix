@@ -6,5 +6,6 @@
     ./git.nix
     ./ranger.nix
     ./tmux.nix
+    ./zed-server.nix
   ];
 }
