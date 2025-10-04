@@ -14,6 +14,5 @@
     ./timezone.nix
     ./user.nix
     ./virtualization.nix
-    ./vscode-server.nix
   ];
 }
