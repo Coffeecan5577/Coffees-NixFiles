@@ -25,6 +25,9 @@
     wget
     wl-clipboard
 
+  # Desktop Applications
+    zed-editor
+
   # Other utilities
     nix-prefetch-scripts
   ];
