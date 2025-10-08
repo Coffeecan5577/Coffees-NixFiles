@@ -31,26 +31,26 @@ window#waybar {
 
 #network {
   margin: 0;
-  color: #d79921;
-  border-bottom: 5px solid #d79921;
+  color: #fe8019;
+  border-bottom: 5px solid #fe8019;
 }
 
 #custom-weather {
   margin: 0;
-  color: #98971a;
-  border-bottom: 5px solid #98971a
+  color: #d79921;
+  border-bottom: 5px solid #d79921
 }
 
 #pulseaudio {
   margin: 0;
-  color: #689d6a;
-  border-bottom: 5px solid #689d6a;
+  color: #b8bb26;
+  border-bottom: 5px solid #b8bb26;
 }
 
 #pulseaudio.muted {
   padding: 0 20px;
-  color: #cc241d;
-  border-bottom: 5px solid #cc241d;
+  color: #b8bb26;
+  border-bottom: 5px solid #b8bb26;
 }
 
 #battery {
@@ -67,6 +67,6 @@ window#waybar {
 
 #custom-diskfree {
   margin: 0;
-  color: #b16286;
-  border-bottom: 5px solid #b16286;
+  color: #d3869b;
+  border-bottom: 5px solid #d3869b;
 }
