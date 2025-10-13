@@ -11,7 +11,7 @@
     ./nh.nix
     ./nix.nix
     ./services.nix
-    # ./store-management.nix
+    ./store-management.nix
     ./timezone.nix
     ./user.nix
     ./virtualization.nix
