@@ -17,7 +17,8 @@
     ./nix.nix
     ./services.nix
     ./steam.nix
-    ./syncthing.nix
+    ./store-management.nix
+    # ./syncthing.nix
     ./timezone.nix
     ./user.nix
     ./virt-manager.nix
