@@ -45,6 +45,7 @@
     gparted
     keepassxc
     librewolf
+    localsend
     mangohud
     melonDS
     mgba
