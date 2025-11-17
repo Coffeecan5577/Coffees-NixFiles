@@ -4,6 +4,7 @@
     ./cursor.nix
     ./dconf.nix
     ./eza.nix
+    ./fastfetch.nix
     ./fish.nix
     ./fonts.nix
     ./git.nix
