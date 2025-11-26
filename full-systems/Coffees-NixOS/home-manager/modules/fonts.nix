@@ -8,7 +8,7 @@
     nerd-fonts.symbols-only
     noto-fonts
     noto-fonts-lgc-plus
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     font-awesome
     powerline-fonts
     powerline-symbols    

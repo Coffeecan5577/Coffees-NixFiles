@@ -58,7 +58,7 @@
     zed-editor
 
   # Window Manager stuff
-    libsForQt5.xwaylandvideobridge
+    # libsForQt5.xwaylandvideobridge
     libnotify
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
