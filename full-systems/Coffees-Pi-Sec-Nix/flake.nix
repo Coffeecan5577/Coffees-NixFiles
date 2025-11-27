@@ -4,10 +4,10 @@
   inputs = {
     
     # Nix Packages URL
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   
@@ -17,7 +17,7 @@
 
   outputs = { self, nixpkgs, home-manager, vscode-server, ... }@inputs: let
     system = "aarch64-linux";
-    homeStateVersion = "25.05";
+    homeStateVersion = "25.11";
     user = "coffeecan";
     hosts = [
       { hostname = "Coffees-Pi-Sec-Nix"; stateVersion = "25.05"; }
