@@ -20,7 +20,7 @@
     homeStateVersion = "25.11";
     user = "coffeecan";
     hosts = [
-      { hostname = "Coffees-Pi-Sec-Nix"; stateVersion = "25.05"; }
+      { hostname = "Coffees-Pi-Sec-Nix"; stateVersion = "25.11"; }
     ];
 
     makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
