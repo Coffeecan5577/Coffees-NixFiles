@@ -4,8 +4,8 @@
       enable = true;
       group = "users";
       user = "coffeecan";
-      # dataDir = "/home/myusername/Documents";
-      # configDir = "/home/myusername/Documents/.config/syncthing";
+      dataDir = "/home/coffeecan/Syncthing";
+      configDir = "/home/coffeecan/.config/syncthing";
       # overrideDevices = true;     # overrides any devices added or deleted through the WebUI
       # overrideFolders = true;     # overrides any folders added or deleted through the WebUI
       # settings = {
