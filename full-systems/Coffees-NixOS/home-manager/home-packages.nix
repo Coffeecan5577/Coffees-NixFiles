@@ -35,7 +35,6 @@
     wofi
 
   # Desktop Applications
-    cartridges
     deluge
     dolphin-emu
     duckstation
@@ -43,10 +42,10 @@
     flameshot
     gitkraken
     gparted
+    inkscape
     keepassxc
     librewolf
     localsend
-    mangohud
     melonDS
     mgba
     nestopia-ue
