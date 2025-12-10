@@ -5,9 +5,9 @@
      settings = {
        logo = {
         type = "kitty-direct";
-        source = "~/Pictures/Icons/Nix-Logo.png";
-        height = 16;
-        width = 34;
+        source = "~/Pictures/Icons/Nix-Gruvbox-Rainbow.png";
+        height = 18;
+        width = 42;
         padding = {
             top = 5;
             left = 3;
