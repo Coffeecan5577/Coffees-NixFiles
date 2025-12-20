@@ -15,6 +15,7 @@
     ./net.nix
     ./nh.nix
     ./nix.nix
+    ./programming-languages.nix
     ./services.nix
     ./steam.nix
     ./store-management.nix
