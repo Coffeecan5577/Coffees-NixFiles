@@ -22,6 +22,7 @@
     hyprpicker
     lshw
     nmap
+    opencode
     ranger
     showmethekey
     silicon
