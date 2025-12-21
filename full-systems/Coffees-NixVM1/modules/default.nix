@@ -1,0 +1,19 @@
+{
+  imports = [
+    ./audio.nix
+    ./boot.nix
+    ./clamav-scanner.nix
+    ./display-manager.nix
+    ./env.nix
+    ./firewall.nix
+    ./home-manager.nix
+    ./hyprland.nix
+    ./kernel.nix
+    ./nh.nix
+    ./nix.nix
+    ./programming-languages.nix
+    ./store-management.nix
+    ./timezone.nix
+    ./user.nix
+  ];
+}
