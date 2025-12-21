@@ -1,6 +1,7 @@
 {
   imports = [
     ./audio.nix
+    ./boot.nix
     ./clamav-scanner.nix
     ./display-manager.nix
     ./env.nix
