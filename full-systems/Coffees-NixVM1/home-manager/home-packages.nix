@@ -21,7 +21,7 @@
     lshw
     nmap
     opencode
-    # ranger
+    ranger
     showmethekey
     silicon
     tealdeer

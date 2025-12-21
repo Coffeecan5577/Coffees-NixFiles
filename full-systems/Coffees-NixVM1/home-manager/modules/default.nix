@@ -9,7 +9,7 @@
     ./fonts.nix
     ./git.nix
     ./hyprland
-    # ./ranger.nix
+    ./ranger.nix
     ./swaync
     ./tmux.nix
     ./waybar
