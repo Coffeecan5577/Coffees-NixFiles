@@ -108,7 +108,7 @@
           format = "󱁋 Disk: {} used";
           interval = 300;
           max_length = 20;
-          exec = "df --total -hl | grep 'cryptroot' | awk '{print $5}'";
+          exec = "df --total -hl | grep '/' | awk '{print $5}'";
         };
       };
     };
