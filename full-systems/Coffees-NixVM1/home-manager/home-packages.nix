@@ -20,6 +20,7 @@
     hyprpicker
     lshw
     nmap
+    oh-my-posh
     opencode
     showmethekey
     silicon

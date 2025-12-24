@@ -9,6 +9,7 @@
     ./fonts.nix
     ./git.nix
     ./hyprland
+    ./oh-my-posh.nix
     ./swaync
     ./tmux.nix
     ./waybar
