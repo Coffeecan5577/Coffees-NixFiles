@@ -5,7 +5,7 @@ programs.fish = {
     shellAliases = {
     
       # Nix-specific aliases
-      rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/Coffees-NixOS#Coffees-NixVM1";
+      rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/Coffees-NixVM1#Coffees-NixVM1";
       rebuild-Nix-Home = "home-manager switch --file ~/Coffees-NixFiles/full-systems/Coffees-NixVM1/home-manager/home.nix";
       update-Nix-Flake = "sudo nix flake update";
       config-Nix-Home = "sudo nano ~/Coffees-NixFiles/full-systems/Coffees-NixVM1/home-manager/home.nix";
