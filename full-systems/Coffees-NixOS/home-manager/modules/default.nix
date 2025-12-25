@@ -13,8 +13,8 @@
     ./hyprland
     ./keepassxc.nix
     ./librewolf.nix
+    ./oh-my-posh.nix
     ./ranger.nix
-    # ./stylix.nix
     ./swaync
     ./tmux.nix
     ./waybar
