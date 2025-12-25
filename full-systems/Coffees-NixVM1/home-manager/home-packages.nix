@@ -34,8 +34,6 @@
     wofi
 
   # Desktop Applications
-    emacs
-    zed-editor
 
   # Window Manager stuff
     # libsForQt5.xwaylandvideobridge
