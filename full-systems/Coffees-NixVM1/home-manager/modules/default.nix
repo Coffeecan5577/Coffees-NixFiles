@@ -1,12 +1,14 @@
 {
   imports = [
     ./bat.nix
+    ./btop-rocm.nix
     ./cursor.nix
     ./dconf.nix
     ./eza.nix
     ./fastfetch.nix
     ./fish.nix
     ./fonts.nix
+    ./ghostty.nix
     ./git.nix
     ./hyprland
     ./oh-my-posh.nix
