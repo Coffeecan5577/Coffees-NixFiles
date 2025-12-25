@@ -50,9 +50,5 @@ programs.fish = {
       # Use the erdtree command to list icons, disk usage, specify directory levels, and show icons all in a human readable format
       erdtree = "erd --human --icons --long";
     };
-   interactiveShellInit = ''
-   # Enable custom shell for oh-my-posh (hopefully)
-   ~/Downloads/Custom_Shells/oh-my-posh/oh-my-posh init fish --config $HOME/.cache/oh-my-posh/themes/gruvbox.omp.json | source
-     '';
   };
 }
