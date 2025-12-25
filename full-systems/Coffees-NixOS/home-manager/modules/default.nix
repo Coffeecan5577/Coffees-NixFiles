@@ -1,6 +1,7 @@
 {
   imports = [
     ./bat.nix
+    ./btop-rocm.nix
     ./cursor.nix
     ./dconf.nix
     ./eza.nix
