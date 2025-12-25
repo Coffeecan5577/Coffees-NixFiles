@@ -16,6 +16,7 @@
     fastfetch
     git
     lshw
+    oh-my-posh
     ranger
     showmethekey
     silicon
