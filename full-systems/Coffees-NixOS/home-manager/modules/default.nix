@@ -8,6 +8,7 @@
     ./fastfetch.nix
     ./fish.nix
     ./fonts.nix
+    ./ghostty.nix
     ./git.nix
     ./hyprland
     ./keepassxc.nix
