@@ -90,6 +90,7 @@
 
         "tray" = {
           icon-size = 14;
+          format-icons = ["󱊖"];
           spacing = 1;
         };
 
