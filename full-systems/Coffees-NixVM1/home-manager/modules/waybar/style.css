@@ -24,7 +24,7 @@ window#waybar {
   background: #d65d0e;
 }
 
-#clock, #tray, #pulseaudio, #diskfree, #network, #weather {
+#clock, #cpu, #memory, #diskfree, #network, #weather {
   padding: 0 10px;
   margin: 0 10px;
 }
@@ -41,19 +41,13 @@ window#waybar {
   border-bottom: 5px solid #d79921
 }
 
-#pulseaudio {
+#cpu {
   margin: 0;
   color: #b8bb26;
   border-bottom: 5px solid #b8bb26;
 }
 
-#pulseaudio.muted {
-  padding: 0 20px;
-  color: #b8bb26;
-  border-bottom: 5px solid #b8bb26;
-}
-
-#tray {
+#memory {
   margin: 0;
   color: #458588;
   border-bottom: 5px solid #458588;
