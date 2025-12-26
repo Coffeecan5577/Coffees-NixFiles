@@ -9,7 +9,7 @@
         height = 30;
         modules-left = ["hyprland/workspaces"];
         modules-center = ["hyprland/window"];
-        modules-right = ["network" "custom/weather" "pulseaudio" "tray" "custom/diskfree" "clock"];
+        modules-right = ["network" "custom/weather" "cpu" "memory" "custom/diskfree" "clock"];
         "hyprland/workspaces" = {
           disable-scroll = true;
           show-special = true;
@@ -72,25 +72,13 @@
           class = "weather";
         };
 
-        "pulseaudio" = {
-          format = "{icon} {volume}%";
-          format-bluetooth = "{icon} {volume}% ";
-          format-muted = "";
-          format-icons = {
-            "headphones" = "";
-            "handsfree" = "";
-            "headset" = "";
-            "phone" = "";
-            "portable" = "";
-            "car" = "";
-            "default" = ["" ""];
-          };
-          on-click = "pavucontrol";
+        "memory" = {
+          format = " {}% used";
         };
 
-        "tray" = {
+        "cpu" = {
           icon-size = 14;
-          format-icons = ["󱊖"];
+          format = " 󰻠{usage}% used";
           spacing = 1;
         };
 
