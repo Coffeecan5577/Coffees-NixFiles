@@ -9,7 +9,7 @@
         height = 30;
         modules-left = ["hyprland/workspaces"];
         modules-center = ["hyprland/window"];
-        modules-right = ["network" "custom/weather" "pulseaudio" "battery" "custom/diskfree" "clock"];
+        modules-right = ["network" "custom/weather" "pulseaudio" "tray" "custom/diskfree" "clock"];
         "hyprland/workspaces" = {
           disable-scroll = true;
           show-special = true;
@@ -88,15 +88,9 @@
           on-click = "pavucontrol";
         };
 
-        "battery" = {
-          states = {
-            warning = 30;
-            critical = 1;
-          };
-          format = "{icon} {capacity}%";
-          format-charging = " {capacity}%";
-          format-alt = "{time} {icon}";
-          format-icons = ["" "" "" "" ""];
+        "tray" = {
+          icon-size = 14;
+          spacing = 1;
         };
 
         "clock" = {
