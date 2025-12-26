@@ -73,12 +73,12 @@
         };
 
         "memory" = {
-          format = " {}% used";
+          format = "  {}% used";
         };
 
         "cpu" = {
           icon-size = 14;
-          format = " 󰻠{usage}% used";
+          format = " 󰻠 {usage}% used";
           spacing = 1;
         };
 
