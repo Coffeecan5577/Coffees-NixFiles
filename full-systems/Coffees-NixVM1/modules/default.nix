@@ -15,5 +15,6 @@
     ./store-management.nix
     ./timezone.nix
     ./user.nix
+    ./virt-manager.nix
   ];
 }
