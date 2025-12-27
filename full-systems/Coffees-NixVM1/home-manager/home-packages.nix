@@ -35,6 +35,7 @@
 
   # Desktop Applications
     gitkraken
+    librewolf
 
   # Window Manager stuff
     # libsForQt5.xwaylandvideobridge
