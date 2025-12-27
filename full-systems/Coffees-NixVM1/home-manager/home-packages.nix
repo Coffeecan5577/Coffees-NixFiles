@@ -34,6 +34,7 @@
     wofi
 
   # Desktop Applications
+    gitkraken
 
   # Window Manager stuff
     # libsForQt5.xwaylandvideobridge
