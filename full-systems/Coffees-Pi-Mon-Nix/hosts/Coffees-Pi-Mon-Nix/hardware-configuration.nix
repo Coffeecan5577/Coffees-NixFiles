@@ -17,21 +17,6 @@
     };
   };
 
-  # Adding mounted external drive on Pi-Mon-Nix
-   fileSystems = {
-    "/srv/nfs" = {
-       device = "/dev/disk/by-uuid/574f4de0-0a87-4a5a-af2c-130680ed95b6";
-       fsType = "btrfs";
-       options = [ "users" "nofail" "rw" ];
-     };
-   };
-
-   # Adding NFS directory to prepare for export
-   fileSystems."/srv/nfs/Coffees-Homelab" = {
-    device = "/srv/nfs/Coffees-Homelab";
-    options = [ "bind" ];
-  };
-
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
