@@ -1,7 +1,0 @@
-{
-  services.nfs.server.enable = true;
-  services.nfs.server.exports = ''
-    /srv/nfs			10.10.1.123(rw,fsid=0,no_subtree_check,sync)
-    /srv/nfs/Coffees-Homelab	10.10.1.123(rw,nohide,insecure,no_subtree_check,sync)
-  '';
-}
