@@ -7,7 +7,7 @@
     user = "coffeecan";
     settings = {
      listen-http = ":8005";
-     base-url = "https://ntfy.sh/coffees-firelink";
+     base-url = "http://ntfy.coffees-firelink";
     };
   };
 }
