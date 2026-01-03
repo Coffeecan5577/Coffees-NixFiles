@@ -20,6 +20,12 @@
       # ", Print, exec, grimblast --notify --freeze copysave area"
       "$mainMod SHIFT, Print, exec, flameshot screen --path ~/Pictures/Screenshots" 
 
+      # Creating an intercepter for Hyprland VMs to accept custom keyboard commands
+      "$mainMod, SHIFT, P, submap passthru"
+      # submap = passthru
+      "$mainMod, Escape, submap reset"
+      # submap = reset
+
       # Moving focus
       "$mainMod, left, movefocus, l"
       "$mainMod, right, movefocus, r"
@@ -32,7 +38,7 @@
       "$mainMod SHIFT, up,    swapwindow, u"
       "$mainMod SHIFT, down,  swapwindow, d"
 
-      # Resizeing windows                   X  Y
+      # Resizing windows                   X  Y
       "$mainMod CTRL, left,  resizeactive, -60 0"
       "$mainMod CTRL, right, resizeactive,  60 0"
       "$mainMod CTRL, up,    resizeactive,  0 -60"
