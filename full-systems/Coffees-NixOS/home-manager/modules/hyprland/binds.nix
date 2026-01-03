@@ -21,10 +21,8 @@
       "$mainMod SHIFT, Print, exec, flameshot screen --path ~/Pictures/Screenshots" 
 
       # Creating an intercepter for Hyprland VMs to accept custom keyboard commands
-      "$mainMod, SHIFT, P, submap passthru"
-      # submap = passthru
-      "$mainMod, Escape, submap reset"
-      # submap = reset
+      # "$mainMod SHIFT, P, submap, passthru"
+      # "$mainMod, Escape, submap, reset"
 
       # Moving focus
       "$mainMod, left, movefocus, l"
