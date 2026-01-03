@@ -91,7 +91,7 @@
           format = "󱁋 Disk: {} used";
           interval = 300;
           max_length = 20;
-          exec = "df --total -hl | grep '/dev/vda3' | awk '{print $5}'";
+          exec = "df --total -hl | grep '/dev/sda3' | awk '{print $5}'";
         };
       };
     };
