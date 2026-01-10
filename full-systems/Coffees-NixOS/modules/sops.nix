@@ -8,13 +8,13 @@
       sshKeyPaths = [ ];
 
       # This is using an age key that is expected to already be in the filesystem
-      keyFile = "~/.config/sops/age/Pi-Sec-Age-Key.txt";
+      keyFile = "/home/coffeecan/.config/sops/age/Pi-Sec-Age-Key.txt";
     };
 
     secrets = {
       # This is the actual specification of the secrets.
-      secrets.example-key = {};
-      secrets."myservice/my_subdir/my_secret" = {};
+      example-key = {};
+      "myservice/my_subdir/my_secret" = {};
     };
   };
 }
