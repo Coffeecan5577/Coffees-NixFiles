@@ -7,6 +7,7 @@
     settings = {
       General = {
         EnableNetworkConfiguration = true;
+        AddressRandomization = "network";
       };
       Network = {
         EnableIPv6 = true;
