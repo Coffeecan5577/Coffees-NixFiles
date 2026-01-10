@@ -66,6 +66,8 @@
     grim
 
   # Other utilities
+    nix-output-monitor
     nix-prefetch-scripts
+    nvd
   ];
 }
