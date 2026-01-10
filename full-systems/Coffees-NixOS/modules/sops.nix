@@ -1,10 +1,16 @@
 {
   sops = {
-    defaultSopsFile = "~/Coffees-NixFiles/full-systems/Coffees-NixOS/secrets/secrets.yaml";
+    defaultSopsFile = ../secrets/secrets.yaml;
     defaultSopsFormat = "yaml";
 
-    age.sshKeyPaths = [ "~/.ssh/Coffees-Pi-Sec-Key" ];
+    # This will automatically import SSH keys as age keys
+    age.sshKeyPaths = [ ];
+
+    # This is using an age key that is expected to already be in the filesystem
     age.keyFile = "~/.config/sops/age/Pi-Sec-Age-Key.txt";
-    secrets."example-key" = { };
+
+    # This is the actual specification of the secrets.
+    secrets.example-key = {};
+    secrets."myservice/my_subdir/my_secret" = {};
   };
 }
