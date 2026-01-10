@@ -71,5 +71,6 @@
     nix-prefetch-scripts
     nvd
     sops
+    ssh-to-age
   ];
 }
