@@ -9,5 +9,6 @@
     nodePackages_latest.pnpm
     lua
     nil
+    nixd
   ];
 }

@@ -1,7 +1,7 @@
 {
   programs.zed-editor = {
     enable = true;
-    themes = {"Gruvbox Dark"};
+    # themes = {"Gruvbox Dark"}; 
     extensions = [
       "colored-zed-icons-theme"
       "nix" 
