@@ -26,9 +26,11 @@
     wl-clipboard
 
   # Desktop Applications
-    zed-editor
+    
 
   # Other utilities
+    nix-output-monitor
     nix-prefetch-scripts
+    nvd
   ];
 }
