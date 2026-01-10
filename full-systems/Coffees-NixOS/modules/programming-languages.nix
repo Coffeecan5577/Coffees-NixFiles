@@ -8,5 +8,6 @@
     nodePackages_latest.nodejs
     nodePackages_latest.pnpm
     lua
+    nil
   ];
 }
