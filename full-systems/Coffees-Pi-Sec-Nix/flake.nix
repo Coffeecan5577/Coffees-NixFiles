@@ -6,16 +6,20 @@
     # Nix Packages URL
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
+    # Home Manager configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  
-    vscode-server.url = "github:nix-community/nixos-vscode-server";
 
+    # Sops-Nix configuration
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, vscode-server, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs: let
     system = "aarch64-linux";
     homeStateVersion = "25.11";
     user = "coffeecan";
@@ -31,7 +35,7 @@
 
       modules = [
         ./hosts/${hostname}/configuration.nix
-        vscode-server.nixosModules.default
+        sops-nix.nixosModules.sops
       ];
     };
 
