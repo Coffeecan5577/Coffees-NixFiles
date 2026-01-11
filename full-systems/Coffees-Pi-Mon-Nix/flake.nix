@@ -6,21 +6,20 @@
     # Nix Packages URL
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
  
-    # Custom Japanese Font import URL
-    # nixos-fonts.url = "github:Takamatsu-Naoki/nixos-fonts";
-
+    # Home Manager Configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
+    }; 
 
-    # stylix = {
-      # url = "github:nix-community/stylix/release-25.05";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    # };   
+    # Sops-Nix Configuration
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };  
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs: let
     system = "aarch64-linux";
     homeStateVersion = "25.11";
     user = "coffeecan";
@@ -36,6 +35,7 @@
 
       modules = [
         ./hosts/${hostname}/configuration.nix
+        sops-nix.nixosModules.sops
       ];
     };
 
