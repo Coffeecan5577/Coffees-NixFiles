@@ -29,8 +29,11 @@
     
 
   # Other utilities
+    age
     nix-output-monitor
     nix-prefetch-scripts
     nvd
+    sops
+    ssh-to-age
   ];
 }
