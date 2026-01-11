@@ -3,7 +3,7 @@
 {
   # Enable networking
   networking.wireless.iwd = {
-    enable = true;
+    enable = false;
     settings = {
       General = {
         EnableNetworkConfiguration = true;
