@@ -16,8 +16,8 @@
     ./nh.nix
     ./nix.nix
     ./programming-languages.nix
-    ./services.nix
     ./sops.nix
+    ./ssh.nix
     ./steam.nix
     ./store-management.nix
     ./syncthing.nix
