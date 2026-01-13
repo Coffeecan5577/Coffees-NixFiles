@@ -26,7 +26,6 @@
     wl-clipboard
 
   # Desktop Applications
-    
 
   # Other utilities
     age
