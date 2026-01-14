@@ -11,6 +11,7 @@
     ./nix.nix
     ./ntfy.nix
     ./ssh.nix
+    ./sops.nix
     ./store-management.nix
     ./timezone.nix
     ./user.nix

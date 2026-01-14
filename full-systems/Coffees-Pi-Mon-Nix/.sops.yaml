@@ -1,0 +1,8 @@
+keys:
+  - &Pi-Monitor-Secrets-Age-Key age1fl8lw66pcmh65jsfu5x9pfc9adaeyx6lmqvphp7mg0p3pmg4540spde7qh
+# …more server keys go here…
+creation_rules:
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+    - age:
+      - *Pi-Monitor-Secrets-Age-Key
