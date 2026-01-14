@@ -9,6 +9,7 @@
     ./net.nix
     ./nh.nix
     ./nix.nix
+    ./sops.nix
     ./ssh.nix
     ./store-management.nix
     ./timezone.nix

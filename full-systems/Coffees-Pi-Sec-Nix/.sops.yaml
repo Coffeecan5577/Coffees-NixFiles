@@ -1,0 +1,8 @@
+keys:
+  - &Pi-Sec-Secrets-Age-Key age1gekrdcusc8hgqpxlw9lxae5330ffz2ea07rx95pvvayd9twle9nqaqn9de
+# …more server keys go here…
+creation_rules:
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+    - age:
+      - *Pi-Sec-Secrets-Age-Key
