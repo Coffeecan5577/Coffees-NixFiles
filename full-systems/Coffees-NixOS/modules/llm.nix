@@ -5,17 +5,11 @@
 
   services.ollama = {
     enable = true;
-    loadModels = [ "deepseek-r1:8b"  "nomic-embed-text" ];
+    loadModels = [ "deepseek-r1:8b"  "nomic-embed-text" "qwen3-coder:30b" ];
     acceleration = "rocm";
   };
 
   services.n8n = {
     enable = true;
-  };
-
-  services.open-webui = {
-    enable = true;
-    port = 8888;
-    host = "127.0.0.1";
   };
 }
