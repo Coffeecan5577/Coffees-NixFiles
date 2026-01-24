@@ -5,6 +5,7 @@
     ./clamav-scanner.nix
     ./display-manager.nix
     ./env.nix
+    ./file-systems.nix
     ./firewall.nix
     ./gamemode.nix
     ./hardware.nix
