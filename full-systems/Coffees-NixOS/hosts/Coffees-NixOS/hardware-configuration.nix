@@ -54,6 +54,7 @@
       fsType = "exfat";
 
       options = [ "users" "nofail" "rw" ];
+    };
 
   swapDevices =
     [ { device = "/dev/disk/by-uuid/12c24e21-e9fa-4133-bb83-e0bd32d4fa77"; }
