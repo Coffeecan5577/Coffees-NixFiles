@@ -55,7 +55,7 @@
     onlyoffice-desktopeditors
     pika-backup
     snes9x-gtk
-    ventoy-full-gtk
+    ventoy-full
     virt-manager
     zed-editor
 
