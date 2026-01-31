@@ -1,5 +1,6 @@
 {
   imports = [
+    ./adb.nix
     ./audio.nix
     ./boot.nix
     ./clamav-scanner.nix
