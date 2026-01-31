@@ -31,6 +31,7 @@
     udisks
     ueberzugpp
     unzip
+    usbutils
     waybar
     wget
     wl-clipboard
