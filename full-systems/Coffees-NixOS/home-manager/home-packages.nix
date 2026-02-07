@@ -47,6 +47,7 @@
     gparted
     inkscape
     keepassxc
+    krusader
     librewolf
     localsend
     melonDS
@@ -69,6 +70,7 @@
 
   # Other utilities
     age
+    kdePackages.kio-extras
     nix-output-monitor
     nix-prefetch-scripts
     nvd
