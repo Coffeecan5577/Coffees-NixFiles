@@ -16,6 +16,7 @@
     ./net.nix
     ./nh.nix
     ./nix.nix
+    ./nvf.nix
     ./programming-languages.nix
     ./sops.nix
     ./ssh.nix
