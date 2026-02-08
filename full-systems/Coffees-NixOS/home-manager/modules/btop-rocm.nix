@@ -5,7 +5,7 @@
       enable = true;
       settings = 
         {
-          color_theme = "ayu";
+          color_theme = "gruvbox_dark";
           theme_background = true;
         };
     };
