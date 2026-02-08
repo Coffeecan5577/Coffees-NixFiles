@@ -41,13 +41,11 @@
     deluge
     dolphin-emu
     duckstation
-    emacs
     flameshot
     gitkraken
     gparted
     inkscape
     keepassxc
-    krusader
     librewolf
     localsend
     melonDS
@@ -57,7 +55,6 @@
     onlyoffice-desktopeditors
     pika-backup
     snes9x-gtk
-    ventoy-full
     virt-manager
     zed-editor
 
@@ -70,7 +67,6 @@
 
   # Other utilities
     age
-    kdePackages.kio-extras
     nix-output-monitor
     nix-prefetch-scripts
     nvd
