@@ -17,9 +17,15 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # NVF Neovim Nix configuration flake
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, sops-nix, nvf, ... }@inputs: let
     system = "aarch64-linux";
     homeStateVersion = "25.11";
     user = "coffeecan";
@@ -36,6 +42,7 @@
       modules = [
         ./hosts/${hostname}/configuration.nix
         sops-nix.nixosModules.sops
+        nvf.nixosModules.default
       ];
     };
 
