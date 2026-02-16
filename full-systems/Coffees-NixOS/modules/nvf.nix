@@ -32,6 +32,11 @@
           python.enable = true;
           terraform.enable = true;
         };
+       
+        # Enabling colored UI modes
+        ui.modes-nvim = {
+          enable = true;
+        };
       };
     };
   };
