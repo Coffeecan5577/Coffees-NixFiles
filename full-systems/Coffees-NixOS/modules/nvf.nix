@@ -27,9 +27,10 @@
         # Enabling language support
         languages = {
           enableTreesitter = true;
-          nix.enable = true;
           go.enable = true;
+          nix.enable = true;
           python.enable = true;
+          terraform.enable = true;
         };
       };
     };
