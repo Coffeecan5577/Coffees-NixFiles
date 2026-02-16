@@ -9,7 +9,7 @@
     ./net.nix
     ./nh.nix
     ./nix.nix
-    ./ntfy.nix
+    ./nvf.nix
     ./ssh.nix
     ./sops.nix
     ./store-management.nix
