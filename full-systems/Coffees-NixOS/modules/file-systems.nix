@@ -23,10 +23,10 @@
   # device = "dev/disk/by-uuid/13f05027-a1ef-4a20-ba01-6c6791cea1fb";
   # fsType = "btrfs";
 
-  #  options = [
-  #   "users"
-  #   "nofail"
-  #   "rw"
+   # options = [
+    # "users"
+    # "nofail"
+    # "rw"
   # ];
   # };
 
