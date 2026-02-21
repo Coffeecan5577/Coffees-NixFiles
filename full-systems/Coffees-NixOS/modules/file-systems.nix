@@ -40,4 +40,17 @@
   # "rw"
   # ];
   # };
+
+  # fileSystems."/media/NTFS-Client-Drive" = {
+    # device = "/dev/disk/by-uuid/98A442BDA4429E1E";
+    # fsType = "ntfs-3g";
+
+    # Define which users can do what with the mounted drive:
+    # options = [
+      # "users"
+      # "nofail"
+      # "rw"
+    # ];
+  # };
+
 }
