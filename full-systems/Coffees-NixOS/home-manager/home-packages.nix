@@ -54,6 +54,7 @@
     obsidian
     onlyoffice-desktopeditors
     pika-backup
+    rustdesk-flutter
     snes9x-gtk
     virt-manager
     zed-editor
