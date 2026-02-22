@@ -32,6 +32,7 @@
     nix-output-monitor
     nix-prefetch-scripts
     nvd
+    rustdesk-server
     sops
     ssh-to-age
   ];
