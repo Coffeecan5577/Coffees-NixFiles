@@ -10,6 +10,7 @@
     ./nh.nix
     ./nix.nix
     ./nvf.nix
+    ./rustdesk-server.nix
     ./sops.nix
     ./ssh.nix
     ./store-management.nix
