@@ -8,9 +8,9 @@ programs.fish = {
       rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/$hostname#$hostname";
       rebuild-Nix-nom = "rebuild-Nix &| nom";
       rebuild-Nix-Home = "home-manager switch --file ~/Coffees-NixFiles/full-systems/$hostname/home-manager/home.nix";
-      update-Nix-Flake = "sudo nix flake update";
-      config-Nix-Home = "sudo nano ~/Coffees-NixFiles/full-systems/$hostname/home-manager/home.nix";
-      config-Nix-Flake = "sudo nano ~/Coffees-NixFiles/full-systems/$hostname/flake.nix";
+      update-Nix-Flake = "nix flake update";
+      config-Nix-Home = "nvim ~/Coffees-NixFiles/full-systems/$hostname/home-manager/home.nix";
+      config-Nix-Flake = "nvim ~/Coffees-NixFiles/full-systems/$hostname/flake.nix";
       cleanup-Nix = "sudo nix-collect-garbage -d";
       rebuild-Nix-Boot = "sudo nixos-rebuild boot";
   
