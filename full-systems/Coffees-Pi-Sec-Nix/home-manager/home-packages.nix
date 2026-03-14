@@ -27,6 +27,9 @@
 
   # Desktop Applications
 
+  # Server Applications
+    actual-server
+
   # Other utilities
     age
     nix-output-monitor
