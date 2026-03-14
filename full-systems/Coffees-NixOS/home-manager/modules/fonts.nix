@@ -10,6 +10,7 @@
     noto-fonts-lgc-plus
     noto-fonts-color-emoji
     font-awesome
+    pixel-code
     powerline-fonts
     powerline-symbols    
   ];
