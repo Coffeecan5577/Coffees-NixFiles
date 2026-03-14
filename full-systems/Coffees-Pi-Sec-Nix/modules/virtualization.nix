@@ -24,7 +24,7 @@
     # flintlock
 
     qemu
-    lima
+    # lima
 
     podman-compose
     podman-tui
