@@ -28,7 +28,7 @@
         dark = "Gruvbox Dark";
       };
       terminal = {
-        font_family = "Monaspace Neon";
+        font_family = "pixel-code"; # Replace back with Monaspace Neon if pixel-code does not look right
         font_size = 18;
         line_height = "standard";
       };
