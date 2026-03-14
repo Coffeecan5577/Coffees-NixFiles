@@ -15,6 +15,7 @@
       buffer_font_family = "Segoe UI";
       icon_theme = "Colored Zed Icons Theme Dark";
       base_keymap = "VSCode";
+      colorize_brackets = true;
       telemetry = { 
         diagnostics = true;
         metrics = true;
@@ -28,7 +29,7 @@
         dark = "Gruvbox Dark";
       };
       terminal = {
-        font_family = "pixel-code"; # Replace back with Monaspace Neon if pixel-code does not look right
+        font_family = "Pixel Code"; # Replace back with Monaspace Neon if pixel-code does not look right
         font_size = 18;
         line_height = "standard";
       };
