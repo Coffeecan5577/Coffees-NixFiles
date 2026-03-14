@@ -24,12 +24,12 @@
       ui_font_size = 20;
       buffer_font_size = 18;
       theme = {
-        mode = "system";
-        light = "Gruvbox Dark";
+        mode = "dark";
+        light = "Gruvbox Light";
         dark = "Gruvbox Dark";
       };
       terminal = {
-        font_family = "Pixel Code"; # Replace back with Monaspace Neon if pixel-code does not look right
+        font_family = "Monaspace Neon"; # Replace back with Monaspace Neon if pixel-code does not look right
         font_size = 18;
         line_height = "standard";
       };
