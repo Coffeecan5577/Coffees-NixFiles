@@ -1,7 +1,6 @@
 {
   programs.zed-editor = {
-    enable = true;
-    # themes = {"Gruvbox Dark"}; 
+    enable = true; 
     extensions = [
       "colored-zed-icons-theme"
       "nix" 
@@ -29,7 +28,7 @@
         dark = "Gruvbox Dark";
       };
       terminal = {
-        font_family = "Monaspace Neon"; # Replace back with Monaspace Neon if pixel-code does not look right
+        font_family = "JetBrains Mono"; # Replace back with Monaspace Neon if pixel-code does not look right
         font_size = 18;
         line_height = "standard";
       };
