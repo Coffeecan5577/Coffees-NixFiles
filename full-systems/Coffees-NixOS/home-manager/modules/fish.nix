@@ -14,6 +14,13 @@ programs.fish = {
       cleanup-Nix = "sudo nix-collect-garbage -d";
       rebuild-Nix-Boot = "sudo nixos-rebuild boot";
   
+      # SSH Device Connection aliases
+      # Connect to Coffees-Pi-Sec NixOS Raspberry Pi 
+      connect-Coffees-Pi-Sec = "ssh -i ~/.ssh/Coffees-Pi-Sec-Key coffeecan@10.10.1.123";
+ 
+      # Connect to Coffees-Pi-Mon NixOS Raspberry Pi 
+      connect-Coffees-Pi-Mon = "ssh -i ~/.ssh/Coffees-Pi-Mon-Key coffeecan@10.10.1.124";
+
       # General commmand aliases
       ls = "eza -al --color=always --group-directories-first --icons"; # Preferred listing
       la = "eza -a --color=always --group-directories-first --icons"; # all files and directories
