@@ -38,6 +38,7 @@
     wofi
 
   # Desktop Applications
+    brave
     deluge
     dolphin-emu
     duckstation
@@ -54,7 +55,6 @@
     obsidian
     onlyoffice-desktopeditors
     pika-backup
-    qutebrowser-qt5
     rustdesk-flutter
     # snes9x-gtk
     virt-manager
