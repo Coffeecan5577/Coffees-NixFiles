@@ -11,6 +11,7 @@
     ./nh.nix
     ./nix.nix
     ./nvf.nix
+    ./pki.nix
     # ./rustdesk-server.nix
     ./sops.nix
     ./ssh.nix
