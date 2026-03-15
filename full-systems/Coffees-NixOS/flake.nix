@@ -1,5 +1,5 @@
 {
-  description = "Coffees NixOS System Configuration";
+  description = "Coffees NixOS System Configuration ❄️";
 
   inputs = {
 
