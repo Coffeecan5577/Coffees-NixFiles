@@ -16,6 +16,7 @@
     fastfetch
     git
     lshw
+    mkcert
     oh-my-posh
     showmethekey
     silicon
