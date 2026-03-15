@@ -38,10 +38,10 @@
     wofi
 
   # Desktop Applications
-    brave
     deluge
     dolphin-emu
     duckstation
+    firefox
     flameshot
     gitkraken
     gparted
