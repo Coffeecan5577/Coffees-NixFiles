@@ -1,6 +1,6 @@
 {
   imports = [
-    # ./actual.nix
+    ./actual.nix
     ./boot.nix
     ./display-manager.nix
     ./env.nix
