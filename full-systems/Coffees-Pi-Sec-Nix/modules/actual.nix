@@ -8,8 +8,8 @@
      settings = {
        port = 5006;
        https = {
-         key = "/home/coffeecan/.local/share/mkcert/key.pem";
-         cert = "/home/coffeecan/.local/share/mkcert/cert.pem";
+         key = "/home/coffeecan/.local/share/mkcert/actual-server.key";
+         cert = "/home/coffeecan/.local/share/mkcert/actual-server.crt";
        };
      };
    };
