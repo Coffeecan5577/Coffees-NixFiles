@@ -67,7 +67,7 @@
 
         "custom/weather" = {
           format = " {} ";
-          exec = "curl -s 'wttr.in/Gruver?format=%c%h%t%w'";
+          exec = "curl -s 'wttr.in/Gruver?format=2'";  # Formatting options were format=%c %h %t %w
           interval = 300;
           class = "weather";
         };
