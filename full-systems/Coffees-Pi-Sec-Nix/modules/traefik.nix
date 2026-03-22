@@ -20,7 +20,9 @@
           http.tls.certresolver = "letsencrypt";
         };
       };
+
+      api.dashboard = true;
+
     };
-    api.dashboard = true;
   };
 }
