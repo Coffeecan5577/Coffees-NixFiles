@@ -39,5 +39,6 @@
     rustdesk-server
     sops
     ssh-to-age
+    traefik
   ];
 }
