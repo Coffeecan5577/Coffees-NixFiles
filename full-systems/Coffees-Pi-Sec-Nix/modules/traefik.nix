@@ -21,5 +21,6 @@
         };
       };
     };
+    api.dashboard = true;
   };
 }
