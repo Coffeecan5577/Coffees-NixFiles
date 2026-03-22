@@ -17,6 +17,7 @@
     ./ssh.nix
     ./store-management.nix
     ./timezone.nix
+    ./traefik.nix
     ./user.nix
     ./virtualization.nix
   ];
