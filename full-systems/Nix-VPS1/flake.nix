@@ -16,6 +16,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Metropolis flake configuration
+    metropolis.url = "github:5c0/metropolis";
+
     # Nix Packages URL
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
@@ -29,9 +32,10 @@
   outputs =
     {
       home-manager,
+      metropolis,
       nix-index-database,
       nixpkgs-unstable,
-      nvf,
+      nvf,  
       self,
       ...
     }@inputs:
