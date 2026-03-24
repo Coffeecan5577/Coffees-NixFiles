@@ -6,7 +6,7 @@
 
     # Home Manager configuration
     home-manager = {
-      unstable-url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -16,14 +16,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Metropolis flake configuration
-    metropolis.url = "github:5c0/metropolis";
-
     # Niri window manager flake
     niri-flake.url = "github:sodiboo/niri-flake";
 
     # Nix Packages URL
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # NVF Neovim Nix configuration flake
     nvf = {
@@ -35,10 +32,9 @@
   outputs =
     {
       home-manager,
-      metropolis,
       niri-flake,
       nix-index-database,
-      nixpkgs-unstable,
+      nixpkgs,
       nvf,  
       self,
       ...
@@ -56,7 +52,7 @@
 
       makeSystem =
         { hostname, stateVersion }:
-        nixpkgs-unstable.lib.nixosSystem {
+        nixpkgs.lib.nixosSystem {
           system = system;
           specialArgs = {
             inherit
@@ -76,7 +72,7 @@
 
     in
     {
-      nixosConfigurations = nixpkgs-unstable.lib.foldl' (
+      nixosConfigurations = nixpkgs.lib.foldl' (
         configs: host:
         configs
         // {
@@ -87,7 +83,7 @@
       ) { } hosts;
 
       homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-        pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+        pkgs-unstable = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = {
           inherit inputs homeStateVersion user;
         };

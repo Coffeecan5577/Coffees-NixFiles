@@ -8,7 +8,6 @@
     ./firewall.nix
     ./hardware.nix
     ./home-manager.nix
-    ./hyprland.nix
     ./kernel.nix
     ./net.nix
     ./nh.nix
