@@ -19,6 +19,9 @@
     # Metropolis flake configuration
     metropolis.url = "github:5c0/metropolis";
 
+    # Niri window manager flake
+    niri-flake.url = "github:sodiboo/niri-flake";
+
     # Nix Packages URL
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
@@ -33,6 +36,7 @@
     {
       home-manager,
       metropolis,
+      niri-flake,
       nix-index-database,
       nixpkgs-unstable,
       nvf,  
