@@ -1,12 +1,12 @@
 {
-  description = "Coffees NixOS System Configuration ❄️";
+  description = "Coffees Nix-VPS1 System Configuration ❄️";
 
   # Inputs will be sorted alphabetically
   inputs = {
 
     # Home Manager configuration
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      unstable-url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -17,17 +17,11 @@
     };
 
     # Nix Packages URL
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # NVF Neovim Nix configuration flake
     nvf = {
       url = "github:NotAShelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Sops-Nix configuration
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -36,20 +30,19 @@
     {
       home-manager,
       nix-index-database,
-      nixpkgs,
+      nixpkgs-unstable,
       nvf,
       self,
-      sops-nix,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
-      homeStateVersion = "25.11";
+      homeStateVersion = "26.05";
       user = "coffeecan";
       hosts = [
         {
-          hostname = "Coffees-NixOS";
-          stateVersion = "25.11";
+          hostname = "Coffees-NixVPS1";
+          stateVersion = "26.05";
         }
       ];
 
@@ -70,7 +63,6 @@
             ./hosts/${hostname}/configuration.nix
             nix-index-database.nixosModules.default
             nvf.nixosModules.default
-            sops-nix.nixosModules.sops
           ];
         };
 
@@ -87,7 +79,7 @@
       ) { } hosts;
 
       homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
         extraSpecialArgs = {
           inherit inputs homeStateVersion user;
         };
