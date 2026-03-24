@@ -1,14 +1,15 @@
 {
   description = "Coffees NixOS System Configuration ❄️";
 
-  inputs = { # Inputs will be sorted alphabetically
+  # Inputs will be sorted alphabetically
+  inputs = {
 
     # Home Manager configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  
+
     # Nix Index Database Nix Configuration
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
