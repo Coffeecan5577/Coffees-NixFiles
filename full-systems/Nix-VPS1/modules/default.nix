@@ -9,7 +9,6 @@
     ./hardware.nix
     ./home-manager.nix
     ./kernel.nix
-    ./net.nix
     ./nh.nix
     ./nix.nix
     ./nvf.nix
