@@ -10,6 +10,7 @@
     ./home-manager.nix
     ./kernel.nix
     ./nh.nix
+    ./niri.nix
     ./nix.nix
     ./nvf.nix
     ./programming-languages.nix
