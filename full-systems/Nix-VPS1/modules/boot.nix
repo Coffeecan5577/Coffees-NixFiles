@@ -1,15 +1,14 @@
 { pkgs,  ... }:
 
 {
-  # Bootloader.
+  # Bootloader
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/vda";
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.timeout = 8;
   boot.initrd.enable = true;
   boot.initrd.verbose = false;
   boot.initrd.systemd.enable = true;
-  boot.initrd.availableKernelModules = [ "amdgpu" ];
-  boot.initrd.kernelModules          = [ "amdgpu" ];
   boot.consoleLogLevel = 3;
   boot.plymouth = {
     enable = true;

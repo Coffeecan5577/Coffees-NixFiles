@@ -6,9 +6,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet \
-          --time --time-format '%I:%M %p | %a • %h | %F' \
-          --cmd 'uwsm start hyprland'";
+        command = "${config.programs.niri.package}/bin/niri-session";
         user    = "greeter";
       };
     };
