@@ -45,7 +45,7 @@
       user = "coffeecan";
       hosts = [
         {
-          hostname = "Coffees-NixVPS1";
+          hostname = "Nix-VPS1";
           stateVersion = "26.05";
         }
       ];
