@@ -4,7 +4,6 @@
   # Bootloader
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/vda";
-  boot.loader.systemd-boot.enable = true;
   boot.loader.timeout = 8;
   boot.initrd.enable = true;
   boot.initrd.verbose = false;
