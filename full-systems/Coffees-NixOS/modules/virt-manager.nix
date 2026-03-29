@@ -7,5 +7,10 @@
   virtualisation = {
     libvirtd.enable = true;
     spiceUSBRedirection.enable = true;
+    libvirtd.qemu.package = pkgs.qemu;
+  };
+
+  services.qemuGuest = {
+    enable = true;
   };
 }
