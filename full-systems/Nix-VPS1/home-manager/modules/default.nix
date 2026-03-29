@@ -8,7 +8,6 @@
     ./fonts.nix
     ./ghostty.nix
     ./git.nix
-    ./niri
     ./oh-my-posh.nix
   ];
 }
