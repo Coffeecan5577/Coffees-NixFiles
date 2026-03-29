@@ -9,7 +9,7 @@
   
   # CLI utilities
     atuin
-    btop-rocm
+    btop
     cbonsai
     cliphist
     erdtree
@@ -26,7 +26,6 @@
     udisks
     ueberzugpp
     unzip
-    usbutils
     waybar
     wget
     wl-clipboard
