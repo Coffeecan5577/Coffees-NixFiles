@@ -33,4 +33,8 @@
     # lazydocker
     # docker-credential-helpers
   ];
+
+  virtualisation = {
+    qemu.guestAgent.enable = true;
+  };
 }

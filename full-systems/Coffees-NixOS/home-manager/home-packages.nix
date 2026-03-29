@@ -55,7 +55,6 @@
     obsidian
     onlyoffice-desktopeditors
     pika-backup
-    qemu
     rustdesk-flutter
     # snes9x-gtk
     virt-manager
