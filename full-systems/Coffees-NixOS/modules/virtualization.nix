@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   # Enable Podman
@@ -32,5 +32,5 @@
     docker-compose
     # lazydocker
     # docker-credential-helpers
-  ];
+  ];  
 }
