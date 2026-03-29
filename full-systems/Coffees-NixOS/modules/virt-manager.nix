@@ -13,4 +13,9 @@
   services.qemuGuest = {
     enable = true;
   };
+
+  services.spice-vdagentd = {
+    enable = true;   # Enable copy and paste between host and guest machines
+  };
+
 }
