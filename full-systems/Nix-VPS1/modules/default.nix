@@ -14,6 +14,7 @@
     ./nix.nix
     ./nvf.nix
     ./programming-languages.nix
+    ./qemu.nix
     ./ssh.nix
     ./timezone.nix
     ./user.nix
