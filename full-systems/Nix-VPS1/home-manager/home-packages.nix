@@ -38,6 +38,7 @@
     # libsForQt5.xwaylandvideobridge
     libnotify
     grim
+    noctalia-shell
 
   # Other utilities
     nix-output-monitor
