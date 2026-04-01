@@ -27,6 +27,12 @@
     # Nix Packages URL
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # Noctalia-Shell flake configuration
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # NVF Neovim Nix configuration flake
     nvf = {
       url = "github:NotAShelf/nvf";
