@@ -56,7 +56,7 @@
     onlyoffice-desktopeditors
     pika-backup
     rustdesk-flutter
-    # snes9x-gtk
+    snes9x-gtk
     virt-manager
     zed-editor
 
