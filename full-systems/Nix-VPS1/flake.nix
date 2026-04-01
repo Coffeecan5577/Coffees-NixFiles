@@ -46,6 +46,7 @@
       niri-flake,
       nix-index-database,
       nixpkgs,
+      noctalia
       nvf,  
       self,
       ...
@@ -101,6 +102,8 @@
 
         modules = [
           ./home-manager/home.nix
+          niri.homeModules.niri # Import niri's home-manager module
+          noctalia.homeModules.default # Import noctalia-shell home-manager module
         ];
       };
     };
