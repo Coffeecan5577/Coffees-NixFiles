@@ -5,8 +5,8 @@
     go
     (python313.withPackages(ps: with ps; [ pygobject3 gobject-introspection pyqt6-sip]))
     uv
-    nodePackages_latest.nodejs
-    nodePackages_latest.pnpm
+    # nodePackages_latest.nodejs
+    # nodePackages_latest.pnpm
     lua
     nil
     nixd
