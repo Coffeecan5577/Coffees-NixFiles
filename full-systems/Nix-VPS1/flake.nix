@@ -16,6 +16,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Nixmate TUI flake
+    nixmate = {
+      url = "github:daskladas/nixmate";
+    };
+
     # Niri window manager flake
     niri-flake.url = "github:sodiboo/niri-flake";
 
