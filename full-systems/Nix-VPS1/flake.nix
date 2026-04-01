@@ -46,7 +46,7 @@
       niri-flake,
       nix-index-database,
       nixpkgs,
-      noctalia
+      noctalia,
       nvf,  
       self,
       ...
