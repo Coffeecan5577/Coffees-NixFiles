@@ -22,7 +22,10 @@
     };
 
     # Niri window manager flake
-    niri-flake.url = "github:sodiboo/niri-flake";
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Nix Packages URL
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -43,7 +46,7 @@
   outputs =
     {
       home-manager,
-      niri-flake,
+      niri,
       nix-index-database,
       nixpkgs,
       noctalia,
@@ -102,7 +105,7 @@
 
         modules = [
           ./home-manager/home.nix
-          niri-flake.homeModules.niri # Import niri's home-manager module
+          niri.homeModules.niri # Import niri's home-manager module
           noctalia.homeModules.default # Import noctalia-shell home-manager module
         ];
       };
