@@ -12,7 +12,7 @@
     ./nh.nix
     ./niri.nix
     ./nix.nix
-    ./noctalia-shell.nix
+    # ./noctalia-shell.nix
     ./nvf.nix
     ./programming-languages.nix
     ./qemu.nix
