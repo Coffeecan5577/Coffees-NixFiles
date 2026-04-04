@@ -105,8 +105,8 @@
 
         modules = [
           ./home-manager/home.nix
-          niri.homeModules.niri # Import niri's home-manager module
-          noctalia.homeModules.default # Import noctalia-shell home-manager module
+          inputs.niri.homeModules.niri # Import niri's home-manager module
+          inputs.noctalia.homeModules.default # Import noctalia-shell home-manager module
         ];
       };
     };
