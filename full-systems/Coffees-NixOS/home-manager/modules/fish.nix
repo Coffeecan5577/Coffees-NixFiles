@@ -1,8 +1,17 @@
-{ config, ...}: {
+{ config, lib, pkgs, ...}: 
+{
 
-programs.fish = {
+  programs.fish = {
     enable = true;
-    shellAliases = {
+   
+      functions = {
+        fish_greeting = {
+          description = "Greeting to show when initializing new fish shell";
+          body = "Welcome to NixOS! Initializing fish now... ❄️";
+        };
+      };
+
+      shellAliases = {
     
       # Nix-specific aliases
       rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/$hostname#$hostname";
