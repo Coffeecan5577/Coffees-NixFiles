@@ -5,7 +5,6 @@
     ./cursor.nix
     ./dconf.nix
     ./eza.nix
-    ./fastfetch-icons
     ./fastfetch.nix
     ./fish.nix
     ./fonts.nix
