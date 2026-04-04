@@ -95,9 +95,9 @@
         "workspace 2,class:(ranger)"
         "workspace 3,class:(ghostty)"
         "workspace 4,class:(obsidian)"
-        "workspace 5,class:(monitor)"
-        "workspace 6,class:(cartridges)"
-        "workspace 7,class:(codium)"
+        "workspace 5,class:(btop-rocm)"
+        "workspace 6,class:(gaming)"
+        "workspace 7,class:(zed-editor)"
         "workspace 8,class:(keepassxc)"
         "workspace 9,class:(gitkraken)"
 
