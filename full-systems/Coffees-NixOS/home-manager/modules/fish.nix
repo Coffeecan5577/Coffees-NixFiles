@@ -7,7 +7,7 @@
       functions = {
         fish_greeting = {
           description = "Greeting to show when initializing new fish shell";
-          body = "Welcome to NixOS! Initializing fish now... ❄️";
+          body = '' echo "Welcome to NixOS! Initializing fish now... ❄️" '';
         };
       };
 
