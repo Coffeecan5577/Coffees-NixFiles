@@ -2,6 +2,7 @@
 {
   programs.nvf = {
     enable = true;
+    enableManpages = true;
 
     # Settings need to go under the settings attribute set
     settings = {
