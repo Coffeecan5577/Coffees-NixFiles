@@ -21,9 +21,21 @@
         };
 
         # Enabling plugins
+        autocomplete.nvim-cmp.enable = true;
+        binds = {
+          cheatsheet.enable = true;
+          hardtime-nvim.enable = true;
+        };
+        clipboard = {
+          enable = true;
+          providers.wl-copy.enable = true;
+        };
+        comments = {
+          comment-nvim.enable = true;
+        };
         statusline.lualine.enable = true;
         telescope.enable = true;
-        autocomplete.nvim-cmp.enable = true;
+        
 
         # Enabling language support
         languages = {
