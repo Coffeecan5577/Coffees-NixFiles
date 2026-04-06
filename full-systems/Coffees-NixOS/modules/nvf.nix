@@ -7,9 +7,6 @@
     # Settings need to go under the settings attribute set
     settings = {
       vim = {
-        
-        # Set custom key repeat rate for nvim key presses (lower numbers mean a faster rate. Set to 1000 by default)
-        timeoutlen = 250;
 
         # Theme Configuration settings
         theme = {
