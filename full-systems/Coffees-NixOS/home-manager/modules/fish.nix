@@ -9,6 +9,11 @@
           description = "Greeting to show when initializing new fish shell";
           body = '' echo "Welcome to NixOS! Initializing fish now... ❄️" '';
         };
+
+        manpager = {
+          description = "Function used to set the MANPAGER variable that utilizes a certain program to read man pages";
+          body = '' set -Ux PAGER nvim '';
+        };
       };
 
       shellAliases = {
