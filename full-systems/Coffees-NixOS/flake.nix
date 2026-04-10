@@ -4,6 +4,12 @@
   # Inputs will be sorted alphabetically
   inputs = {
 
+    # Drift terminal screensaver flake
+    drift = {
+      url = "github:phlx0/drift";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Home Manager configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
@@ -39,6 +45,7 @@
 
   outputs =
     {
+      drift,
       home-manager,
       nix-index-database,
       nixpkgs,
