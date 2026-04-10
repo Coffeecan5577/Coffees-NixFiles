@@ -12,7 +12,7 @@
 
         manpager = {
           description = "Function used to set the MANPAGER variable that utilizes a certain program to read man pages";
-          body = '' set -Ux PAGER nvim '';
+          body = '' set -Ux $PAGER nvim '';
         };
       };
 
