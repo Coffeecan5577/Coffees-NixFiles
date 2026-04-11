@@ -1,23 +1,28 @@
-{ config, lib, pkgs, ...}: 
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
 
   programs.fish = {
     enable = true;
-   
-      functions = {
-        fish_greeting = {
-          description = "Greeting to show when initializing new fish shell";
-          body = '' echo "Welcome to NixOS! Initializing fish now... ❄️" '';
-        };
 
-        manpager = {
-          description = "Function used to set the MANPAGER variable that utilizes a certain program to read man pages";
-          body = '' set -Ux $PAGER nvim '';
-        };
+    functions = {
+      fish_greeting = {
+        description = "Greeting to show when initializing new fish shell";
+        body = ''echo "Welcome to NixOS! Initializing fish now... ❄️" '';
       };
 
-      shellAliases = {
-    
+      manpager = {
+        description = "Function used to set the MANPAGER variable that utilizes a certain program to read man pages";
+        body = "set -Ux $PAGER nvim ";
+      };
+    };
+
+    shellAliases = {
+
       # Nix-specific aliases
       rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/$hostname#$hostname";
       rebuild-Nix-nom = "rebuild-Nix &| nom";
@@ -27,11 +32,11 @@
       config-Nix-Flake = "nvim ~/Coffees-NixFiles/full-systems/$hostname/flake.nix";
       cleanup-Nix = "sudo nix-collect-garbage -d";
       rebuild-Nix-Boot = "sudo nixos-rebuild boot";
-  
+
       # SSH Device Connection aliases
       # Connect to Coffees-Pi-Sec NixOS Raspberry Pi 
       connect-Coffees-Pi-Sec = "ssh -i ~/.ssh/Coffees-Pi-Sec-Key coffeecan@10.10.1.123";
- 
+
       # Connect to Coffees-Pi-Mon NixOS Raspberry Pi 
       connect-Coffees-Pi-Mon = "ssh -i ~/.ssh/Coffees-Pi-Mon-Key coffeecan@10.10.1.124";
 
@@ -47,13 +52,13 @@
 
       # Force the amount of output of the mount command to be listed in columns:
       lsmount = "mount | column -t";
- 
+
       # display my external ip address:
       extip = "curl icanhazip.com";
 
       # Display the top 5 processes using the most RAM:
       mem5 = "ps auxf | sort -nr -k 4 | head -5 | column -t";
-    
+
       # Display the top 5 processes using the most CPU resources:
       cpu5 = "ps auxf | sort -nr -k 3 | head -5 | column -t";
 
