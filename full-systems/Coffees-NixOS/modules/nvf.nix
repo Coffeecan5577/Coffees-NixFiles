@@ -41,7 +41,11 @@
         languages = {
           enableTreesitter = true;
           go.enable = true;
-          nix.enable = true;
+          nix = {
+            enable = true;
+            format.enable = true;
+            format.type = "alejandra";
+          };
           python.enable = true;
           terraform.enable = true;
         };
