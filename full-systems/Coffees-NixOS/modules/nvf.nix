@@ -44,7 +44,7 @@
           nix = {
             enable = true;
             format.enable = true;
-            format.type = "alejandra";
+            format.type = ["alejandra"];
           };
           python.enable = true;
           terraform.enable = true;
