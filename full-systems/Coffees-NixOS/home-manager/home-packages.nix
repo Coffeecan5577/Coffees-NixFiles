@@ -41,7 +41,6 @@
   # Desktop Applications
     deluge
     dolphin-emu
-    firefox
     flameshot
     gitkraken
     gparted
