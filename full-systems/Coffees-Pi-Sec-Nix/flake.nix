@@ -5,7 +5,7 @@
 
     # Home Manager configuration
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   
@@ -16,7 +16,7 @@
     };
 
     # Nix Packages URL
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 
     # NVF Neovim Nix configuration flake
     nvf = {
@@ -33,10 +33,10 @@
 
   outputs = { home-manager, nixpkgs, nvf, self, sops-nix, ... }@inputs: let
     system = "aarch64-linux";
-    homeStateVersion = "25.11";
+    homeStateVersion = "26.05";
     user = "coffeecan";
     hosts = [
-      { hostname = "Coffees-Pi-Sec-Nix"; stateVersion = "25.11"; }
+      { hostname = "Coffees-Pi-Sec-Nix"; stateVersion = "26.05"; }
     ];
 
     makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
