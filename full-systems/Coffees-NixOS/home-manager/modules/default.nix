@@ -4,6 +4,7 @@
     ./btop-rocm.nix
     ./cursor.nix
     ./dconf.nix
+    # ./drift.nix
     ./eza.nix
     ./fastfetch.nix
     ./fish.nix
