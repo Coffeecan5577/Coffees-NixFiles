@@ -10,7 +10,6 @@
       "$mainMod,       F, togglefloating,"
       "$mainMod,       D, exec, $menu --show drun"
       "$mainMod,       P, pin,"
-      "$mainMod,       J, togglesplit,"
       "$mainMod,       V, exec, cliphist list | $menu --dmenu | cliphist decode | wl-copy"
       "$mainMod,       B, exec, pkill -SIGUSR2 waybar"
       "$mainMod SHIFT, B, exec, pkill -SIGUSR1 waybar"

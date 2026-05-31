@@ -40,7 +40,6 @@
   # Desktop Applications
     deluge
     dolphin-emu
-    duckstation
     firefox
     flameshot
     gitkraken
@@ -55,7 +54,7 @@
     obsidian
     onlyoffice-desktopeditors
     pika-backup
-    rustdesk-flutter
+    # rustdesk-flutter
     # snes9x-gtk
     virt-manager
     zed-editor

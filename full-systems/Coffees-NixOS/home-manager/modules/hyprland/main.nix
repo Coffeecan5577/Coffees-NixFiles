@@ -2,9 +2,9 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
+
     settings = {
       env = [
-        # Hint Electron apps to use Wayland
         "NIXOS_OZONE_WL,1"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
@@ -14,13 +14,12 @@
       ];
 
       monitor = "e-DP1,1920x1200@120,auto,1";
+
       "$mainMod" = "SUPER";
       "$terminal" = "ghostty";
       "$fileManager" = "$terminal -e sh -c 'ranger'";
       "$browser" = "librewolf";
       "$menu" = "wofi";
-      # "$notes" = "obsidian";
-      # "$editor" = "codium";
 
       exec-once = [
         "waybar"
@@ -50,17 +49,13 @@
         active_opacity = 1.0;
         inactive_opacity = 1.0;
 
-        shadow = {
-          enabled = false;
-        };
+        shadow.enabled = false;
 
-        blur = {
-          enabled = false;
-        };
+        blur.enabled = false;
       };
 
       animations = {
-        enabled = "yes please :)";
+        enabled = true;
       };
 
       input = {
@@ -69,8 +64,8 @@
       };
 
       dwindle = {
-        pseudotile = true;
         preserve_split = true;
+        smart_split = true;
       };
 
       master = {
@@ -84,32 +79,42 @@
         disable_hyprland_logo = true;
       };
 
-      windowrulev2 = [
-        "bordersize 0, floating:0, onworkspace:w[t1]"
+      windowrule = [
+        # Floating windows
+        "float on, match:class ^(mpv|imv|showmethekey-gtk)$"
 
-        "float,class:(mpv)|(imv)|(showmethekey-gtk)"
-        "move 990 60,size 900 170,pin,noinitialfocus,class:(showmethekey-gtk)"
-        "noborder,nofocus,class:(showmethekey-gtk)"
+        # ShowMeTheKey
+        "move 990 60, match:class ^(showmethekey-gtk)$"
+        "size 900 170, match:class ^(showmethekey-gtk)$"
+        "pin on, match:class ^(showmethekey-gtk)$"
+        "no_initial_focus on, match:class ^(showmethekey-gtk)$"
+        "border_size 0, match:class ^(showmethekey-gtk)$"
+        "no_focus on, match:class ^(showmethekey-gtk)$"
 
-        "workspace 1,class:(librewolf)"
-        "workspace 2,class:(ranger)"
-        "workspace 3,class:(ghostty)"
-        "workspace 4,class:(obsidian)"
-        "workspace 5,class:(btop-rocm)"
-        "workspace 6,class:(gaming)"
-        "workspace 7,class:(zed-editor)"
-        "workspace 8,class:(keepassxc)"
-        "workspace 9,class:(gitkraken)"
+        # Workspace assignments
+        "workspace 1, match:class ^(librewolf)$"
+        "workspace 2, match:class ^(ranger)$"
+        "workspace 3, match:class ^(ghostty)$"
+        "workspace 4, match:class ^(obsidian)$"
+        "workspace 5, match:class ^(btop-rocm)$"
+        "workspace 6, match:class ^(gaming)$"
+        "workspace 7, match:class ^(zed-editor)$"
+        "workspace 8, match:class ^(keepassxc)$"
+        "workspace 9, match:class ^(gitkraken)$"
 
-        "suppressevent maximize, class:.*"
-        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+        # Suppress maximize requests
+        "suppress_event maximize, match:class .*"
 
-        "opacity 0.0 override, class:^(xwaylandvideobridge)$"
-        "noanim, class:^(xwaylandvideobridge)$"
-        "noinitialfocus, class:^(xwaylandvideobridge)$"
-        "maxsize 1 1, class:^(xwaylandvideobridge)$"
-        "noblur, class:^(xwaylandvideobridge)$"
-        "nofocus, class:^(xwaylandvideobridge)$"
+        # Empty XWayland helper windows
+        "no_focus on, match:class ^$, match:title ^$"
+
+        # XWaylandVideoBridge
+        "opacity 0.0 override, match:class ^(xwaylandvideobridge)$"
+        "no_anim on, match:class ^(xwaylandvideobridge)$"
+        "no_initial_focus on, match:class ^(xwaylandvideobridge)$"
+        "max_size 1 1, match:class ^(xwaylandvideobridge)$"
+        "no_blur on, match:class ^(xwaylandvideobridge)$"
+        "no_focus on, match:class ^(xwaylandvideobridge)$"
       ];
 
       workspace = [
