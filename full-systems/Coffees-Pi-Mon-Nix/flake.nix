@@ -4,11 +4,11 @@
   inputs = {
     
     # Nix Packages URL
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
  
     # Home Manager Configuration
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     }; 
 
@@ -27,10 +27,10 @@
 
   outputs = { self, nixpkgs, home-manager, sops-nix, nvf, ... }@inputs: let
     system = "aarch64-linux";
-    homeStateVersion = "25.11";
+    homeStateVersion = "26.05";
     user = "coffeecan";
     hosts = [
-      { hostname = "Coffees-Pi-Mon-Nix"; stateVersion = "25.11"; }
+      { hostname = "Coffees-Pi-Mon-Nix"; stateVersion = "26.05"; }
     ];
 
     makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
