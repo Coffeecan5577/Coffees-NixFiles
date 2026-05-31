@@ -14,6 +14,7 @@
     caligula
     cbonsai
     cliphist
+    drift
     erdtree
     fastfetch
     ghostty
