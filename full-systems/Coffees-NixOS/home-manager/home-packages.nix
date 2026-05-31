@@ -48,7 +48,7 @@
     keepassxc
     librewolf
     localsend
-    melonDS
+    melonds
     mgba
     nestopia-ue
     obsidian
