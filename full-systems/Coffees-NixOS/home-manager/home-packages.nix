@@ -45,6 +45,7 @@
     flameshot
     gitkraken
     gparted
+    higan
     inkscape
     keepassxc
     librewolf
@@ -55,8 +56,7 @@
     obsidian
     onlyoffice-desktopeditors
     pika-backup
-    # rustdesk-flutter
-    # snes9x-gtk
+    rustdesk-flutter
     virt-manager
     zed-editor
 
