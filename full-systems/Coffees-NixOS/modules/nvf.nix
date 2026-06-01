@@ -15,6 +15,9 @@
           style = "dark";
         };
 
+        # Enabling syntax highlighting
+        syntaxHighlighting = true;
+
         # Enabling LSP support for programming languages
         lsp = {
           enable = true;
@@ -53,6 +56,13 @@
         # Enabling colored UI modes
         ui.modes-nvim = {
           enable = true;
+        };
+
+        # Visual-based plugins
+        visuals = {
+          blink-indent.enable = true;
+          cinnamon-nvim.enable = true;
+          rainbow-delimiters.enable = true;
         };
       };
     };
