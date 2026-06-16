@@ -2,6 +2,14 @@
 
 programs.fish = {
     enable = true;
+
+    functions = {
+      fish_greeting = {
+        description = "Greeting to show when initializing new fish shell";
+        body = ''echo "Welcome to NixOS! Initializing fish now... ❄️" '';
+      };
+    };
+
     shellAliases = {
     
       # Nix-specific aliases
