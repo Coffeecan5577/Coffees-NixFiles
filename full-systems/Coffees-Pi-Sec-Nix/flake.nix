@@ -1,19 +1,15 @@
-{
   description = "Coffees Pi-Sec-Nix System Configuration ❄️"; 
 
   inputs = {  # Inputs will be sorted alphabetically
-
-    # Home Manager configuration
+    
+    # Home Manager Configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  
-    # Nix Index Database Nix Configuration
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+
+    # NixOS Hardware URL
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     # Nix Packages URL
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
@@ -24,14 +20,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Sops-Nix configuration
+    # Sops-Nix Configuration
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { home-manager, nixpkgs, nvf, self, sops-nix, ... }@inputs: let
+  outputs = { home-manager, nixos-hardware, nixpkgs, nvf, self, sops-nix, ... }@inputs: let
     system = "aarch64-linux";
     homeStateVersion = "26.05";
     user = "coffeecan";
@@ -47,8 +43,9 @@
 
       modules = [
         ./hosts/${hostname}/configuration.nix
-        sops-nix.nixosModules.sops
+        nixos-hardware.nixosModules.raspberry-pi-4
         nvf.nixosModules.default
+        sops-nix.nixosModules.sops
       ];
     };
 
