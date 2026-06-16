@@ -33,7 +33,7 @@
       connect-Coffees-Pi-Sec = "ssh -i ~/.ssh/Coffees-Pi-Sec-Key coffeecan@10.10.1.123";
 
       # Connect to Coffees-Pi-Mon NixOS Raspberry Pi 
-      connect-Coffees-Pi-Mon = "ssh -i ~/.ssh/Coffees-Pi-Mon-Key coffeecan@10.10.1.124";
+      connect-Coffees-Pi-Mon = "ssh -i ~/.ssh/Coffees-Pi-Mon-Key coffeecan@192.168.0.244";
 
       # General commmand aliases
       ls = "eza -al --color=always --group-directories-first --icons"; # Preferred listing
