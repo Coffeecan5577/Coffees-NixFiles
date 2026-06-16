@@ -2,33 +2,33 @@
   description = "Coffees Pi-Mon-Nix System Configuration";
 
   inputs = {
-    
-    # Nix Packages URL
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 
-    # NixOS Hardware URL
-    nixos-hardware.url = "github:NixOS/nixos-hardware";
- 
     # Home Manager Configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
-    }; 
-
-    # Sops-Nix Configuration
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # NixOS Hardware URL
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+    
+    # Nix Packages URL
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05"; 
 
     # NVF Neovim Nix configuration flake
     nvf = {
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Sops-Nix Configuration
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, sops-nix, nvf, ... }@inputs: let
+  outputs = { self, home-manager, nixos-hardware, nixpkgs, nvf, sops-nix, ... }@inputs: let
     system = "aarch64-linux";
     homeStateVersion = "26.05";
     user = "coffeecan";
@@ -45,8 +45,8 @@
       modules = [
         ./hosts/${hostname}/configuration.nix
         nixos-hardware.nixosModules.raspberry-pi-4
-        sops-nix.nixosModules.sops
         nvf.nixosModules.default
+        sops-nix.nixosModules.sops
       ];
     };
 
