@@ -5,6 +5,9 @@
     
     # Nix Packages URL
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+
+    # NixOS Hardware URL
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
  
     # Home Manager Configuration
     home-manager = {
@@ -25,7 +28,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, sops-nix, nvf, ... }@inputs: let
+  outputs = { self, nixpkgs, nixos-hardware,  home-manager, sops-nix, nvf, ... }@inputs: let
     system = "aarch64-linux";
     homeStateVersion = "26.05";
     user = "coffeecan";
