@@ -28,7 +28,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware,  home-manager, sops-nix, nvf, ... }@inputs: let
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, sops-nix, nvf, ... }@inputs: let
     system = "aarch64-linux";
     homeStateVersion = "26.05";
     user = "coffeecan";
@@ -44,6 +44,7 @@
 
       modules = [
         ./hosts/${hostname}/configuration.nix
+        nixos-hardware.nixosModules.raspberry-pi-4
         sops-nix.nixosModules.sops
         nvf.nixosModules.default
       ];
