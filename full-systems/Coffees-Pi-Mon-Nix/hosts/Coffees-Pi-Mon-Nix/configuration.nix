@@ -2,6 +2,7 @@
 
 {
   imports = [
+    <nixos-hardware/raspberry-pi/4>
     ./hardware-configuration.nix
     ./local-packages.nix
     ../../modules
