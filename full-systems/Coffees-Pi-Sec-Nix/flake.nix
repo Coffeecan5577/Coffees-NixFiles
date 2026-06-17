@@ -1,3 +1,4 @@
+{
   description = "Coffees Pi-Sec-Nix System Configuration ❄️"; 
 
   inputs = {  # Inputs will be sorted alphabetically
