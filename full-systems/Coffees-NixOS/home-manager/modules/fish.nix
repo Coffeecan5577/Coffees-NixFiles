@@ -30,7 +30,7 @@
 
       # SSH Device Connection aliases
       # Connect to Coffees-Pi-Sec NixOS Raspberry Pi 
-      connect-Coffees-Pi-Sec = "ssh -i ~/.ssh/Coffees-Pi-Sec-Key coffeecan@10.10.1.123";
+      connect-Coffees-Pi-Sec = "ssh -i ~/.ssh/Coffees-Pi-Sec-Key coffeecan@192.168.1.155";
 
       # Connect to Coffees-Pi-Mon NixOS Raspberry Pi 
       connect-Coffees-Pi-Mon = "ssh -i ~/.ssh/Coffees-Pi-Mon-Key coffeecan@192.168.0.244";
