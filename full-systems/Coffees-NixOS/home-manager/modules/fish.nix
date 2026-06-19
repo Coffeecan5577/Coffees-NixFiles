@@ -30,10 +30,10 @@
 
       # SSH Device Connection aliases
       # Connect to Coffees-Pi-Sec NixOS Raspberry Pi 
-      connect-Coffees-Pi-Sec = "ssh -i ~/.ssh/Coffees-Pi-Sec-Key coffeecan@192.168.0.155";
+      connect-Coffees-Pi-Sec = "ssh -i ~/.ssh/Coffees-Pi-Sec-Key coffeecan@10.10.0.160";
 
       # Connect to Coffees-Pi-Mon NixOS Raspberry Pi 
-      connect-Coffees-Pi-Mon = "ssh -i ~/.ssh/Coffees-Pi-Mon-Key coffeecan@192.168.0.244";
+      connect-Coffees-Pi-Mon = "ssh -i ~/.ssh/Coffees-Pi-Mon-Key coffeecan@10.10.0.27";
 
       # General commmand aliases
       ls = "eza -al --color=always --group-directories-first --icons"; # Preferred listing
