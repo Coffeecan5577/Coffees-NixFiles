@@ -20,7 +20,6 @@
     ./tmux.nix
     ./waybar
     ./wofi
-    ./zathura.nix
     ./zed-editor.nix
   ];
 }

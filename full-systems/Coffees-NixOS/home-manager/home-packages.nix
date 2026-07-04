@@ -39,6 +39,7 @@
     wofi
 
   # Desktop Applications
+    calibre
     deluge
     dolphin-emu
     flameshot
