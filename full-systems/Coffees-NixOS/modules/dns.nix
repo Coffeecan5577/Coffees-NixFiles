@@ -39,7 +39,7 @@
       };
 
       # You can choose a specific set of servers from https://github.com/DNSCrypt/dnscrypt-resolvers/blob/master/v3/public-resolvers.md
-      server_names = [ "nextdns" ];
+      server_names = [ "nextdns" "cloudflare" "cloudflare-security" ];
     };
   };
 
