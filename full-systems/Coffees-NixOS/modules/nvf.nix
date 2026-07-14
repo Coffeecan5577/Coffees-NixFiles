@@ -77,7 +77,7 @@
         # Utility and quality of life plugins
         utility = {
           oil-nvim.enable = true;
-          oil-nvim-gitStatus.enable = true;
+          oil-nvim.gitStatus.enable = true;
           snacks-nvim.enable = true;
         };
 
