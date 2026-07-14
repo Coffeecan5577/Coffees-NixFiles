@@ -13,6 +13,12 @@
         
         # Background blur value can be set to a non-negative integer, true or false
         background-blur = 5;
+
+        # Set custom cursor shader animation to be on all the time
+        custom-shader-animation = "always";
+
+        # Set custom cursor shader 
+        custom-shader = "~/.config/ghostty/shaders/cursor_warp.glsl";
       };
   };
 }
