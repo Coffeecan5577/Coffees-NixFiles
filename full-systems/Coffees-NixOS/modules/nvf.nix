@@ -8,6 +8,11 @@
     settings = {
       vim = {
 
+        # Enabling autopairs
+        autopairs = {
+          nvim-autopairs.enable = true;
+        };
+
         # Theme Configuration settings
         theme = {
           enable = true;
@@ -17,6 +22,11 @@
 
         # Enabling syntax highlighting
         syntaxHighlighting = true;
+
+        # Enabling some git functions
+        git = {
+          gitsigns.enable = true;
+        };
 
         # Enabling LSP support for programming languages
         lsp = {
@@ -52,10 +62,22 @@
           python.enable = true;
           terraform.enable = true;
         };
-       
+
+        # Enabling various UI settings
+        ui = {
+          colorful-menu-nvim.enable = true;
+        };
+
         # Enabling colored UI modes
         ui.modes-nvim = {
           enable = true;
+        };
+
+        # Utility and quality of life plugins
+        utility = {
+          oil-nvim.enable = true;
+          oil-nvim-gitStatus.enable = true;
+          snacks-nvim.enable = true;
         };
 
         # Visual-based plugins
