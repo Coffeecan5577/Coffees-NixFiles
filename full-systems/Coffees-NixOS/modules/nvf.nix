@@ -58,7 +58,7 @@
             enable = true;
             format.enable = true;
             format.type = ["alejandra"];
-            lsp.servers = "nixd";
+            lsp.servers = ["nixd"];
           };
           python.enable = true;
           terraform.enable = true;
