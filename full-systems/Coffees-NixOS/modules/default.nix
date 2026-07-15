@@ -7,7 +7,6 @@
     ./env.nix
     ./file-systems.nix
     ./firewall.nix
-    ./gamemode.nix
     ./hardware.nix
     ./home-manager.nix
     ./hyprland.nix
