@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   programs.bat = {
     enable = true;
-    settings = {
+    config = {
       pager = "nvim -c";
       manpager = "nvim -c";
       theme = "gruvbox-dark";
