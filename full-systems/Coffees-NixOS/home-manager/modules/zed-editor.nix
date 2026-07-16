@@ -10,7 +10,25 @@
       "python-snippets"
       "tmux"
     ];
+
     userSettings = {
+
+      languages = {
+        Nix = {
+          language_servers = ["nixd" "!nil"];
+        };
+      };
+
+       lsp = {
+         nixd = {
+           initialization_options = {
+             formatting = {
+               command = ["alejandra" "--quiet" "--"];
+             };
+           };
+         };
+       };
+
       buffer_font_family = "Pixel Code"; #Segoe UI was the font family listed here
       icon_theme = "Colored Zed Icons Theme Dark";
       base_keymap = "VSCode";
