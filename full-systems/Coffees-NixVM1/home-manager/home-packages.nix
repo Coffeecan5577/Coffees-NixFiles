@@ -46,5 +46,6 @@
 
   # Other utilities
     nix-prefetch-scripts
+    spice-vdagent
   ];
 }
