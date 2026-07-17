@@ -71,6 +71,7 @@
     age
     nix-output-monitor
     nix-prefetch-scripts
+    nurl
     nvd
     sops
     ssh-to-age
