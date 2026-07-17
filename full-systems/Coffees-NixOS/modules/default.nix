@@ -1,31 +1,13 @@
 {
   imports = [
-    ./audio.nix
-    ./boot.nix
-    ./clamav-scanner.nix
-    ./display-manager.nix
-    ./env.nix
-    ./file-systems.nix
-    ./firewall.nix
-    ./hardware.nix
-    ./home-manager.nix
-    ./hyprland.nix
-    ./kernel.nix
-    ./llm.nix
-    ./net.nix
-    ./nh.nix
-    ./nix.nix
-    ./nvf.nix
-    ./programming-languages.nix
-    ./sops.nix
-    ./ssh.nix
-    ./steam.nix
-    ./store-management.nix
-    ./syncthing.nix
-    ./timezone.nix
-    ./user.nix
-    ./virt-manager.nix
-    ./virtualization.nix
-    ./vpn.nix
+    ./applications
+    ./core
+    ./desktop
+    ./development
+    ./environment
+    ./networking
+    ./nix
+    ./security
+    ./virtualization
   ];
 }
