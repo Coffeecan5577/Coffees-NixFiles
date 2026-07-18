@@ -27,6 +27,7 @@
       config-Nix-Flake = "nvim ~/Coffees-NixFiles/full-systems/$hostname/flake.nix";
       cleanup-Nix = "sudo nix-collect-garbage -d";
       rebuild-Nix-Boot = "sudo nixos-rebuild boot";
+      nix-list-generations = "nixos-rebuild list-generations";
 
       # SSH Device Connection aliases
       # Connect to Coffees-Pi-Sec NixOS Raspberry Pi 
