@@ -2,11 +2,6 @@
   description = "Coffees Pi-Sec-Nix System Configuration ❄️"; 
 
   inputs = {  # Inputs will be sorted alphabetically
-    
-    # Areofyl Fetch URL
-    areofyl-fetch = {
-      url = "github:areofyl/fetch";
-    };
 
     # Home Manager Configuration
     home-manager = {
@@ -71,7 +66,6 @@
 
       modules = [
         ./home-manager/home.nix
-        inputs.areofyl-fetch.homeManagerModules.default
       ];
     };
   };
