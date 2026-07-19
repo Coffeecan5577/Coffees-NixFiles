@@ -3,6 +3,11 @@
 
   inputs = {  # Inputs will be sorted alphabetically
     
+    # Areofyl Fetch URL
+    areofyl-fetch = {
+      url = "github:aerofyl/fetch";
+    };
+
     # Home Manager Configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";

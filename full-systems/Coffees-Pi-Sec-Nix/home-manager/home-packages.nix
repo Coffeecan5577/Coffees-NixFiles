@@ -1,7 +1,10 @@
-{ pkgs, ... }: 
+{ pkgs, inputs, ... }: 
 
 {
   nixpkgs.config.allowUnfree = true;
+ 
+  # Adding import packages from flake inputs
+  imports = [inputs.areofyl-fetch.homeManagerModules.default ];
 
   home.packages = with pkgs; [
   
