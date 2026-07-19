@@ -5,7 +5,7 @@
     
     # Areofyl Fetch URL
     areofyl-fetch = {
-      url = "github:aerofyl/fetch";
+      url = "github:areofyl-fetch";
     };
 
     # Home Manager Configuration
@@ -33,7 +33,7 @@
     };
   };
 
-  outputs = { home-manager, nixos-hardware, nixpkgs, nvf, self, sops-nix, ... }@inputs: let
+  outputs = { areofyl-fetch, home-manager, nixos-hardware, nixpkgs, nvf, self, sops-nix, ... }@inputs: let
     system = "aarch64-linux";
     homeStateVersion = "26.05";
     user = "coffeecan";
