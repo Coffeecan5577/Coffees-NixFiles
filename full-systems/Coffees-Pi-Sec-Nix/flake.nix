@@ -5,7 +5,7 @@
     
     # Areofyl Fetch URL
     areofyl-fetch = {
-      url = "github:areofyl-fetch";
+      url = "github:areofyl/fetch";
     };
 
     # Home Manager Configuration
