@@ -33,7 +33,7 @@
     };
   };
 
-  outputs = { areofyl-fetch, home-manager, nixos-hardware, nixpkgs, nvf, self, sops-nix, ... }@inputs: let
+  outputs = { home-manager, nixos-hardware, nixpkgs, nvf, self, sops-nix, ... }@inputs: let
     system = "aarch64-linux";
     homeStateVersion = "26.05";
     user = "coffeecan";
@@ -71,6 +71,7 @@
 
       modules = [
         ./home-manager/home.nix
+        inputs.areofyl-fetch.homeManagerModules.default
       ];
     };
   };
