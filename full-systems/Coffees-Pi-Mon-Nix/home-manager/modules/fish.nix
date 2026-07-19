@@ -21,6 +21,7 @@ programs.fish = {
       config-Nix-Flake = "sudo nano ~/Coffees-NixFiles/full-systems/$hostname/flake.nix";
       cleanup-Nix = "sudo nix-collect-garbage -d";
       rebuild-Nix-Boot = "sudo nixos-rebuild boot";
+      nix-list-generations = "nixos-rebuild list-generations";
   
       # General commmand aliases
       ls = "eza -al --color=always --group-directories-first --icons"; # Preferred listing
