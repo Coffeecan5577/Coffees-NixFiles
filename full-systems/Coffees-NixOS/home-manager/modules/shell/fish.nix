@@ -72,6 +72,11 @@
 
       # Use the erdtree command to list icons, disk usage, specify directory levels, and show icons all in a human readable format
       erdtree = "erd --human --icons --long";
+
+      # General Application-related aliases
+      # Superfile run command (Uses spf by default)
+      superfile = "spf";
+
     };
   };
 }
