@@ -28,6 +28,7 @@
     ranger
     showmethekey
     silicon
+    superfile
     tealdeer
     udisks
     ueberzugpp
