@@ -5,7 +5,7 @@
     pinnedFolders = [
       {
         name = "Coffees-NixOS Files";
-        location = "home/coffeecan/Coffees-NixFiles/full-systems/Coffees-NixOS";
+        location = "/home/coffeecan/Coffees-NixFiles/full-systems/Coffees-NixOS";
       }
     ];
 
