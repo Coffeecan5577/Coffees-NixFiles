@@ -5,7 +5,7 @@
   networking = {
     nameservers = [ "127.0.0.1" "[::1]" ];
     # If using dhcpcd:
-    dhcpcd.enable = false; # disable, because enabled by default
+    dhcpcd.enable = true; # disable, because enabled by default
     dhcpcd.extraConfig = "nohook resolv.conf";
 
     # If using NetworkManager:
