@@ -75,7 +75,7 @@
 
       # General Application-related aliases
       # Superfile run command (Uses spf by default)
-      superfile = "spf";
+      # superfile = "spf";
 
     };
   };
