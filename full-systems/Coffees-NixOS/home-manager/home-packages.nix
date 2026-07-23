@@ -26,7 +26,6 @@
     nmap
     oh-my-posh
     opencode
-    ranger
     showmethekey
     silicon
     superfile
