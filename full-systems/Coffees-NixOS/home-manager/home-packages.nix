@@ -16,6 +16,7 @@
     cliphist
     drift
     erdtree
+    exiftool
     fastfetch
     ghostty
     git
@@ -38,6 +39,7 @@
     wget
     wl-clipboard
     wofi
+    zoxide
 
   # Desktop Applications
     calibre

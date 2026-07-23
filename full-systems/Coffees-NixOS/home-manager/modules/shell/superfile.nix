@@ -11,7 +11,7 @@
 
     settings = {
       default_sort_type = 0;
-      theme = "gruvbox";
+      theme = "gruvbox-dark-hard";
       transparent_background = true;
     };
   };
