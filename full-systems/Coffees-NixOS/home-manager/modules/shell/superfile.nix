@@ -2,8 +2,6 @@
   programs.superfile = {
     enable = true;
 
-    firstUseCheck = false;
-
     pinnedFolders = [
       {
         name = "Coffees-NixOS Files";
