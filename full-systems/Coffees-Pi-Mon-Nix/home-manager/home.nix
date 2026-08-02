@@ -1,7 +1,8 @@
-{ homeStateVersion, user, ... }: {
+{ inputs, homeStateVersion, user, ... }: {
   imports = [
     ./modules
     ./home-packages.nix
+    inputs.areofyl-fetch.homeManagerModules.default
     ];
 
     home = {
