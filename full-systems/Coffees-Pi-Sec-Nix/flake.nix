@@ -3,6 +3,11 @@
 
   inputs = {  # Inputs will be sorted alphabetically
 
+    # Areofyl Fetch package flake
+    areofyl-fetch = {
+      url = "github:areofyl/fetch";
+    };
+
     # Home Manager Configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
