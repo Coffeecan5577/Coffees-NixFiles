@@ -93,7 +93,7 @@
 
         # Workspace assignments
         "workspace 1, match:class ^(librewolf)$"
-        "workspace 2, match:class ^(ranger)$"
+        "workspace 2, match:class ^(superfile)$"
         "workspace 3, match:class ^(ghostty)$"
         "workspace 4, match:class ^(obsidian)$"
         "workspace 5, match:class ^(btop-rocm)$"
