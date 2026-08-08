@@ -1,8 +1,9 @@
 {
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
+  flake.modules.nixos.desktop-hyprland = {
+    programs.hyprland = {
+      enable = true;
+      xwayland.enable = true;
     };
-
-  security.pam.services.hyprlock = {};
+    security.pam.services.hyprlock = {};
+  };
 }

@@ -1,5 +1,0 @@
- {
-   imports = [
-   ./btop-rocm.nix
-   ];
- }

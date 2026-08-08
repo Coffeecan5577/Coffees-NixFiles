@@ -1,13 +1,20 @@
 {
   description = "Coffees NixOS System Configuration ❄️";
 
-  # Inputs will be sorted alphabetically
   inputs = {
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+    };
 
     # Home Manager configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Recursively imports every module under ./modules
+    import-tree = {
+      url = "github:vic/import-tree";
     };
 
     # Nix Index Database Nix Configuration
@@ -21,8 +28,10 @@
       url = "github:daskladas/nixmate";
     };
 
-    # Nix Packages URL
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    # Nix Packages Stable Branch URL
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-26.05";
+    };
 
     # NVF Neovim Nix configuration flake
     nvf = {
@@ -39,7 +48,6 @@
     # Stylix Nix Module URL
     stylix = {
       url = "github:nix-community/stylix/release-26.05";
-      # inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Zen Browser Twilight package flake
@@ -50,71 +58,11 @@
   };
 
   outputs =
-    {
-      home-manager,
-      nix-index-database,
-      nixpkgs,
-      nvf,
-      self,
-      sops-nix,
-      stylix,
-      zen-browser,
-      ...
-    }@inputs:
-    let
-      system = "x86_64-linux";
-      homeStateVersion = "26.05";
-      user = "coffeecan";
-      hosts = [
-        {
-          hostname = "Coffees-NixOS";
-          stateVersion = "26.05";
-        }
+    inputs@{ flake-parts, import-tree, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        (inputs.import-tree ./modules)
+        ./hosts/Coffees-NixOS
       ];
-
-      makeSystem =
-        { hostname, stateVersion }:
-        nixpkgs.lib.nixosSystem {
-          system = system;
-          specialArgs = {
-            inherit
-              inputs
-              stateVersion
-              hostname
-              user
-              ;
-          };
-
-          modules = [
-            ./hosts/${hostname}/configuration.nix
-            nix-index-database.nixosModules.default
-            nvf.nixosModules.default
-            sops-nix.nixosModules.sops
-            stylix.nixosModules.stylix
-          ];
-        };
-
-    in
-    {
-      nixosConfigurations = nixpkgs.lib.foldl' (
-        configs: host:
-        configs
-        // {
-          "${host.hostname}" = makeSystem {
-            inherit (host) hostname stateVersion;
-          };
-        }
-      ) { } hosts;
-
-      homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        extraSpecialArgs = {
-          inherit inputs homeStateVersion user;
-        };
-
-        modules = [
-          ./home-manager/home.nix
-        ];
-      };
     };
 }
