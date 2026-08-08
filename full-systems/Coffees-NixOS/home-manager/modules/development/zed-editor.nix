@@ -41,7 +41,7 @@
       ui_font_size = 20;
       buffer_font_size = 18;
       theme = {
-        mode = "dark";
+        mode = "light";
         light = "Gruvbox Light";
         dark = "Gruvbox Dark";
       };
