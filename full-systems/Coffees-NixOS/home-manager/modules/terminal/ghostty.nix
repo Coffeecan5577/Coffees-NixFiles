@@ -5,7 +5,7 @@
     enableFishIntegration = true;
     settings = 
       {
-        theme = "Gruvbox Dark";
+        theme = "Gruvbox Light Hard";
         font-size = 16;
         
         # Set windows transparency value and blur background
