@@ -17,7 +17,7 @@
 
       "$mainMod" = "SUPER";
       "$terminal" = "ghostty";
-      "$fileManager" = "$terminal -e sh -c 'ranger'";
+      "$fileManager" = "$terminal -e sh -c 'superfile'";
       "$browser" = "librewolf";
       "$menu" = "wofi";
 
