@@ -36,6 +36,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Stylix Nix Module URL
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Zen Browser Twilight package flake
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -51,6 +57,7 @@
       nvf,
       self,
       sops-nix,
+      stylix,
       zen-browser,
       ...
     }@inputs:
@@ -83,6 +90,7 @@
             nix-index-database.nixosModules.default
             nvf.nixosModules.default
             sops-nix.nixosModules.sops
+            stylix.nixosModules.stylix
           ];
         };
 
