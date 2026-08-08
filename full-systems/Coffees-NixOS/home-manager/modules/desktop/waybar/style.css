@@ -21,7 +21,7 @@ window#waybar {
   color: #1d2021;
 }
 #workspaces button.active {
-  background: #d65d0e;
+  background: #d79921;
 }
 
 #clock, #battery, #pulseaudio, #diskfree, #network, #weather {
