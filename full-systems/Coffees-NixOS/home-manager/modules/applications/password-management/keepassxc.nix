@@ -4,7 +4,7 @@
 
       GUI = {
           AdvancedSettings = true;
-          ApplicationTheme = "dark";
+          ApplicationTheme = "light";
           HidePasswords = true;
         };
     };
