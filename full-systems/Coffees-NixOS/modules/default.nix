@@ -1,6 +1,5 @@
 {
   imports = [
-    ./applications
     ./core
     ./desktop
     ./development
