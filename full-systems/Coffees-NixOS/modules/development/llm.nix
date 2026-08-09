@@ -7,8 +7,5 @@
       syncModels = true;
       package = pkgs.ollama-rocm;
     };
-    services.n8n = {
-      enable = false;
-    };
   };
 }

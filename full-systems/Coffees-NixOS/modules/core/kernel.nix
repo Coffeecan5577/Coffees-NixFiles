@@ -21,6 +21,7 @@
       "video4linux"
       "acpi_rev_override=5"
     ];
+
     # boot.kernelPatches = [ {
     #      name = "selinux-config";
     #      patch = null;

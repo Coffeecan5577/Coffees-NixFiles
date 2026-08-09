@@ -8,14 +8,17 @@
       dhcpcd.extraConfig = "nohook resolv.conf";
       # If using NetworkManager:
       networkmanager.dns = "none";
+
       # If using resolvconf:
       resolvconf = {
         enable = true; # FIXME remember to delete /etc/resolv.conf if you disable `resolvconf`
         useLocalResolver = true;
       };
+
       # If using iwd:
       wireless.iwd.settings.Network.NameResolvingService = "none";
     };
+
     services.dnscrypt-proxy = {
       enable = true;
       settings = {

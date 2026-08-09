@@ -39,6 +39,7 @@
         bind -n M-q kill-window
         bind -n M-Q kill-session
       '';
+
       plugins = with pkgs; [
         tmuxPlugins.gruvbox
         # {

@@ -2,12 +2,14 @@
   flake.modules.homeManager.shell-superfile = {
     programs.superfile = {
       enable = true;
+
       pinnedFolders = [
         {
           name = "Coffees-NixOS Files";
           location = "/home/coffeecan/Coffees-NixFiles/full-systems/Coffees-NixOS";
         }
       ];
+
       settings = {
         auto_check_update = true;
         code_previewer = "bat";

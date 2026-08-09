@@ -3,6 +3,7 @@
     programs.ghostty = {
       enable = true;
       enableFishIntegration = true;
+
       settings = {
         theme = "Gruvbox Light";
         font-size = 16;
