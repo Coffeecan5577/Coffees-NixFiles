@@ -2,12 +2,14 @@
   flake.modules.homeManager.shell-fish = { config, lib, pkgs, ... }: {
     programs.fish = {
       enable = true;
+
       functions = {
         fish_greeting = {
           description = "Greeting to show when initializing new fish shell";
           body = ''echo "Welcome to NixOS! Initializing fish now... ❄️" '';
         };
       };
+
       shellAliases = {
         # Nix-specific aliases
         rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/Coffees-NixOS#Coffees-NixOS";
@@ -18,11 +20,13 @@
         cleanup-Nix = "sudo nix-collect-garbage -d";
         rebuild-Nix-Boot = "sudo nixos-rebuild boot --flake ~/Coffees-NixFiles/full-systems/Coffees-NixOS#Coffees-NixOS";
         nix-list-generations = "nixos-rebuild list-generations";
+
         # SSH Device Connection aliases
         # Connect to Coffees-Pi-Sec NixOS Raspberry Pi
         connect-Coffees-Pi-Sec = "ssh -i ~/.ssh/Coffees-Pi-Sec-Key coffeecan@10.10.0.160";
         # Connect to Coffees-Pi-Mon NixOS Raspberry Pi
         connect-Coffees-Pi-Mon = "ssh -i ~/.ssh/Coffees-Pi-Mon-Key coffeecan@10.10.0.27";
+
         # General commmand aliases
         ls = "eza -al --color=always --group-directories-first --icons"; # Preferred listing
         la = "eza -a --color=always --group-directories-first --icons"; # all files and directories
@@ -49,9 +53,6 @@
         cat = "bat";
         # Use the erdtree command to list icons, disk usage, specify directory levels, and show icons all in a human readable format
         erdtree = "erd --human --icons --long";
-        # General Application-related aliases
-        # Superfile run command (Uses spf by default)
-        # superfile = "spf";
       };
     };
   };
