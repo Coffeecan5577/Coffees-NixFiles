@@ -2,7 +2,8 @@
   flake.modules.homeManager.desktop-hyprland = {
     wayland.windowManager.hyprland = {
       enable = true;
-      systemd.enable = true;
+      systemd.enable = false;
+      configType = "hyprlang";
       settings = {
         env = [
           "NIXOS_OZONE_WL,1"
@@ -15,7 +16,7 @@
         monitor = "e-DP1,1920x1200@120,auto,1";
         "$mainMod" = "SUPER";
         "$terminal" = "ghostty";
-        "$fileManager" = "$terminal -e sh -c 'superfile'";
+        "$fileManager" = "ghostty -e sh -c 'superfile'";
         "$browser" = "librewolf";
         "$menu" = "wofi";
         exec-once = [
