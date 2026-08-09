@@ -17,143 +17,142 @@
           };
         };
 
-        modules = [
-          "break"
-          {
-            type = "custom";
-            format = "┌──────────────────────Hardware──────────────────────┐";
-          }
+       modules =  [
+        "break"
+        {
+            type =  "custom";
+            format =  "┌──────────────────────Hardware──────────────────────┐";
+        }
 
-          {
+        {
             type = "host";
-            key = " PC";
+            key = " PC";
             keyColor = "green";
-          }
+        }
 
-          {
+        {
             type = "cpu";
             key = "│ ├󰻠";
             keyColor = "green";
-          }
+        }
 
-          {
+        {
             type = "gpu";
             key = "│ ├󰍛";
             keyColor = "green";
-          }
-          {
+        }
+        {
             type = "memory";
-            key = "│ ├";
+            key = "│ ├";
             keyColor = "green";
-          }
-          {
+        }
+        {
             type = "disk";
             key = "└ └󱁋";
             keyColor = "green";
-          }
-          {
+        }
+        {
             type = "custom";
             format = "└────────────────────────────────────────────────────┘";
-          }
+        }
 
-          "break"
+        "break"
 
-          {
+        {
             type = "custom";
             format = "┌──────────────────────Software──────────────────────┐";
-          }
-          {
+        }
+        {
             type = "os";
-            key = " OS";
+            key = " OS";
             keyColor = "yellow";
-          }
-          {
+        }
+        {
             type = "kernel";
-            key = "│ ├";
+            key = "│ ├";
             keyColor = "yellow";
-          }
-          {
+        }
+        {
             type = "bios";
-            key = "│ ├";
+            key = "│ ├";
             keyColor = "yellow";
-          }
-          {
+        }
+        {
             type = "packages";
             key = "│ ├󰏖";
             keyColor = "yellow";
-          }
-          {
+        }
+        {
             type = "shell";
-            key = "└ └";
+            key = "└ └";
             keyColor = "yellow";
-          }
+        }
 
-          "break"
+        "break"
 
-          {
+        {
             type = "de";
-            key = " DE";
+            key = " DE";
             keyColor = "blue";
-          }
-          {
+        }
+        {
             type = "lm";
-            key = "│ ├";
+            key = "│ ├";
             keyColor = "blue";
-          }
-          {
+        }
+        {
             type = "wm";
-            key = "│ ├";
+            key = "│ ├";
             keyColor = "blue";
-          }
-          {
+        }
+        {
             type = "wmtheme";
             key = "│ ├󰉼";
             keyColor = "blue";
-          }
-          {
+        }
+        {
             type = "terminal";
-            key = "└ └";
+            key = "└ └";
             keyColor = "blue";
-          }
-          {
+        }
+        {
             type = "custom";
             format = "└────────────────────────────────────────────────────┘";
-          }
+        }
 
-          "break"
+        "break"
 
-          {
+        {
             type = "custom";
             format = "┌────────────────────Uptime / Age / DT────────────────────┐";
-          }
-          {
+        }
+        {
             type = "command";
             key = "  OS Age ";
             keyColor = "magenta";
             text = "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days";
-          }
-          {
+        }
+        {
             type = "uptime";
             key = "  Uptime ";
             keyColor = "magenta";
-          }
-          {
+        }
+        {
             type = "datetime";
             key = "  DateTime ";
             keyColor = "magenta";
-          }
-          {
+        }
+        {
             type = "custom";
             format = "└─────────────────────────────────────────────────────────┘";
-          }
+        }
 
-          {
+        {
             type = "colors";
             paddingLeft = 2;
             symbol = "circle";
-          }
-        ];
-      };
-    };
-  };
+        }
+       ];
+     };
+   };
 }
