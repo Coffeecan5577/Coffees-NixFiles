@@ -20,14 +20,14 @@
             format-icons = {
               "1" = "󰈹";
               "2" = "󰪶";
-              "3" = "";
+              "3" = "";
               "4" = "󰎞";
-              "5" = "";
+              "5" = "󰗶";
               "6" = "󰖺";
               "7" = "󱃖";
               "8" = "󰟵";
-              "9" = "";
-              "10" = " ";
+              "9" = "";
+              "10" = "";
             };
             persistent-workspaces = {
               "*" = 9;
@@ -63,37 +63,41 @@
             "tooltip-format-disconnected" = "Wi-Fi Disconnected";
             "tooltip-format-disabled" = "Wi-Fi Disabled";
           };
+
           "custom/weather" = {
             format = " {} ";
             exec = "curl -s 'wttr.in/Gruver?format=2'"; # Formatting options were format=%c %h %t %w
             interval = 300;
             class = "weather";
           };
-          "pulseaudio" = {
-            format = "{icon} {volume}%";
-            format-bluetooth = "{icon} {volume}% ";
-            format-muted = "";
-            format-icons = {
-              "headphones" = "";
-              "handsfree" = "";
-              "headset" = "";
-              "phone" = "";
-              "portable" = "";
-              "car" = "";
-              "default" = [ "" "" ];
-            };
-            on-click = "pavucontrol";
+
+	"pulseaudio" = {
+          format = "{icon} {volume}%";
+          format-bluetooth = "{icon} {volume}% ";
+          format-muted = "";
+          format-icons = {
+            "headphones" = "";
+            "handsfree" = "";
+            "headset" = "";
+            "phone" = "";
+            "portable" = "";
+            "car" = "";
+            "default" = ["" ""];
           };
-          "battery" = {
-            states = {
-              warning = 30;
-              critical = 1;
-            };
-            format = "{icon} {capacity}%";
-            format-charging = " {capacity}%";
-            format-alt = "{time} {icon}";
-            format-icons = [ "" "" "" "" "" ];
+          on-click = "pavucontrol";
+        };
+
+        "battery" = {
+          states = {
+            warning = 30;
+            critical = 1;
           };
+          format = "{icon} {capacity}%";
+          format-charging = " {capacity}%";
+          format-alt = "{time} {icon}";
+          format-icons = ["" "" "" "" ""];
+        };
+
           "clock" = {
             format = "󰃭 {:%d.%m.%Y - %H:%M}";
             format-alt = "󰃭 {:%A, %B %d at %R}";
