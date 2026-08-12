@@ -12,6 +12,13 @@
             nvim-autopairs.enable = true;
           };
 
+          # Enabling neo-tree file tree for file previews in NVF
+          filetree = {
+            neo-tree = {
+              enable = true;
+            };
+          };
+
           # Theme Configuration settings
           theme = {
             enable = true;
