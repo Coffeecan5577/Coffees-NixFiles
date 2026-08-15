@@ -6,7 +6,7 @@
       settings = {
         logo = {
           type = "kitty-direct";
-          source = "~/Coffees-NixFiles/full-systems/Coffees-NixOS/modules/shell/fastfetch-icons/Nix-Gruvbox-Rainbow.png";
+          source = "~/Coffees-NixFiles/full-systems/Coffees-NixOS/modules/shell/fastfetch-icons/Nix-Gruvbox-Rainbow-Light-Outline.png";
           height = 18;
           width = 42;
           padding = {
