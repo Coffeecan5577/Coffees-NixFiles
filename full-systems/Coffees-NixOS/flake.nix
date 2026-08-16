@@ -26,6 +26,7 @@
     # Nixmate TUI flake
     nixmate = {
       url = "github:daskladas/nixmate";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Nix Packages Stable Branch URL
@@ -48,6 +49,7 @@
     # Stylix Nix Module URL
     stylix = {
       url = "github:nix-community/stylix/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Zen Browser Twilight package flake
