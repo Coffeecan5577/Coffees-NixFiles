@@ -32,6 +32,7 @@
         flakeArgs.config.flake.modules.homeManager.applications-keepassxc
         flakeArgs.config.flake.modules.homeManager.applications-flameshot
 
+        flakeArgs.config.flake.modules.homeManager.shell-atuin
         flakeArgs.config.flake.modules.homeManager.shell-bat
         flakeArgs.config.flake.modules.homeManager.shell-eza
         flakeArgs.config.flake.modules.homeManager.shell-fastfetch
