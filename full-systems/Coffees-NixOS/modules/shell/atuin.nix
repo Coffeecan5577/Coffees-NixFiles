@@ -98,8 +98,8 @@
           command_chaining = true;
           keymap_mode = "vim-normal";
         };
-       };
-     };
+      };
+     enableFishIntegration = true;
     };
   };
 }
