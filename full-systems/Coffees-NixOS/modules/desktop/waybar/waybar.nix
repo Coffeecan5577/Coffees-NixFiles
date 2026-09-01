@@ -99,7 +99,7 @@
         };
 
           "clock" = {
-            format = "󰃭 {:%d.%m.%Y - %H:%M}";
+            format = "󰃭 {:%m.%d.%Y - %H:%M}";
             format-alt = "󰃭 {:%A, %B %d at %R}";
           };
           "custom/diskfree" = {
