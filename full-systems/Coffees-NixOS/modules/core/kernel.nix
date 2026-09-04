@@ -6,6 +6,7 @@
     # security.protectKernelImage = true;
     security.unprivilegedUsernsClone = true;
     security.virtualisation.flushL1DataCache = "cond";
+
     boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
     boot.kernelParams = [
       "quiet"
@@ -15,8 +16,24 @@
       "systemd.show_status=auto"
       "fbcon=nodefer"
       "vt.global_cursor_default=0"
+      "lsm=landlock,lockdown,yama,integrity,apparmor,bpf"
       "usbcore.autosuspend=-1"
       "video4linux"
+
+      # AMD CPU power management: gives amd-pstate's firmware-level
+      # CPPC control instead of the older, coarser acpi-cpufreq driver.
+      "amd_pstate=active"
+
+      # AMD-Vi (IOMMU): DMA isolation for devices/VMs. Passthrough mode
+      # keeps overhead low for non-virtualized use while still enabling
+      # IOMMU groups for future VM/PCI-passthrough work.
+      "amd_iommu=on"
+      "iommu=pt"
+
+      # Zero memory on allocation/free to close use-after-free and
+      # uninitialized-memory info-leak classes of bugs.
+      "init_on_alloc=1"
+      "init_on_free=1"
     ];
 
     # boot.kernelPatches = [ {
