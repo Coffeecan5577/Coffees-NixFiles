@@ -17,7 +17,7 @@
         theme = {
           enable = true;
           name = "gruvbox";
-          style = "dark";
+          style = "light";
         };
 
         # Enabling syntax highlighting
