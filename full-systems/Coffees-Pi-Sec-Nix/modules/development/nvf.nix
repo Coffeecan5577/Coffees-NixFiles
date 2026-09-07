@@ -1,5 +1,6 @@
-{ pkgs, lib, ... }:
 {
+  flake.modules.nixos.development-nvf = { pkgs, lib, ...}: 
+  {
   programs.nvf = {
     enable = true;
     enableManpages = true;
@@ -90,4 +91,5 @@
       };
     };
   };
+ };
 }

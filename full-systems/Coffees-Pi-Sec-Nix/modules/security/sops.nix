@@ -1,4 +1,6 @@
 {
+  flake.modules.nixos.security-sops = {
+    
   sops = {
     defaultSopsFile = ../../secrets/secrets.yaml;
     defaultSopsFormat = "yaml";
@@ -16,5 +18,6 @@
       example-key = {};
       traefik = {};
     };
+   };
   };
 }

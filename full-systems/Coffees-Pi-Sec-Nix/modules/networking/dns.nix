@@ -1,6 +1,6 @@
-{ ... }:
-
 {
+  flake.modules.nixos.networking-dns = {
+    
   # Enable Encrypted DNS
   networking = {
     nameservers = [ "127.0.0.1" "[::1]" ];
@@ -46,4 +46,5 @@
   systemd.services.dnscrypt-proxy2.serviceConfig = {
     StateDirectory = "dnscrypt-proxy";
   };
+ };
 }

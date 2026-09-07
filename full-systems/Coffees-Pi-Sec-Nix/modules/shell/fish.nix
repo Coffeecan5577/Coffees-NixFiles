@@ -1,6 +1,7 @@
-{ config, ...}: {
-
-programs.fish = {
+{
+  flake.modules.homeManager.shell-fish = { config, lib, pkgs, ...}:
+  {
+    programs.fish = {
     enable = true;
 
     functions = {
@@ -13,12 +14,10 @@ programs.fish = {
     shellAliases = {
     
       # Nix-specific aliases
-      rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/$hostname#$hostname";
+      rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/Coffees-Pi-Sec-Nix#Coffees-Pi-Sec-Nix";
       rebuild-Nix-nom = "rebuild-Nix &| nom";
-      rebuild-Nix-Home = "home-manager switch --flake ~/Coffees-NixFiles/full-systems/$hostname#coffeecan";
-      update-Nix-Flake = "sudo nix flake update";
-      config-Nix-Home = "sudo nano ~/Coffees-NixFiles/full-systems/$hostname/home-manager/home.nix";
-      config-Nix-Flake = "sudo nano ~/Coffees-NixFiles/full-systems/$hostname/flake.nix";
+      update-Nix-Flake = "nix flake update ~/Coffees-NixFiles/full-systems/Coffees-Pi-Sec-Nix";
+      config-Nix-Flake = "sudo nano ~/Coffees-NixFiles/full-systems/Coffees-Pi-Sec-Nix/flake.nix";
       cleanup-Nix = "sudo nix-collect-garbage -d";
       rebuild-Nix-Boot = "sudo nixos-rebuild boot";
       nix-list-generations = "nixos-rebuild list-generations";
@@ -60,5 +59,7 @@ programs.fish = {
       # Use the erdtree command to list icons, disk usage, specify directory levels, and show icons all in a human readable format
       erdtree = "erd --human --icons --long";
     };
+  };
+      
   };
 }

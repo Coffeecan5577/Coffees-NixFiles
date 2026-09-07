@@ -1,4 +1,6 @@
-{ config, pkgs, lib, ... }:
-{
-  hardware.enableRedistributableFirmware = true;
+{ 
+  flake.modules.nixos.core-hardware = {pkgs, ...}:
+  {
+    hardware.enableRedistributableFirmware = true;
+  };
 }

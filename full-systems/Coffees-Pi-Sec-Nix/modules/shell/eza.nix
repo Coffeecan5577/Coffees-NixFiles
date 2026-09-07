@@ -1,4 +1,5 @@
 {
+  flake.modules.homeManager.shell-eza = {
   programs.eza = {
     enable = true;
     enableFishIntegration = true;
@@ -9,5 +10,6 @@
       "--group-directories-first"
       "--header"
     ];
+  };  
   };
 }

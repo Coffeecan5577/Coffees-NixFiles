@@ -1,5 +1,6 @@
-{ pkgs, ...}:
 {
+  flake.modules.nixos.applications-actual = { pkgs, ...}:
+  {
   services.actual= {
      enable = true;
      openFirewall = true;
@@ -13,4 +14,5 @@
        };
      };
    };
+  };
 }

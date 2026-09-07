@@ -1,6 +1,8 @@
-{ user, ... }: {
-  programs.nh = {
-    enable = true;
-    flake = "/home/${user}/flake";
+{
+  flake.modules.nixos.nix-nh = {
+    programs.nh = {
+      enable = true;
+      flake = "/home/coffeecan/flake";
     };
+  };
 }
