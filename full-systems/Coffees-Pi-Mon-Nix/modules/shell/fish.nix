@@ -1,6 +1,7 @@
-{ config, ...}: {
-
-programs.fish = {
+{
+  flake.modules.homeManager.shell-fish = { config, lib, pkgs, ...}:
+  {
+    programs.fish = {
     enable = true;
 
     functions = {
@@ -11,18 +12,16 @@ programs.fish = {
     };
 
     shellAliases = {
-    
+
       # Nix-specific aliases
-      rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/$hostname#$hostname";
+      rebuild-Nix = "sudo nixos-rebuild switch --flake ~/Coffees-NixFiles/full-systems/Coffees-Pi-Mon-Nix#Coffees-Pi-Mon-Nix";
       rebuild-Nix-nom = "rebuild-Nix &| nom";
-      rebuild-Nix-Home = "home-manager switch --flake ~/Coffees-NixFiles/full-systems/$hostname#coffeecan";
-      update-Nix-Flake = "sudo nix flake update";
-      config-Nix-Home = "sudo nano ~/Coffees-NixFiles/full-systems/$hostname/home-manager/home.nix";
-      config-Nix-Flake = "sudo nano ~/Coffees-NixFiles/full-systems/$hostname/flake.nix";
+      update-Nix-Flake = "nix flake update ~/Coffees-NixFiles/full-systems/Coffees-Pi-Mon-Nix";
+      config-Nix-Flake = "sudo nano ~/Coffees-NixFiles/full-systems/Coffees-Pi-Mon-Nix/flake.nix";
       cleanup-Nix = "sudo nix-collect-garbage -d";
       rebuild-Nix-Boot = "sudo nixos-rebuild boot";
       nix-list-generations = "nixos-rebuild list-generations";
-  
+
       # General commmand aliases
       ls = "eza -al --color=always --group-directories-first --icons"; # Preferred listing
       la = "eza -a --color=always --group-directories-first --icons"; # all files and directories
@@ -35,13 +34,13 @@ programs.fish = {
 
       # Force the amount of output of the mount command to be listed in columns:
       lsmount = "mount | column -t";
- 
+
       # display my external ip address:
       extip = "curl icanhazip.com";
 
       # Display the top 5 processes using the most RAM:
       mem5 = "ps auxf | sort -nr -k 4 | head -5 | column -t";
-    
+
       # Display the top 5 processes using the most CPU resources:
       cpu5 = "ps auxf | sort -nr -k 3 | head -5 | column -t";
 
@@ -50,7 +49,7 @@ programs.fish = {
 
       # Prompt the user before overwriting an existing file using the copy command
       cp = "cp -i";
-
+ 
       # Prompt the user before removing any files using the remove command
       rm = "rm -i";
 
@@ -60,5 +59,7 @@ programs.fish = {
       # Use the erdtree command to list icons, disk usage, specify directory levels, and show icons all in a human readable format
       erdtree = "erd --human --icons --long";
     };
+  };
+
   };
 }

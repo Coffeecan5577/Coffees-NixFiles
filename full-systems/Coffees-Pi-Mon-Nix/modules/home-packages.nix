@@ -1,12 +1,13 @@
-{ pkgs, ... }: 
-
 {
+  flake.modules.homeManager.home-packages = { pkgs, ...}:
+  {
+
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-  
+
   # Packages in each category are sorted alphabetically
-  
+
   # CLI utilities
     atuin
     btop
@@ -16,6 +17,7 @@
     fastfetch
     git
     lshw
+    mkcert
     oh-my-posh
     showmethekey
     silicon
@@ -25,15 +27,13 @@
     wget
     wl-clipboard
 
-  # Desktop Applications
-
   # Other utilities
     age
     nix-output-monitor
     nix-prefetch-scripts
     nvd
-    rustdesk-server
     sops
     ssh-to-age
   ];
+  };
 }

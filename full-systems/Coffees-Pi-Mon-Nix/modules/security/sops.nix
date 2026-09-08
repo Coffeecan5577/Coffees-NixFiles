@@ -1,4 +1,6 @@
 {
+  flake.modules.nixos.security-sops = {
+
   sops = {
     defaultSopsFile = ../../secrets/secrets.yaml;
     defaultSopsFormat = "yaml";
@@ -14,7 +16,7 @@
     secrets = {
       # This is the actual specification of the secrets.
       example-key = {};
-      "myservice/my_subdir/my_secret" = {};
     };
+   };
   };
 }

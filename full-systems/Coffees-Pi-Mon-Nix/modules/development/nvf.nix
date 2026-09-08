@@ -1,5 +1,6 @@
-{ pkgs, lib, ... }:
 {
+  flake.modules.nixos.development-nvf = { pkgs, lib, ...}:
+  {
   programs.nvf = {
     enable = true;
     enableManpages = true;
@@ -17,7 +18,7 @@
         theme = {
           enable = true;
           name = "gruvbox";
-          style = "dark";
+          style = "light";
         };
 
         # Enabling syntax highlighting
@@ -49,7 +50,7 @@
         statusline.lualine.enable = true;
         telescope.enable = true;
         
-
+        
         # Enabling language support
         languages = {
           enableTreesitter = true;
@@ -90,4 +91,5 @@
       };
     };
   };
+ };
 }

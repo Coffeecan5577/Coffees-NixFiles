@@ -8,9 +8,25 @@
       url = "github:areofyl/fetch";
     };
 
+    # Flake-Parts for modularizing flakes
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+    };
+
     # Home Manager Configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Recursively imports every module under ./modules
+    import-tree = {
+      url = "github:vic/import-tree";
+    };
+
+    # Nix Index Database Nix Configuration
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -33,45 +49,12 @@
     };
   };
 
-  outputs = { self, home-manager, nixos-hardware, nixpkgs, nvf, sops-nix, ... }@inputs: let
-    system = "aarch64-linux";
-    homeStateVersion = "26.05";
-    user = "coffeecan";
-    hosts = [
-      { hostname = "Coffees-Pi-Mon-Nix"; stateVersion = "26.05"; }
-    ];
-
-    makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
-      system = system;
-      specialArgs = {
-        inherit inputs stateVersion hostname user;
-      };
-
-      modules = [
-        ./hosts/${hostname}/configuration.nix
-        nixos-hardware.nixosModules.raspberry-pi-4
-        nvf.nixosModules.default
-        sops-nix.nixosModules.sops
+  outputs = 
+    inputs@{ flake-parts, import-tree, ...}:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        (inputs.import-tree ./modules)
+        ./hosts/Coffees-Pi-Mon-Nix
       ];
     };
-
-  in {
-    nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
-      configs // {
-        "${host.hostname}" = makeSystem {
-          inherit (host) hostname stateVersion;
-        };
-      }) {} hosts;
-
-    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
-      extraSpecialArgs = {
-        inherit inputs homeStateVersion user;
-      };
-
-      modules = [
-        ./home-manager/home.nix
-      ];
-    };
-  };
 }
