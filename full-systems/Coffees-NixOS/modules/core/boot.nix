@@ -14,7 +14,7 @@
 
     # Workaround for amdgpu flip_done timed out / display freeze bug
     # (disables Panel Self Refresh) — see gitlab.freedesktop.org/drm/amd/-/work_items/4141
-    boot.kernelParams = [ "amdgpu.dcdebugmask=0x10" ];
+    # boot.kernelParams = [ "amdgpu.dcdebugmask=0x10" ];
 
     boot.consoleLogLevel = 3;
     boot.plymouth = {
