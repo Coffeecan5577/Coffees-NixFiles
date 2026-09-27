@@ -23,12 +23,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Nixmate TUI flake
-    nixmate = {
-      url = "github:daskladas/nixmate";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Nix Packages Stable Branch URL
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-26.05";
