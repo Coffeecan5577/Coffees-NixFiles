@@ -29,6 +29,7 @@
 
   # Other utilities
     age
+    nixmate
     nix-output-monitor
     nix-prefetch-scripts
     nvd
