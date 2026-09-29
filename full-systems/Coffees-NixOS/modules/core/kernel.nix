@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.core-kernel = { pkgs, ... }: {
+  flake.modules.nixos.core-kernel = { pkgs, inputs, ... }: {
     # Linux Kernel
     security.forcePageTableIsolation = true;
     # security.lockKernelModules = true;
@@ -35,6 +35,15 @@
       "init_on_alloc=1"
       "init_on_free=1"
     ];
+
+    # Specialization: boot into the CachyOS kernel to test a display-freeze
+    # patch (amdgpu flip_done timed out) not yet in mainline/zen. 
+    # Select "cachyos-kernel" from the systemd-boot menu at boot time. 
+
+    specialisation.cachyos-kernel.configuration = {
+      boot.kernelPackages = pkgs.linuxPackagesFor
+        inputs.nix-cachyos-kernel.packages.${pkgs.system}.linux-cachyos-latest-zen4;
+    };
 
     # boot.kernelPatches = [ {
     #      name = "selinux-config";
