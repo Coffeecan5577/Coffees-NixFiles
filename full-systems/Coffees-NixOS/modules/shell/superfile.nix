@@ -20,7 +20,7 @@
         ignore_missing_fields = true;
         metadata = true;
         nerdfont = true;
-        theme = "gruvbox";
+        theme = "gruvbox-dark-hard";
         transparent_background = true;
         zoxide_support = true;
       };
