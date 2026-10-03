@@ -17,12 +17,6 @@
       url = "github:vic/import-tree";
     };
 
-    # CachyOS kernel flake, for testing a patch not yet in mainline
-    # (amdgpu flip_done timed out / display freeze — see gitlab.freedesktop.org/drm/amd/-/work_items/5616)
-    nix-cachyos-kernel = {
-      url = "github:xddxdd/nix-cachyos-kernel";
-    };
-
     # Nix Index Database Nix Configuration
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
