@@ -36,17 +36,6 @@
       "init_on_free=1"
     ];
 
-    # Specialization: boot into the CachyOS kernel to test a display-freeze
-    # patch (amdgpu flip_done timed out) not yet in mainline/zen. 
-    # Select "cachyos-kernel" from the systemd-boot menu at boot time. 
-
-    specialisation.cachyos-kernel.configuration = {
-      boot.kernelPackages = lib.mkForce (
-          pkgs.linuxPackagesFor
-            inputs.nix-cachyos-kernel.packages.${pkgs.system}.linux-cachyos-latest-zen4
-      );
-    };
-
     # boot.kernelPatches = [ {
     #      name = "selinux-config";
     #      patch = null;
