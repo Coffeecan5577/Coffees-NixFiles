@@ -11,6 +11,8 @@
       btop-rocm
       caligula
       cbonsai
+      claude-code
+      claude-monitor
       cliphist
       drift
       erdtree
