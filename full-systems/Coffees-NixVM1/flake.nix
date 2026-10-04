@@ -34,16 +34,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Sops-Nix configuration
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Stylix Nix Module URL
     stylix = {
       url = "github:nix-community/stylix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Zen Browser Twilight package flake 
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
     };
   };
 
