@@ -1,61 +1,58 @@
 {
-  description = "Coffees NixVM1 System Configuration";
+  description = "Coffees NixVM Template System Configuration ❄️";
 
   inputs = {
-    
-    # Nix Packages URL
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
- 
-    # Custom Japanese Font import URL
-    # nixos-fonts.url = "github:Takamatsu-Naoki/nixos-fonts";
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+    };
 
+    # Home Manager configuration
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # stylix = {
-      # url = "github:nix-community/stylix/release-25.05";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    # };   
-  };
-
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
-    system = "x86_64-linux";
-    homeStateVersion = "25.11";
-    user = "coffeecan";
-    hosts = [
-      { hostname = "Coffees-NixVM1"; stateVersion = "25.11"; }
-    ];
-
-    makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
-      system = system;
-      specialArgs = {
-        inherit inputs stateVersion hostname user;
-      };
-
-      modules = [
-        ./hosts/${hostname}/configuration.nix
-      ];
+    # Recursively imports every module under ./modules
+    import-tree = {
+      url = "github:vic/import-tree";
     };
 
-  in {
-    nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
-      configs // {
-        "${host.hostname}" = makeSystem {
-          inherit (host) hostname stateVersion;
-        };
-      }) {} hosts;
+    # Nix Index Database Nix Configuration
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
-      extraSpecialArgs = {
-        inherit inputs homeStateVersion user;
-      };
+    # Nix Packages Stable Branch URL
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-26.05";
+    };
 
-      modules = [
-        ./home-manager/home.nix
-      ];
+    # NVF Neovim Nix configuration flake
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Sops-Nix configuration
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Stylix Nix Module URL
+    stylix = {
+      url = "github:nix-community/stylix/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
+  outputs =
+    inputs@{ flake-parts, import-tree, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        (inputs.import-tree ./modules)
+        ./hosts/Coffees-NixVM1
+      ];
+    };
 }
