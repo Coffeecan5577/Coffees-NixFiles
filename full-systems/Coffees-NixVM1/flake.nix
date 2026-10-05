@@ -2,6 +2,12 @@
   description = "Coffees NixVM Template System Configuration ❄️";
 
   inputs = {
+
+    # Areofyl Fetch package flake 
+    areofyl-fetch = {
+      url = "github:areofyl/fetch";
+    };
+
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
     };
