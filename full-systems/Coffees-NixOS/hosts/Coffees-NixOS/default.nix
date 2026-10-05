@@ -38,7 +38,6 @@
       config.flake.modules.nixos.virtualization-podman
 
       # Development + environment
-      config.flake.modules.nixos.development-llm
       config.flake.modules.nixos.development-nvf
       config.flake.modules.nixos.development-programming-languages
       config.flake.modules.nixos.environment-env
