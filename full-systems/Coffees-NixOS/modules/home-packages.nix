@@ -41,7 +41,6 @@
       zoxide
 
       # Desktop Applications
-      brave
       calibre
       deluge
       dolphin-emu
