@@ -44,8 +44,8 @@
 
         theme = {
           mode = "light";
-          light = "Gruvbox Light";
-          dark = "Gruvbox Dark";
+          light = "Snowflake Transparent";
+          dark = "Snowflake Transparent";
         };
 
         terminal = {
