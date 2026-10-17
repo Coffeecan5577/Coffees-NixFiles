@@ -4,7 +4,7 @@
       package = pkgs.btop-rocm;
       enable = true;
       settings = {
-        color_theme = "gruvbox_light";
+        color_theme = "kyli0x";
         theme_background = true;
       };
     };
