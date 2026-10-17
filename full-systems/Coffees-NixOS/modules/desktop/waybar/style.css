@@ -2,14 +2,14 @@
   border: none;
   border-radius: 0px;
   font-family: "Pixel Code","Symbols Nerd Font Mono";
-  font-weight: bold;
+/*  font-weight: bold; */
   font-size: 16px;
   min-height: 0;
   color: #1d2021;
 }
 
 window#waybar {
-  background: #FBF1C7;
+  background: #C8f1FF;
 }
 
 /* Workspace Buttons */
