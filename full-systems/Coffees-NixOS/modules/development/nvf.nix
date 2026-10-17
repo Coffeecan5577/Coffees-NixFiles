@@ -22,8 +22,9 @@
           # Theme Configuration settings
           theme = {
             enable = true;
-            name = "gruvbox";
+            name = "github";
             style = "light";
+            transparent = true;
           };
 
           # Enabling syntax highlighting
