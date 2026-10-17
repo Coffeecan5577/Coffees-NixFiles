@@ -17,6 +17,11 @@
       url = "github:vic/import-tree";
     };
 
+    # Nix Datifier flake 
+    nixdatifier = {
+      url = "github:Muddyblack/nixdatifier";
+    };
+
     # Nix Index Database Nix Configuration
     nix-index-database = {
       url = "github:nix-community/nix-index-database";

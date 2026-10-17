@@ -16,6 +16,9 @@
       config.flake.modules.nixos.core-user
       config.flake.modules.nixos.core-home-manager
 
+      # Generation Management
+      config.flake.modules.nixos.generation-management.nixdatifier
+
       # Nix
       config.flake.modules.nixos.nix-nh
       config.flake.modules.nixos.nix-settings
@@ -48,6 +51,7 @@
       config.flake.modules.nixos.desktop-hyprland
 
       # External flake modules (unchanged from original flake.nix)
+      inputs.nixdatifier.nixosModules.default
       inputs.nix-index-database.nixosModules.default
       inputs.nvf.nixosModules.default
       inputs.sops-nix.nixosModules.sops
