@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.generation-management.nixdatifier = {pkgs, lib, inputs, ...}: {
+  flake.modules.nixos.generation-management-nixdatifier = {lib, ...}: {
     programs.nixdatifier = {
       enable = true;
     };

@@ -17,7 +17,7 @@
       config.flake.modules.nixos.core-home-manager
 
       # Generation Management
-      config.flake.modules.nixos.generation-management.nixdatifier
+      config.flake.modules.nixos.generation-management-nixdatifier
 
       # Nix
       config.flake.modules.nixos.nix-nh
