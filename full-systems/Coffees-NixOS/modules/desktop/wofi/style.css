@@ -1,10 +1,10 @@
 window {
   margin: 0px;
   border: 5px solid;
-  border-image: linear-gradient(135deg, #d65d0e 0%, #98971a 100%) 1;
-  background-color: #FBF1C7;
-  font-family: "JetBrains Mono Nerd Font";
-  font-weight: bold;
+  border-image: linear-gradient(135deg, #2364cc 0%, #2364cc 100%) 1;
+  background-color: #c8f1ff;
+  font-family: "Pixel Code";
+/*  font-weight: bold; */
   font-size: 16px;
 }
 
@@ -18,13 +18,13 @@ window {
 #inner-box {
   margin: 5px;
   border: none;
-  background-color: #fbf1c7;
+  background-color: #c8f1ff;
 }
 
 #outer-box {
   margin: 5px;
   border: none;
-  background-color: #fbf1c7;
+  background-color: #c8f1ff;
 }
 
 #scroll {
@@ -39,6 +39,6 @@ window {
 }
 
 #entry:selected {
-  background-color: #d65d0e;
+  background-color: #2364cc;
   color: #ffffff;
 }
