@@ -19,7 +19,7 @@
     boot.consoleLogLevel = 3;
     boot.plymouth = {
       enable = true;
-      font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
+      font = "${pkgs.pixel-code}/share/fonts/truetype/Pixel Code.ttf";
       themePackages = [ pkgs.catppuccin-plymouth ];
       theme = "catppuccin-macchiato";
     };
