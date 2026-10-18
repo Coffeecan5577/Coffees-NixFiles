@@ -12,6 +12,7 @@
       config.flake.modules.nixos.core-file-systems
       config.flake.modules.nixos.core-hardware
       config.flake.modules.nixos.core-kernel
+      config.flake.modules.nixos.core-plymouth
       config.flake.modules.nixos.core-timezone
       config.flake.modules.nixos.core-user
       config.flake.modules.nixos.core-home-manager

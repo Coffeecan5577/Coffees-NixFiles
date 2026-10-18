@@ -17,11 +17,5 @@
     boot.kernelParams = [ "amdgpu.dcdebugmask=0x12" ];
 
     boot.consoleLogLevel = 3;
-    boot.plymouth = {
-      enable = true;
-      font = "${pkgs.pixel-code}/share/fonts/opentype/PixelCode.otf";
-      themePackages = [ pkgs.catppuccin-plymouth ];
-      theme = "catppuccin-macchiato";
-    };
   };
 }
