@@ -8,7 +8,7 @@
 
         buildPhase = ''
           mkdir frames
-          ffmpeg -i icy.mp4 -vf "fps=8,scale=960:-1" frames/frame-%d.png
+          ffmpeg -i icy.mp4 -vf "fps=8,scale=1280:-1" frames/frame-%d.png
         '';
 
         installPhase = ''
