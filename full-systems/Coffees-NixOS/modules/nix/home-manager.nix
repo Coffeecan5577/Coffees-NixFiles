@@ -23,6 +23,7 @@
         flakeArgs.config.flake.modules.homeManager.desktop-swaync
         flakeArgs.config.flake.modules.homeManager.desktop-waybar
         flakeArgs.config.flake.modules.homeManager.desktop-wofi
+        flakeArgs.config.flake.modules.homeManager.desktop-icons
 
         flakeArgs.config.flake.modules.homeManager.appearance-cursor
         flakeArgs.config.flake.modules.homeManager.appearance-fonts

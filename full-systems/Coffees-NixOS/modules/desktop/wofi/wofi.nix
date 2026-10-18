@@ -5,6 +5,7 @@
       settings = {
         allow_markup = true;
         allow_images = true;
+        show = "drun";
         width = 350;
         height = 450;
       };
