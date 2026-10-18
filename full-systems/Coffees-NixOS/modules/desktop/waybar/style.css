@@ -1,72 +1,90 @@
 * {
   border: none;
   border-radius: 0px;
-  font-family: "Pixel Code","Symbols Nerd Font Mono";
-/*  font-weight: bold; */
+  font-family: "Pixel Code", "Symbols Nerd Font Mono";
+  /* font-weight: bold; */
   font-size: 16px;
   min-height: 0;
   color: #1d2021;
 }
 
-window#waybar {
-  background: #C8f1FF;
+tooltip {
+  background: #1d2021;
+  border-radius: 12px;
 }
 
-/* Workspace Buttons */
-#workspaces button label{
+tooltip label {
+  color: #ebdbb2;
+}
+
+/* Bar is invisible; only the pills show */
+window#waybar {
+  background: transparent;
+}
+
+/* Left: workspaces pill */
+#workspaces {
+  background: #C8f1FF;
+  border-radius: 16px;
+  padding: 0 4px;
+  margin: 5px 4px 5px 8px;
+}
+
+#workspaces button {
+  border-radius: 12px;
+  margin: 3px 2px;
+  padding: 0;
+}
+
+#workspaces button label {
   color: #1d2021;
   padding: 0 10px;
 }
-#workspaces button.active label {
-  color: #1d2021;
-}
+
 #workspaces button.active {
   background: #2364cc;
 }
 
-#clock, #battery, #pulseaudio, #diskfree, #network, #weather {
-  padding: 0 10px;
-  margin: 0 10px;
+/* Center: window title pill */
+#window {
+  background: #C8f1FF;
+  border-radius: 16px;
+  padding: 0 14px;
+  margin: 5px 4px;
 }
 
-#network {
-  margin: 0;
-  color: #fe8019;
-  border-bottom: 5px solid #fe8019;
+/* Right: shared pill shape */
+#network,
+#custom-weather,
+#pulseaudio,
+#battery,
+#custom-diskfree,
+#clock {
+  border-radius: 16px;
+  padding: 0 14px;
+  margin: 5px 4px;
+  color: #1d2021;
 }
 
-#custom-weather {
-  margin: 0;
-  color: #d79921;
-  border-bottom: 5px solid #d79921
-}
-
-#pulseaudio {
-  margin: 0;
-  color: #b8bb26;
-  border-bottom: 5px solid #b8bb26;
-}
+/* Right: one accent color per pill */
+#network         { background: #c8f1ff; }
+#custom-weather  { background: #c8f1ff; }
+#pulseaudio      { background: #c8f1ff; }
+#battery         { background: #c8f1ff; }
+#custom-diskfree { background: #c8f1ff; }
+#clock           { background: #c8f1ff; margin-right: 7px; }
 
 #pulseaudio.muted {
   padding: 0 20px;
-  color: #b8bb26;
-  border-bottom: 5px solid #b8bb26;
 }
 
-#battery {
-  margin: 0;
-  color: #458588;
-  border-bottom: 5px solid #458588;
-}
+/* Battery state colors */
+#battery.warning  { background: #fabd2f; }
+#battery.critical { background: #fb4934; }
 
-#clock {
+/* Hide empty pills (e.g. the window title with nothing focused) */
+#window.empty {
+  background: transparent;
+  padding: 0;
   margin: 0;
-  color: #cc241d;
-  border-bottom: 5px solid #cc241d;
-}
-
-#custom-diskfree {
-  margin: 0;
-  color: #d3869b;
-  border-bottom: 5px solid #d3869b;
 }
