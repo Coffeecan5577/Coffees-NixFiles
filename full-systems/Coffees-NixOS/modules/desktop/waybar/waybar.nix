@@ -7,7 +7,7 @@
         mainBar = {
           layer = "top";
           position = "top";
-          height = 30;
+          height = 40;
           modules-left = [ "hyprland/workspaces" ];
           modules-center = [ "hyprland/window" ];
           modules-right = [ "network" "custom/weather" "pulseaudio" "battery" "custom/diskfree" "clock" ];
@@ -90,7 +90,7 @@
         "battery" = {
           states = {
             warning = 30;
-            critical = 1;
+            critical = 15;
           };
           format = "{icon} {capacity}%";
           format-charging = " {capacity}%";
@@ -105,7 +105,7 @@
           "custom/diskfree" = {
             format = "󱁋 Disk: {} used";
             interval = 300;
-            max_length = 20;
+            max-length = 20;
             exec = "df --total -hl | grep 'cryptroot' | awk '{print $5}'";
           };
         };
