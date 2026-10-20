@@ -3,48 +3,37 @@ Window.SetBackgroundBottomColor(0, 0, 0);
 
 frame_count = FRAME_COUNT_PLACEHOLDER;
 
-// Get screen dimensions
-screen_width = Window.GetWidth();
-screen_height = Window.GetHeight();
-
-// Load all frames and scale them to fill the screen
 // Original frames are 1920x1080 (16:9)
 original_width = 1920;
 original_height = 1080;
 
-// Calculate scaling to fill screen (crop edges if needed, no distortion)
-scale_x = screen_width / original_width;
-scale_y = screen_height / original_height;
-scale = Math.Max(scale_x, scale_y);
+// Current layout. Recomputed whenever the display size changes, because
+// Plymouth can start on a small firmware framebuffer and switch to the
+// native resolution later in boot.
+cur_w = 0;
+cur_h = 0;
+final_width = original_width;
+final_height = original_height;
+pos_x = 0;
+pos_y = 0;
+layout_id = 1;
 
-// Calculate final dimensions
-final_width = Math.Int(original_width * scale);
-final_height = Math.Int(original_height * scale);
-
-// Center the animation
-pos_x = (screen_width - final_width) / 2;
-pos_y = (screen_height - final_height) / 2;
-
+// Load every frame once at its original size. Scaled copies are made on
+// demand, and remade whenever the layout changes.
 // ffmpeg outputs frame-1.png, frame-2.png ... (1-indexed)
 for (i = 0; i < frame_count; i++) {
-  raw_image = Image("frame-" + (i + 1) + ".png");
-  anim_image[i] = raw_image.Scale(final_width, final_height);
+  raw_image[i] = Image("frame-" + (i + 1) + ".png");
+ // scaled image must be created here, at the top level, so it is global.
+ // If it were first assigned inside refresh_callback it would be local
+ // and the cache would be thrown away on every call.
+  scaled_image[i] = raw_image[i];
+  scaled_for[i] = 0;
 }
 
-// Create sprite and center it
-anim_sprite = Sprite(anim_image[0]);
-anim_sprite.SetX(pos_x);
-anim_sprite.SetY(pos_y);
+anim_sprite = Sprite(raw_image[0]);
 anim_sprite.SetZ(0);
 
 progress = 0;
-
-fun refresh_callback() {
-  anim_sprite.SetImage(anim_image[Math.Int(progress / 6) % frame_count]);
-  progress++;
-}
-
-Plymouth.SetRefreshFunction(refresh_callback);
 
 // Global sprite references — must be global or Plymouth's GC destroys them instantly
 mode_sprite = null;
@@ -52,6 +41,7 @@ prompt_sprite = null;
 bullets = null;
 msg_sprite = null;
 ok_sprite = null;
+debug_sprite = null;
 bullet_img = Image.Text("*", 1, 1, 1);
 password_field_active = 0;
 password_error = 0;
@@ -76,7 +66,61 @@ fun update_mode_label() {
   mode_sprite.SetY(sh - mode_img.GetHeight() - 40);
   mode_sprite.SetZ(10);
 }
-update_mode_label();
+
+// ── Layout: size the animation to the largest connected display ──
+fun update_layout() {
+  lw = 0;
+  lh = 0;
+  for (ld = 0; ld < 4; ld++) {
+    t_w = Window.GetWidth(ld);
+    t_h = Window.GetHeight(ld);
+    if (t_w > lw) lw = t_w;
+    if (t_h > lh) lh = t_h;
+  }
+  // Fallback if the per-display lookup returned nothing
+  if (lw == 0) {
+    lw = Window.GetWidth();
+    lh = Window.GetHeight();
+  }
+  if (lw == 0) return;
+  if (lw == cur_w && lh == cur_h) return;
+
+  cur_w = lw;
+  cur_h = lh;
+
+  // Scale to fill the screen (crop edges if needed, no distortion)
+  fit = Math.Max(lw / original_width, lh / original_height);
+  final_width = Math.Int(original_width * fit);
+  final_height = Math.Int(original_height * fit);
+
+  // Center the animation
+  pos_x = (lw - final_width) / 2;
+  pos_y = (lh - final_height) / 2;
+
+  // Invalidates every cached scaled frame
+  layout_id++;
+
+  // Re-place the Booting/Shutting down label for the new size
+  update_mode_label();
+}
+
+// Playback speed: a new frame every 4 refresh ticks. Lower = faster.
+fun refresh_callback() {
+  update_layout();
+
+  frame = Math.Int(progress / 3) % frame_count;
+  if (scaled_for[frame] != layout_id) {
+    scaled_image[frame] = raw_image[frame].Scale(final_width, final_height);
+    scaled_for[frame] = layout_id;
+  }
+
+  anim_sprite.SetImage(scaled_image[frame]);
+  anim_sprite.SetX(pos_x);
+  anim_sprite.SetY(pos_y);
+  progress++;
+}
+
+Plymouth.SetRefreshFunction(refresh_callback);
 
 // ── LUKS / password prompt ───────────────────────────────
 fun DisplayPasswordCallback(nil, bulletCount) {
@@ -88,7 +132,7 @@ fun DisplayPasswordCallback(nil, bulletCount) {
   prompt_img = Image.Text("Enter Password:", 1, 1, 1);
   prompt_sprite = Sprite(prompt_img);
   prompt_sprite.SetX(sw / 2 - prompt_img.GetWidth() / 2);
-  prompt_sprite.SetY(sh * 0.8);
+  prompt_sprite.SetY(sh * 0.94);
   prompt_sprite.SetZ(10);
 
   bullets = null;
@@ -97,7 +141,7 @@ fun DisplayPasswordCallback(nil, bulletCount) {
   for (i = 0; i < bulletCount; i++) {
     bullets[i] = Sprite(bullet_img);
     bullets[i].SetX(bx + i * bullet_img.GetWidth());
-    bullets[i].SetY(sh * 0.8 + prompt_img.GetHeight() + 4);
+    bullets[i].SetY(sh * 0.94 + prompt_img.GetHeight() + 4);
     bullets[i].SetZ(10);
   }
 }
@@ -132,3 +176,6 @@ fun MessageCallback(text) {
   msg_sprite.SetZ(11);
 }
 Plymouth.SetMessageFunction(MessageCallback);
+
+// Initial layout (also draws the Booting/Shutting down label)
+update_layout();
