@@ -2,6 +2,11 @@
   description = "Coffees NixOS System Configuration ❄️";
 
   inputs = {
+
+    claude-desktop-nix = {
+      url = "github:tomsch/claude-desktop-nix";
+    };
+
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
     };
