@@ -8,6 +8,11 @@
       url = "github:areofyl/fetch";
     };
     
+    comin = {
+      url = "github:nlewo/comin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Flake-Parts for modularizing flakes
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
