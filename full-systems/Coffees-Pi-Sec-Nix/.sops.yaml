@@ -1,10 +1,9 @@
 keys:
   - &NixOS-Admin-Key age1l59arts3uzvc0gf7r3spzch53qac2s92kayhsuj566sra4junucspzdc6f
   - &Comin-Pi-Sec-Key age1de80vae5uz4yul2xvdlynvwqrvkau8jl7hljq267wv9h7wu5u5aq0yalu0
-# …more server keys go here…
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
-    - age:
-      - *NixOS-Admin-Key
-      - *Comin-Pi-Sec-Key
+      - age:
+          - *NixOS-Admin-Key
+          - *Comin-Pi-Sec-Key
