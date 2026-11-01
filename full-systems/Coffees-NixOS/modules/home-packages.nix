@@ -43,18 +43,13 @@
       # Desktop Applications
       calibre
       deluge
-      dolphin-emu
       flameshot
       gitkraken
       gparted
-      higan
       inkscape
       keepassxc
       librewolf
       localsend
-      melonds
-      mgba
-      nestopia-ue
       obsidian
       onlyoffice-desktopeditors
       pika-backup
