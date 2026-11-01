@@ -9,7 +9,7 @@
 
       # Applications
       config.flake.modules.nixos.applications-actual
-      config.flake.modules.nixos.applications-traefik
+      # config.flake.modules.nixos.applications-traefik
 
       # Core
       config.flake.modules.nixos.core-boot
