@@ -58,6 +58,14 @@
         "$mainMod SHIFT, 8, movetoworkspacesilent, 8"
         "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
         "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
+
+        # Switch to previous/next workspace
+        "$mainMod ALT, left,  workspace, e-1"
+        "$mainMod ALT, right, workspace, e+1"
+        # Send active window to previous/next workspace (and follow it)
+        "$mainMod ALT SHIFT, left,  movetoworkspace, e-1"
+        "$mainMod ALT SHIFT, right, movetoworkspace, e+1"
+
         # Scratchpad
         "$mainMod,       S, togglespecialworkspace,  magic"
         "$mainMod SHIFT, S, movetoworkspace, special:magic"
