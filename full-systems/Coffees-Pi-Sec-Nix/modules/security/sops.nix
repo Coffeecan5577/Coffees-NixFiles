@@ -15,7 +15,7 @@
 
     secrets = {
       # This is the actual specification of the secrets.
-      example-key = {};
+      # example-key = {};
     };
    };
   };
