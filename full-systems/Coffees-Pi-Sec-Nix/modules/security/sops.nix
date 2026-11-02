@@ -15,7 +15,7 @@
 
     secrets = {
       # This is the actual specification of the secrets.
-      test_secret = {};
+      Comin-Git-Key = {};
     };
    };
   };
