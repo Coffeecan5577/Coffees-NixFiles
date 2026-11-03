@@ -31,6 +31,7 @@
       config.flake.modules.nixos.security-sops
 
       # Development + environment
+      config.flake.modules.nixos.development-comin
       config.flake.modules.nixos.development-nvf
       config.flake.modules.nixos.environment-env
 
