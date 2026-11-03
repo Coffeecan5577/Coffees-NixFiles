@@ -16,7 +16,7 @@
     secrets = {
       # This is the actual specification of the secrets.
       Comin-Git-Key = {
-        owner = "Coffees-Pi-Sec-Nix";
+        owner = "coffeecan";
         mode = "0400";
       };
     };
