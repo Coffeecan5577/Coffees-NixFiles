@@ -16,6 +16,7 @@
         flakeArgs.config.flake.modules.homeManager.core-user
 
         flakeArgs.config.flake.modules.homeManager.development-git
+        flakeArgs.config.flake.modules.homeManager.development-git-pi-mon
 
         flakeArgs.config.flake.modules.homeManager.applications-btop
 
