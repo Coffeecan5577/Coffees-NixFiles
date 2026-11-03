@@ -12,6 +12,7 @@
       remotes = [{
         name = "origin";
         url = "git@github.com:Coffeecan5577/Coffees-NixFiles.git";
+        auth.username = "git";
         auth.ssh_deploy_key_path = config.sops.secrets.Comin-Git-Key.path;
         branches.main.name = "Raspberry-Pi-Nix";   # the shared Pi branch
       }];
