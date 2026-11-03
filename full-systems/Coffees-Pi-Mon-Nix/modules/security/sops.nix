@@ -10,12 +10,15 @@
       sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
 
       # This is using an age key that is expected to already be in the filesystem
-      # keyFile = "/home/coffeecan/.config/sops/age/Pi-Monitor-Secrets-Age-Key.txt";
+      # keyFile = "";
     };
 
     secrets = {
       # This is the actual specification of the secrets.
-      test_secret = {};
+      Comin-Git-Key = {
+        owner = "coffeecan";
+        mode = "0400";
+      };
     };
    };
   };
