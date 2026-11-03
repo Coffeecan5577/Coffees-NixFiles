@@ -1,8 +1,10 @@
 keys:
-  - &Pi-Monitor-Secrets-Age-Key age1fl8lw66pcmh65jsfu5x9pfc9adaeyx6lmqvphp7mg0p3pmg4540spde7qh
+  - &NixOS-Admin-Key age1l59arts3uzvc0gf7r3spzch53qac2s92kayhsuj566sra4junucspzdc6f
+  - &Comin-Pi-Mon-Key age1tt46g04t2c3lzgr5ew90y960p8s4ecyw7y2mhfu62ghu9aavs4wsz766gx
 # …more server keys go here…
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
     - age:
-      - *Pi-Monitor-Secrets-Age-Key
+      - *NixOS-Admin-Key
+      - *Comin-Pi-Mon-Key
