@@ -34,10 +34,12 @@
       config.flake.modules.nixos.security-sops
 
       # Development + environment
+      config.flake.modules.nixos.development-comin
       config.flake.modules.nixos.development-nvf
       config.flake.modules.nixos.environment-env
 
       # External flake modules
+      inputs.comin.nixosModules.comin
       inputs.nix-index-database.nixosModules.default
       inputs.nixos-hardware.nixosModules.raspberry-pi-4
       inputs.nvf.nixosModules.default
