@@ -16,6 +16,7 @@
         flakeArgs.config.flake.modules.homeManager.core-user
 
         flakeArgs.config.flake.modules.homeManager.development-git
+        flakeArgs.config.flake.modules.homeManager.development-git-commit-signing
         flakeArgs.config.flake.modules.homeManager.development-zed-editor
 
         flakeArgs.config.flake.modules.homeManager.desktop-hyprland
