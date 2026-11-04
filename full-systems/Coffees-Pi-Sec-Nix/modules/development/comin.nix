@@ -8,7 +8,7 @@
 
     services.comin = {
       enable = true;
-      repositorySubdir = "Coffees-Pi-Sec-Nix";   # the folder holding THIS Pi's flake
+      repositorySubdir = "full-systems/Coffees-Pi-Sec-Nix";   # the folder holding THIS Pi's flake
       remotes = [{
         name = "origin";
         url = "git@github.com:Coffeecan5577/Coffees-NixFiles.git";
