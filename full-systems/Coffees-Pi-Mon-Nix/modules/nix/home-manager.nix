@@ -22,6 +22,7 @@
 
         flakeArgs.config.flake.modules.homeManager.shell-atuin
         flakeArgs.config.flake.modules.homeManager.shell-bat
+        flakeArgs.config.flake.modules.homeManager.shell-direnv
         flakeArgs.config.flake.modules.homeManager.shell-eza
         flakeArgs.config.flake.modules.homeManager.shell-fetch
         flakeArgs.config.flake.modules.homeManager.shell-fish
