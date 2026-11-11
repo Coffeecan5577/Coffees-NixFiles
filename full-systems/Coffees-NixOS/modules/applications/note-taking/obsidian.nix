@@ -1,6 +1,6 @@
 { ... }:
 {
-  flake.modules.homeManager.applications-note-taking = { lib, pkgs, ...}:
+  flake.modules.homeManager.applications-obsidian = { lib, pkgs, ...}:
   {
     home.packages = [ pkgs.obsidian ];
 
