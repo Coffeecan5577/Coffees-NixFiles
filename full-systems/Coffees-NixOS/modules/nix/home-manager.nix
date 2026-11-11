@@ -29,6 +29,7 @@
         flakeArgs.config.flake.modules.homeManager.appearance-cursor
         flakeArgs.config.flake.modules.homeManager.appearance-fonts
 
+        flakeArgs.config.flake.modules.homeManager.applications-obsidian
         flakeArgs.config.flake.modules.homeManager.applications-librewolf
         flakeArgs.config.flake.modules.homeManager.applications-btop-rocm
         flakeArgs.config.flake.modules.homeManager.applications-keepassxc

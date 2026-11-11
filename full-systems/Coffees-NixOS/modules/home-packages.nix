@@ -50,7 +50,6 @@
       keepassxc
       librewolf
       localsend
-      obsidian
       onlyoffice-desktopeditors
       pika-backup
       rustdesk-flutter
