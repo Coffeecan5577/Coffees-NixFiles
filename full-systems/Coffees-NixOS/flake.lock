@@ -73,11 +73,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1794525165,
-        "narHash": "sha256-fgMROl6kSkH06XARyJFQgMzOi/oKgmVxKI4b2Hen+HY=",
+        "lastModified": 1794578122,
+        "narHash": "sha256-6mmedbexjat5Z0MhVKyg1EBn4+mv+h77gcbUumpBxfw=",
         "owner": "tomsch",
         "repo": "claude-desktop-nix",
-        "rev": "badda71fc015b3e2a27399f4fda8512b5a1a1460",
+        "rev": "37c1302bb21a19a7ff1fe1b218104b22e068b547",
         "type": "github"
       },
       "original": {
