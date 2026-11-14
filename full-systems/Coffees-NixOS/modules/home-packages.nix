@@ -65,6 +65,7 @@
 
       # Other utilities
       age
+      mcp-nixos
       nixmate
       nix-output-monitor
       nix-prefetch-scripts
