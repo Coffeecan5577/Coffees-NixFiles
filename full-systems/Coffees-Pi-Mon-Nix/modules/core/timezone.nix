@@ -1,6 +1,5 @@
 {
-  flake.modules.nixos.core-timezone = { pkgs, ...}:
-  {
+  flake.modules.nixos.core-timezone = {pkgs, ...}: {
     time.timeZone = "America/Chicago";
   };
 }

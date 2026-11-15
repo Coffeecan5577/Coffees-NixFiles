@@ -1,6 +1,5 @@
 {
-  flake.modules.homeManager.shell-bat = { pkgs, ...}:
-  {
+  flake.modules.homeManager.shell-bat = {pkgs, ...}: {
     programs.bat = {
       enable = true;
       config = {

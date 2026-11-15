@@ -1,19 +1,23 @@
-{ config, lib, pkgs, modulesPath, ... }:
-
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}: {
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
-  boot.initrd.availableKernelModules = [ "xhci_pci" "usbhid" "usb_storage" ];
+  boot.initrd.availableKernelModules = ["xhci_pci" "usbhid" "usb_storage"];
 
   # File Systems
-   fileSystems = {
+  fileSystems = {
     "/" = {
       device = "/dev/disk/by-label/NIXOS_SD";
       fsType = "ext4";
-      options = [ "noatime" ];
+      options = ["noatime"];
     };
   };
 

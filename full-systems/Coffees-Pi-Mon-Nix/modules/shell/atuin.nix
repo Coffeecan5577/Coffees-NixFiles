@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.shell-atuin = { pkgs, ...}: {
+  flake.modules.homeManager.shell-atuin = {pkgs, ...}: {
     programs.atuin = {
       enable = true;
       themes = {
@@ -31,7 +31,6 @@
             # neutral_purple
             Title = "#b16286";
 
-
             # Gruvbox Dark color palette
             # https://github.com/mwinters0/hnjobs/blob/main/theme/gruvbox.go
 
@@ -50,7 +49,7 @@
             #neutral_yellow
             #Foo = "#d79921"
 
-             #bright_green
+            #bright_green
             #Foo = "#b8bb26"
             #neutral_green
             #Foo = "#98971a"
@@ -99,7 +98,7 @@
           keymap_mode = "vim-normal";
         };
       };
-     enableFishIntegration = true;
+      enableFishIntegration = true;
     };
   };
 }

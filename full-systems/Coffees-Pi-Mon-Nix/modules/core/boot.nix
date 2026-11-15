@@ -1,16 +1,15 @@
 {
-  flake.modules.nixos.core-boot = { pkgs, ... }:
-  {
+  flake.modules.nixos.core-boot = {pkgs, ...}: {
     # Bootloader
     boot.consoleLogLevel = 3;
     boot.loader = {
-        grub.enable = false;
-        generic-extlinux-compatible.enable = true;
-      };
+      grub.enable = false;
+      generic-extlinux-compatible.enable = true;
+    };
     boot.plymouth = {
       enable = true;
       font = "${pkgs.jetbrains-mono}/share/fonts/truetype/JetBrainsMono-Regular.ttf";
-      themePackages = [ pkgs.catppuccin-plymouth ];
+      themePackages = [pkgs.catppuccin-plymouth];
       theme = "catppuccin-macchiato";
     };
   };

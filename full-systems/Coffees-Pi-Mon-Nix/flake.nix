@@ -2,7 +2,6 @@
   description = "Coffees Pi-Mon-Nix System Configuration";
 
   inputs = {
-
     # Areofyl Fetch package flake
     areofyl-fetch = {
       url = "github:areofyl/fetch";
@@ -37,9 +36,9 @@
 
     # NixOS Hardware URL
     nixos-hardware.url = "github:NixOS/nixos-hardware";
-    
+
     # Nix Packages URL
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05"; 
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 
     # NVF Neovim Nix configuration flake
     nvf = {
@@ -59,9 +58,12 @@
     };
   };
 
-  outputs = 
-    inputs@{ flake-parts, import-tree, ...}:
-    flake-parts.lib.mkFlake { inherit inputs; } {
+  outputs = inputs @ {
+    flake-parts,
+    import-tree,
+    ...
+  }:
+    flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [
         (inputs.import-tree ./modules)
         ./hosts/Coffees-Pi-Mon-Nix

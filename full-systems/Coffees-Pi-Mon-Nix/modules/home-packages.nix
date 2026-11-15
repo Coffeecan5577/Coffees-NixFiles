@@ -1,40 +1,37 @@
 {
-  flake.modules.homeManager.home-packages = { pkgs, ...}:
-  {
+  flake.modules.homeManager.home-packages = {pkgs, ...}: {
+    nixpkgs.config.allowUnfree = true;
 
-  nixpkgs.config.allowUnfree = true;
+    home.packages = with pkgs; [
+      # Packages in each category are sorted alphabetically
 
-  home.packages = with pkgs; [
+      # CLI utilities
+      atuin
+      btop
+      cbonsai
+      cliphist
+      erdtree
+      fastfetch
+      git
+      lshw
+      mkcert
+      oh-my-posh
+      showmethekey
+      silicon
+      tealdeer
+      udisks
+      unzip
+      wget
+      wl-clipboard
 
-  # Packages in each category are sorted alphabetically
-
-  # CLI utilities
-    atuin
-    btop
-    cbonsai
-    cliphist
-    erdtree
-    fastfetch
-    git
-    lshw
-    mkcert
-    oh-my-posh
-    showmethekey
-    silicon
-    tealdeer
-    udisks
-    unzip
-    wget
-    wl-clipboard
-
-  # Other utilities
-    age
-    nixmate
-    nix-output-monitor
-    nix-prefetch-scripts
-    nvd
-    sops
-    ssh-to-age
-  ];
+      # Other utilities
+      age
+      nixmate
+      nix-output-monitor
+      nix-prefetch-scripts
+      nvd
+      sops
+      ssh-to-age
+    ];
   };
 }

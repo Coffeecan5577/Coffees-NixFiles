@@ -1,8 +1,11 @@
-{ inputs, config, ...}:
 {
+  inputs,
+  config,
+  ...
+}: {
   flake.nixosConfigurations."Coffees-Pi-Mon-Nix" = inputs.nixpkgs.lib.nixosSystem {
     system = "aarch64-linux";
-    specialArgs = { inherit inputs; };
+    specialArgs = {inherit inputs;};
     modules = [
       ./hardware-configuration.nix
       ./local-packages.nix
@@ -44,9 +47,8 @@
 
       # Host identity + the one line from your old configuration.nix
       (
-        { pkgs, ... }:
-        {
-          environment.systemPackages = [ pkgs.home-manager ];
+        {pkgs, ...}: {
+          environment.systemPackages = [pkgs.home-manager];
           networking.hostName = "Coffees-Pi-Mon-Nix";
           system.stateVersion = "26.05";
         }
