@@ -2,7 +2,6 @@
   description = "Coffees NixOS System Configuration ❄️";
 
   inputs = {
-
     claude-desktop-nix = {
       url = "github:tomsch/claude-desktop-nix";
     };
@@ -22,7 +21,7 @@
       url = "github:vic/import-tree";
     };
 
-    # Nix Datifier flake 
+    # Nix Datifier flake
     nixdatifier = {
       url = "github:Muddyblack/nixdatifier";
     };
@@ -56,15 +55,24 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # treefmt-nix Module URL
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Zen Browser Twilight package flake
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
     };
   };
 
-  outputs =
-    inputs@{ flake-parts, import-tree, ... }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
+  outputs = inputs @ {
+    flake-parts,
+    import-tree,
+    ...
+  }:
+    flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [
         (inputs.import-tree ./modules)
         ./hosts/Coffees-NixOS

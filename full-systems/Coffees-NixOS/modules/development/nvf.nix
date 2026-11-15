@@ -1,5 +1,9 @@
 {
-  flake.modules.nixos.development-nvf = { pkgs, lib, ... }: {
+  flake.modules.nixos.development-nvf = {
+    pkgs,
+    lib,
+    ...
+  }: {
     programs.nvf = {
       enable = true;
       enableManpages = true;
@@ -63,13 +67,13 @@
             nix = {
               enable = true;
               format.enable = true;
-              format.type = [ "alejandra" ];
-              lsp.servers = [ "nixd" ];
+              format.type = ["alejandra"];
+              lsp.servers = ["nixd"];
             };
             python.enable = true;
             terraform.enable = true;
           };
-                                        
+
           # Enabling various UI settings
           ui = {
             colorful-menu-nvim.enable = true;

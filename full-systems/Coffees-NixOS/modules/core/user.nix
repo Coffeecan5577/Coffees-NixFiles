@@ -1,13 +1,12 @@
 let
   username = "coffeecan";
-in
-{
-  flake.modules.nixos.core-user = { pkgs, ... }: {
+in {
+  flake.modules.nixos.core-user = {pkgs, ...}: {
     programs.fish.enable = true;
     users.defaultUserShell = pkgs.fish;
     users.users.${username} = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" "libvirtd" ];
+      extraGroups = ["wheel" "networkmanager" "libvirtd"];
     };
   };
 

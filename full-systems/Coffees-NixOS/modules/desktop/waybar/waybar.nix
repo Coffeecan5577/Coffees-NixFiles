@@ -8,9 +8,9 @@
           layer = "top";
           position = "top";
           height = 40;
-          modules-left = [ "hyprland/workspaces" ];
-          modules-center = [ "hyprland/window" ];
-          modules-right = [ "network" "custom/weather" "pulseaudio" "battery" "custom/diskfree" "clock" ];
+          modules-left = ["hyprland/workspaces"];
+          modules-center = ["hyprland/window"];
+          modules-right = ["network" "custom/weather" "pulseaudio" "battery" "custom/diskfree" "clock"];
           "hyprland/workspaces" = {
             disable-scroll = true;
             show-special = true;
@@ -45,7 +45,10 @@
             "format-disabled" = "󰤮";
             #  "format-alt":
             "format-icons" = [
-              "󰤟" "󰤢" "󰤥" "󰤨"
+              "󰤟"
+              "󰤢"
+              "󰤥"
+              "󰤨"
             ];
             #  "rotate":
             "min-length" = 2;
@@ -71,32 +74,32 @@
             class = "weather";
           };
 
-	"pulseaudio" = {
-          format = "{icon} {volume}%";
-          format-bluetooth = "{icon} {volume}% ";
-          format-muted = "";
-          format-icons = {
-            "headphones" = "";
-            "handsfree" = "";
-            "headset" = "";
-            "phone" = "";
-            "portable" = "";
-            "car" = "";
-            "default" = ["" ""];
+          "pulseaudio" = {
+            format = "{icon} {volume}%";
+            format-bluetooth = "{icon} {volume}% ";
+            format-muted = "";
+            format-icons = {
+              "headphones" = "";
+              "handsfree" = "";
+              "headset" = "";
+              "phone" = "";
+              "portable" = "";
+              "car" = "";
+              "default" = ["" ""];
+            };
+            on-click = "pavucontrol";
           };
-          on-click = "pavucontrol";
-        };
 
-        "battery" = {
-          states = {
-            warning = 30;
-            critical = 15;
+          "battery" = {
+            states = {
+              warning = 30;
+              critical = 15;
+            };
+            format = "{icon} {capacity}%";
+            format-charging = " {capacity}%";
+            format-alt = "{time} {icon}";
+            format-icons = ["" "" "" "" ""];
           };
-          format = "{icon} {capacity}%";
-          format-charging = " {capacity}%";
-          format-alt = "{time} {icon}";
-          format-icons = ["" "" "" "" ""];
-        };
 
           "clock" = {
             format = "󰃭 {:%m.%d.%Y - %H:%M}";

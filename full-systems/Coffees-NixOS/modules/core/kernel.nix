@@ -1,5 +1,10 @@
 {
-  flake.modules.nixos.core-kernel = { pkgs, lib,  inputs, ... }: {
+  flake.modules.nixos.core-kernel = {
+    pkgs,
+    lib,
+    inputs,
+    ...
+  }: {
     # Linux Kernel
     security.forcePageTableIsolation = true;
     # security.lockKernelModules = true;

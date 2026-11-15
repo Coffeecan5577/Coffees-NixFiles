@@ -1,5 +1,9 @@
 {
-  flake.modules.homeManager.appearance-fonts = { inputs, pkgs, ... }: {
+  flake.modules.homeManager.appearance-fonts = {
+    inputs,
+    pkgs,
+    ...
+  }: {
     home.packages = with pkgs; [
       dejavu_fonts
       nerd-fonts.jetbrains-mono

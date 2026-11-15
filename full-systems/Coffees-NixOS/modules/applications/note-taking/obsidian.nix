@@ -1,10 +1,12 @@
-{ ... }:
-{
-  flake.modules.homeManager.applications-obsidian = { lib, pkgs, ...}:
-  {
-    home.packages = [ pkgs.obsidian ];
+{...}: {
+  flake.modules.homeManager.applications-obsidian = {
+    lib,
+    pkgs,
+    ...
+  }: {
+    home.packages = [pkgs.obsidian];
 
-    home.activation.obsidianCacheReset = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    home.activation.obsidianCacheReset = lib.hm.dag.entryAfter ["writeBoundary"] ''
       cfg="$HOME/.config/obsidian"
       stamp="$cfg/.nix-package"
       current="${pkgs.obsidian}"

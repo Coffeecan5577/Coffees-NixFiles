@@ -1,9 +1,9 @@
 {
-  flake.modules.nixos.virtualization-virt-manager = { pkgs, ... }: {
+  flake.modules.nixos.virtualization-virt-manager = {pkgs, ...}: {
     programs.virt-manager = {
       enable = true;
     };
-    users.groups.libvirtd.members = [ "coffeecan" ];
+    users.groups.libvirtd.members = ["coffeecan"];
     virtualisation = {
       libvirtd.enable = true;
       spiceUSBRedirection.enable = true;

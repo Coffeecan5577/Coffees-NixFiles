@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.desktop-hyprland = { pkgs, ... }: {
+  flake.modules.homeManager.desktop-hyprland = {pkgs, ...}: {
     wayland.windowManager.hyprland.settings = {
       bind = [
         "$mainMod SHIFT, Return, exec, $terminal"

@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.applications-btop-rocm = { pkgs, ... }: {
+  flake.modules.homeManager.applications-btop-rocm = {pkgs, ...}: {
     programs.btop = {
       package = pkgs.btop-rocm;
       enable = true;

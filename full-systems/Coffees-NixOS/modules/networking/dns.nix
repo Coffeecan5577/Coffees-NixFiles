@@ -2,7 +2,7 @@
   flake.modules.nixos.networking-dns = {
     # Enable Encrypted DNS
     networking = {
-      nameservers = [ "127.0.0.1" "[::1]" ];
+      nameservers = ["127.0.0.1" "[::1]"];
       # If using dhcpcd:
       dhcpcd.enable = true; # disable, because enabled by default
       dhcpcd.extraConfig = "nohook resolv.conf";
@@ -22,7 +22,7 @@
     services.dnscrypt-proxy = {
       enable = true;
       settings = {
-        listen_addresses = [ "127.0.0.1:53" "[::1]:53" ];
+        listen_addresses = ["127.0.0.1:53" "[::1]:53"];
         ipv6_servers = false;
         require_dnssec = true;
         sources.public-resolvers = {
@@ -34,7 +34,7 @@
           minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
         };
         # You can choose a specific set of servers from https://github.com/DNSCrypt/dnscrypt-resolvers/blob/master/v3/public-resolvers.md
-        server_names = [ "nextdns" "cloudflare" "cloudflare-security" ];
+        server_names = ["nextdns" "cloudflare" "cloudflare-security"];
       };
     };
     systemd.services.dnscrypt-proxy2.serviceConfig = {

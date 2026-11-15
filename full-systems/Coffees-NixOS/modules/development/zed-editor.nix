@@ -16,14 +16,14 @@
       userSettings = {
         languages = {
           Nix = {
-            language_servers = [ "nixd" "!nil" ];
+            language_servers = ["nixd" "!nil"];
           };
         };
         lsp = {
           nixd = {
             initialization_options = {
               formatting = {
-                command = [ "alejandra" "--quiet" "--" ];
+                command = ["alejandra" "--quiet" "--"];
               };
             };
           };

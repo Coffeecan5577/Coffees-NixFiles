@@ -1,8 +1,11 @@
-{ inputs, config, ... }:
 {
+  inputs,
+  config,
+  ...
+}: {
   flake.nixosConfigurations."Coffees-NixOS" = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
-    specialArgs = { inherit inputs; };
+    specialArgs = {inherit inputs;};
     modules = [
       ./hardware-configuration.nix
       ./local-packages.nix
@@ -61,9 +64,8 @@
       # Host identity + the one line from your old configuration.nix
       # that isn't an aspect (environment.systemPackages = [ pkgs.home-manager ])
       (
-        { pkgs, ... }:
-        {
-          environment.systemPackages = [ pkgs.home-manager ];
+        {pkgs, ...}: {
+          environment.systemPackages = [pkgs.home-manager];
           networking.hostName = "Coffees-NixOS";
           system.stateVersion = "26.05";
         }

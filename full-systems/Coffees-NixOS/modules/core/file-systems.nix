@@ -1,11 +1,10 @@
 {
   flake.modules.nixos.core-file-systems = {
-
     fileSystems."/media/Nix-Storage" = {
       device = "/dev/disk/by-uuid/aad64d8f-1030-4de2-a09c-73ebabb5808f";
       fsType = "btrfs";
       # Define which users can do what with the mounted drive:
-      options = [ "nofail" ];
+      options = ["nofail"];
     };
 
     fileSystems."/media/External-Drive" = {
@@ -22,11 +21,11 @@
     # fileSystems."/media/Second-External-Drive" = {
     # device = "dev/disk/by-uuid/13f05027-a1ef-4a20-ba01-6c6791cea1fb";
     # fsType = "btrfs";
-      # options = [
-        # "users"
-        # "nofail"
-        # "rw"
-      # ];
+    # options = [
+    # "users"
+    # "nofail"
+    # "rw"
+    # ];
     # };
   };
 }

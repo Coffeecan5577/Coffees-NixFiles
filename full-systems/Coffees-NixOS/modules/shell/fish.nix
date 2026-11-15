@@ -1,5 +1,10 @@
 {
-  flake.modules.homeManager.shell-fish = { config, lib, pkgs, ... }: {
+  flake.modules.homeManager.shell-fish = {
+    config,
+    lib,
+    pkgs,
+    ...
+  }: {
     programs.fish = {
       enable = true;
 

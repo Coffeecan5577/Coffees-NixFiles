@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.desktop-display-manager = { pkgs, ... }: {
+  flake.modules.nixos.desktop-display-manager = {pkgs, ...}: {
     # Enable Display Manager
     services.greetd = {
       enable = true;
@@ -15,7 +15,7 @@
     users.users.greeter = {
       isNormalUser = false;
       description = "greetd greeter user";
-      extraGroups = [ "video" "audio" ];
+      extraGroups = ["video" "audio"];
       linger = true;
     };
     environment.systemPackages = with pkgs; [

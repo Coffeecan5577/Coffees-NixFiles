@@ -1,6 +1,9 @@
 {
-  flake.modules.nixos.virtualization-podman = { config, pkgs, ... }: {
-
+  flake.modules.nixos.virtualization-podman = {
+    config,
+    pkgs,
+    ...
+  }: {
     # Enable Podman
     virtualisation.podman = {
       enable = true;
@@ -12,7 +15,7 @@
     };
 
     environment.variables.DBX_CONTAINER_MANAGER = "podman";
-    users.extraGroups.podman.members = [ "coffeecan" ];
+    users.extraGroups.podman.members = ["coffeecan"];
 
     environment.systemPackages = with pkgs; [
       nvidia-docker

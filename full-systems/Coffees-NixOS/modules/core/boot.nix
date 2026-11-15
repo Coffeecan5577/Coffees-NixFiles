@@ -1,6 +1,5 @@
 {
-  flake.modules.nixos.core-boot = { pkgs, ... }: 
-  {
+  flake.modules.nixos.core-boot = {pkgs, ...}: {
     # Bootloader.
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
@@ -9,12 +8,12 @@
     boot.initrd.enable = true;
     boot.initrd.verbose = false;
     boot.initrd.systemd.enable = true;
-    boot.initrd.availableKernelModules = [ "amdgpu" ];
-    boot.initrd.kernelModules = [ "amdgpu" ];
+    boot.initrd.availableKernelModules = ["amdgpu"];
+    boot.initrd.kernelModules = ["amdgpu"];
 
     # Workaround for amdgpu flip_done timed out / display freeze bug
     # (disables Panel Self Refresh) — see gitlab.freedesktop.org/drm/amd/-/work_items/4141
-    boot.kernelParams = [ "amdgpu.dcdebugmask=0x12" ];
+    boot.kernelParams = ["amdgpu.dcdebugmask=0x12"];
 
     boot.consoleLogLevel = 3;
   };
