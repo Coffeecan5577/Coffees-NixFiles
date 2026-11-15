@@ -1,13 +1,14 @@
 {
-  description = "Coffees Pi-Sec-Nix System Configuration ❄️"; 
+  description = "Coffees Pi-Sec-Nix System Configuration ❄️";
 
-  inputs = {  # Inputs will be sorted alphabetically
+  inputs = {
+    # Inputs will be sorted alphabetically
 
     # Areofyl Fetch package flake
     areofyl-fetch = {
       url = "github:areofyl/fetch";
     };
-    
+
     comin = {
       url = "github:nlewo/comin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,12 +25,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Recursively imports every module under ./modules 
+    # Recursively imports every module under ./modules
     import-tree = {
       url = "github:vic/import-tree";
     };
 
-    # Nix Index Database Nix Configuration 
+    # Nix Index Database Nix Configuration
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -57,15 +58,17 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
-  outputs =  
-    inputs@{ flake-parts, import-tree, ...}:
-    flake-parts.lib.mkFlake { inherit inputs; } {
+  outputs = inputs @ {
+    flake-parts,
+    import-tree,
+    ...
+  }:
+    flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [
         (inputs.import-tree ./modules)
         ./hosts/Coffees-Pi-Sec-Nix
-        ];
-     };
+      ];
+    };
 }
