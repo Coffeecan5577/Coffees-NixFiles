@@ -32,6 +32,7 @@
       config.flake.modules.nixos.networking-dns
       config.flake.modules.nixos.networking-firewall
       config.flake.modules.nixos.networking-net
+      config.flake.modules.nixos.networking-netbird
       config.flake.modules.nixos.networking-ssh
       config.flake.modules.nixos.networking-syncthing
       config.flake.modules.nixos.networking-vpn
