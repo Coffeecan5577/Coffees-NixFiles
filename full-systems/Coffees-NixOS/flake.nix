@@ -37,6 +37,11 @@
       url = "github:nixos/nixpkgs/nixos-26.05";
     };
 
+    # Nix Packages Unstable Branch URL 
+    nixpkgs-unstable = {
+      url = "github:NixOS/nixpkgs/nixos-unstable";
+    };
+
     # NVF Neovim Nix configuration flake
     nvf = {
       url = "github:NotAShelf/nvf";

@@ -43,7 +43,6 @@
       calibre
       deluge
       flameshot
-      gitkraken
       gparted
       inkscape
       keepassxc

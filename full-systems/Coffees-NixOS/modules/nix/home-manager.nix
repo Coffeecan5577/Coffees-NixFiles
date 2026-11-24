@@ -31,6 +31,7 @@
       flakeArgs.config.flake.modules.homeManager.applications-btop-rocm
       flakeArgs.config.flake.modules.homeManager.applications-keepassxc
       flakeArgs.config.flake.modules.homeManager.applications-flameshot
+      flakeArgs.config.flake.modules.homeManager.applications-gitkraken
 
       flakeArgs.config.flake.modules.homeManager.shell-atuin
       flakeArgs.config.flake.modules.homeManager.shell-bat
